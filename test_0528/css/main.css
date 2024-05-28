@@ -34,6 +34,9 @@ body {
 em {
     font-style: normal;
 }
+li {
+    list-style: none;
+}
 .intro {
     text-align: center;
     margin: 150px 0 150px 0;
@@ -96,4 +99,53 @@ em {
 .overveiw p strong {
     font-weight: 700;
     text-decoration: underline;
+}
+.color {
+    margin: 120px 0 120px 0;
+}
+.color h1 {
+    color: #1d1d1d;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin: 0 0 20px 0;
+}
+.color h2 {
+    color: #00507d;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin: 34px 0 10px 0;
+}
+.color ul {
+    display: flex;
+    justify-content: space-between;
+}
+.color ul li {
+    width: 190px;
+    height: 260px;
+    color: #ffffff;
+    padding: 165px 0 0 20px;
+}
+.color ul li.blue {
+    background-color: #00507d;
+}
+.color ul li.lb {
+    background-color: #00a5e5;
+}
+.color ul li.dg {
+    background-color: #4b5151;
+}
+.color ul li.lg {
+    background-color: #bcbdbb;
+}
+.color ul li.gold {
+    background-color: #86754e;
+}
+.color ul li.silver {
+    background-color: #8d908f;
+}
+.color ul li h3 {
+    font-size: 20px;
+    line-height: 1.2;
 }
