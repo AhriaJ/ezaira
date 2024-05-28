@@ -1,0 +1,99 @@
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+/* 홈페이지 전체에 적용될 글자 스타일 */
+body {
+    font-family: "Pretendard";
+    color: #3d3d3d;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.4;
+    font-size: 20px;
+    word-break: keep-all;
+}
+/* 홈페이지의 넓이를 결정하고 가운데 정렬하게하는 요소 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 태그의 기울기 삭제 */
+em {
+    font-style: normal;
+}
+.intro {
+    text-align: center;
+    margin: 150px 0 150px 0;
+}
+.biz {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 110px 0 110px 0;
+}
+.intro h1, .biz h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0091ff;
+}
+.intro p, .biz p {
+    color: #666666;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1.2;    
+}
+.intro p {
+    margin: 7px 0 0 0;
+}
+.intro p em, .biz p em {
+    color: #1d1d1d;
+}
+.intro p strong, .biz p strong {
+    color: #0091ff;
+}
+.company {
+    margin: 120px 0 120px 0;
+}
+.company h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #1d1d1d;
+    letter-spacing: -0.05em;
+    margin: 0 0 20px 0;
+}
+.company p strong {
+    color: #1d1d1d;
+    font-weight: 700;
+}
+.overveiw {
+    /* 아무리 커다란 이미지를 넣어도 그 영역이 존재하는 만큼만 보임 -  즉 영역이 작으면 이미지가 잘림 */
+    background: url(../images/overveiw_bg.png) no-repeat center center / cover;
+    height: 471px;
+    color: #ffffff;
+    /* 배경때문에 글자의 색상이 변경되었다면, 배경과 글자색상을 동시에 선언하는게 좋다 */
+    text-align: right;
+    padding: 93px 82px 0 0;
+}
+.overveiw h1 {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    margin: 0 0 20px 0;
+}
+.overveiw p strong {
+    font-weight: 700;
+    text-decoration: underline;
+}
