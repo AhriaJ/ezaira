@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6, strong {
     font-size: inherit; /* 상위요소에서 정의된대로 상속받아라 inherit */
     font-weight: inherit;
 }
-em { /*글가 기울임 삭제*/
+em, address { /*글가 기울임 삭제*/
     font-style: normal;
 }
 a { /*글자 색상,언더라인 삭제*/
