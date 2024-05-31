@@ -21,6 +21,9 @@ html, body {
     word-break: keep-all;
     letter-spacing: 0;
 }
+#wrap { /* 홈페이지 전체를 감싸는 역할 */
+    min-width: 1260px;
+}
 .wrapper {
     width: 1260px;
     margin: 0 auto;
