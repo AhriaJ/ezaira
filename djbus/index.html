@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>대전복합터미널</title>
+</head>
+<body>
+    <!--홈페이지 전체를 감싸는 요소-->
+    <div id="wrap">
+        <header></header>
+        <div class="container"><!--header와 footer를 제외한 나머지 전부를 container-->
+            <section class="visual">
+            </section><!--visual-->
+            <section class="introduce">
+                <div class="art"></div>
+                <div class="scholarship"></div>
+            </section><!--introduce-->
+            <!--섹션 news와  movie는 배경이 연결되어있어서 div로 묶어줌
+            (section태그는 section으로 다시 감싸는게 불가능)-->
+            <div class="promotion">
+                <section class="news"></section>
+                <section class="movie"></section>
+            </div><!--promotion-->
+        </div><!--container-->
+        <footer></footer>
+    </div>
+</body>
+</html>
