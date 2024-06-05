@@ -19,6 +19,6 @@ a {
 img { /* 이미지태그를 a태그로 감싸면 일부 브라우저에서 파란색 테두리가 생김 그걸 방지 */
     border: 0;
 }
-em {
+em, address {
     font-style: normal;
 }
