@@ -1,0 +1,89 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언해야 모든 글자에 적용 */
+html, body {
+    font-family: 'NanumSquareNeo', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.4; /* 배수 */
+    word-break: keep-all;
+}
+/* id는 #으로 불러야함 */
+#wrap { /* 홈페이지 전체를 감싸는 역할 -가로 스크롤바가 생겼을때 배경이 짤리는 현상을 방지 */
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+.community { 
+    margin: 160px 0 0 0;
+}
+.community .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+.community .colgroup1 .rowgroup1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+.community .colgroup2 .rowgroup2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 0 0;
+}
+.community .txt_news {
+    width: 297px;
+    background-color: #f4f4f4;
+}
+.community .txt_news a {
+    height: 215px;
+}
+.community .photo_news {
+    width: 618px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .photo_news a {
+    height: 364px;
+    display: flex;
+    flex-direction: column; /* 세로정렬 */
+    justify-content: flex-end; /* 하단정렬 */
+}
+/* <div class="photo_news bg1"></div> 이렇게 하나의 요소에 두개의 이름이 들어간 경우 아래처럼 소환*/
+.community .photo_news.bg1 {
+    background-image: url(../images/community1.png);
+}
+.community .photo_news.bg2 {
+    background-image: url(../images/community2.png);
+}
+.community .photo_news h2 {
+    color: #fff;
+}
+.community .txt_news.deepgr {
+    background-color: #005c53;
+}
+.community .txt_news.gr {
+    background-color: #44803f;
+}
+.community a {
+    padding: 33px;
+    display: block;
+}
+.community a h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+.community a .name {
+    display: flex;
+}
+.community a .name span:first-child {
+    margin: 0 36px 0 0;
+}
