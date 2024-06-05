@@ -3,7 +3,7 @@
 
 /* 글자 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언해야 모든 글자에 적용 */
 html, body {
-    font-family: Pretendard, sans-serif;
+    font-family: 'Pretendard', sans-serif;
     font-weight: 400;
     font-size: 15px;
     color: #3d3d3d;
@@ -147,17 +147,6 @@ header .gnb ul li a:hover {
 .promotion .news .tit h2 em {
     color: #2ADEA1;
 }
-.promotion .news .tit a {
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 10px 21px;
-    margin: 22px 0 0 0;
-    display: inline-block;
-}
-.promotion .news .tit a:hover {
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #022873;
-}
 .promotion .news .list {
     width: 749px;
 }
@@ -179,6 +168,26 @@ header .gnb ul li a:hover {
 }
 .promotion .news .list ul li a:hover strong { /* a한테 오버했을때 strong태그의 스타일이 변함*/
     font-weight: 800;
+}
+.promotion .news .wrapper {
+    position: relative; 
+    /* more정렬의 기준
+    more를 감싸는 wrapper를 기준으로 정렬, */
+}
+.promotion .news .more {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px 21px;
+    display: inline-block;
+    position: absolute; left: 0; top: 120px;
+    /* position: absolute는 반드시 좌우위치 (left or right)
+    위아래위치 (top or bottom)값이 필수, 이 값을 어디서부터 계산하는 지 기분이 필요함 
+    나는 감싸는 요소중에서 position 속성을 가진 요소를 기준으로 정렬 
+    --- .wrapper를 기준으로 정렬 */
+}
+.promotion .news .more:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #022873;
 }
 .promotion .movie .tit h2 {
     font-size: 45px;
@@ -254,4 +263,25 @@ footer .f_info address, footer .f_info span {
 }
 footer .copyright {
     color: rgba(255, 255, 255, 0.6);
+}
+footer .wrapper {
+    position: relative;
+}
+footer .family {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* footer .wrapper를 기준 */
+}
+footer .family button { /* button태그는 인라인블럭 태그 */
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 208px;
+    height: 38px;
+    /* 원래 버튼 태그는 요소가 센터에 정렬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
 }
