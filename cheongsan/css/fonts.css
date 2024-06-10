@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 400;
+    font-style: normal;
+	src: local('S-CoreDream Regular'), url(../fonts/SCoreDreamRegular.woff2) format('woff2'), url(../fonts/SCoreDreamRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 700;
+    font-style: normal;
+	src: local('S-CoreDream ExtraBold'), url(../fonts/SCoreDreamExtraBold.woff2) format('woff2'), url(../fonts/SCoreDreamExtraBold.woff) format('woff');
+}
