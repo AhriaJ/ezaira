@@ -1,0 +1,175 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언해야 모든 글자에 적용 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.2; /* 배수 */
+    word-break: keep-all;
+}
+/* id는 #으로 불러야함 */
+/* 홈페이지 전체를 감싸는 역할 -가로 스크롤바가 생겼을때 배경이 짤리는 현상을 방지 */
+#wrap { 
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+@media screen and (max-width:640px){ 
+    /* 640px이하에서만 우선적용. 선택자가 동일해야함 pc버전 스타일과 mobile버전 스타일이 동시에 적용되어 변경되는 요소만 스타일 적용 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap { 
+        min-width: 100%; /* 최소 넓이 꽉차게*/
+    }
+    .wrapper {
+        width: auto; /* block오소의 속성대로 알아서. 
+        100%로 주면 margin이 좌우로 20px씩 들어가서
+        실제 넓이가 100% + 40px로 사이즈가 넘치게 됨 */
+        margin: 0 20px; /* 좌우 여백 20px */
+    }
+}/* media */
+
+.eco h2 {
+    font-size: 45px; font-weight: 700; color: #1d1d1d; margin: 135px 0 41px 0;
+}
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.eco ul li {
+    width: 404px;
+}
+.eco ul li a h3 {
+    font-size: 25px; font-weight: 700; color: #1d1d1d; margin: 20px 0 13px 0;
+}
+@media screen and (max-width:640px){
+    .eco h2 {
+        font-size: 20px; margin: 62px 0 17px 0;
+    }
+    .eco ul li {
+        width: calc(50% - 8px);
+        /* 두개의 li가 반반 들어가는데 사이의 여백이 16px 고정으로 들어감. 
+        (100% / li개수) - (사이여백의 총합 / li개수)
+        ex) (100% / 2) - (16px / 2) 
+        50% - 8px 
+        퍼센트와  px 두 단위를 동시에 계산하는 계산식
+        calc(50% - 8px) 반드시 -,+ 같은 수식 앞뒤로 여백이 있어야함. */
+    }
+    .eco ul li:last-child { display: none; }
+    /* 글자는 넓이가 부족하면 줄이 바뀜. 하지만 이미지는 넓이를 주지않으면 절대 안바뀜
+     아무리 이미지를 감싸는 영역의 넓이가 줄어도 이미지는 빠져나옴 */
+    .eco ul li a .photo img { 
+        width: 100%; 
+     /* 넓이만 주기 - 높이는 비율에 맞게 자동으로 적용. ( 넓이 높이 둘 다 주면 비율이 깨질 수도 있음) 
+      100% - 이미지를 감싸는 요소의 넓이 100% > 만약 이미지의 사이즈가 더 작다면 늘어남 */
+    }
+    .eco ul li a h3 {
+        font-size: 15px; margin: 13px 0 7px 0;
+    }
+} /*media*/
+.pure {
+    background: url(../images/pure_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    margin: 160px 0 0 0;
+    height: 700px;
+    text-align: center;
+}
+.pure h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    padding: 100px 0 24px 0;
+}
+.pure ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0 0 0;
+}
+.pure ul li {
+    width: 297px;
+    height: 297px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 20px;    
+}
+.pure ul li a {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .pure {
+        margin: 80px 0 0 0;
+        padding: 0 0 58px 0;
+        /* 모바일에서 높이는 계속 바뀜. 높이를 지정해주는 것이 아니라 콘텐츠 하단의 값을 입력해줌 */
+        height: auto; /* 기존에 선언된 높이 값을 해제 */
+    }
+    .pure h2 {
+        font-size: 20px;
+        padding: 54px 0 10px 0;
+    }
+    .pure ul {
+        flex-wrap: wrap; /* 여러줄 허용 */
+        gap: 16px;
+        margin: 32px 0 0 0;
+    }
+    .pure ul li {
+        width: calc(50% - 8px);
+        height: 152px;
+        border-radius: 10px;    
+    }
+}/* media */
+
+.tech {
+    margin: 156px 0 200px 0;
+} 
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    font-size: 25px; 
+    font-weight: 700; 
+    color: #1d1d1d;
+    margin: 50px 0 5px 0;
+    display: block;
+}
+.tech h2 {
+    font-size: 45px; 
+    font-weight: 700; 
+    color: #1d1d1d;
+}
+.tech p {
+    width: 511px;
+    margin: 33px 0 36px 0;
+}
+@media screen and (max-width:640px){
+    .tech {
+        margin: 74px 0 200px 0;
+    } 
+    .tech .wrapper {
+        display: block;
+        /* flex를 해제하기 위해서는 display의 다른 속성을 선언하면 됨. 제일 만만한게 block */
+    }
+    .tech strong {
+        font-size: 15px; 
+    }
+    .tech h2 {
+        font-size: 45px; 
+        font-weight: 700; 
+        color: #1d1d1d;
+    }
+    .tech p {
+        width: auto;
+        margin: 14px 0 16px 0;
+    }
+    .tech .photo img {
+        width: 100%;
+    }
+}
