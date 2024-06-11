@@ -359,6 +359,22 @@ footer .f_nav ul {
 }
 footer .f_nav ul li {
     padding: 0 46px 0 0;
+    position: relative;
+}
+footer .f_nav ul li::after {
+    content: ""; 
+    /* 가상요소 before와 after를 사용할때는 반드시 content 필요.
+     지우면 나타나지않음 */
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+    display: block;
+    position: absolute;
+    right: 23px;
+    top: 4px;
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
 }
 footer .f_nav ul .privacy {
     font-weight: 700;
