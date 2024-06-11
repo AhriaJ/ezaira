@@ -264,7 +264,7 @@ header .gnb ul a:hover {
     margin: 185px 0 0 0;
 }
 .community .tit h2 {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
     color: #fff;
@@ -287,15 +287,96 @@ header .gnb ul a:hover {
     font-size: 22px;
     font-weight: 700;
     color: #fff;
-    margin: 41px 0 25px 0;
+    margin: 41px 0 20px 0;
+}
+.community .news ul li {
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+.community .news ul li:first-child {
+    border-top: 0;
+}
+.community .news ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 0;
+}
+.community .news ul li a:hover {
+    color: #05F2C7;
+    font-weight: 700;
+}
+.community .link {
+    width: 428px;
+    display: flex;
+    align-items: flex-end;
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.community .link ul li {
+    width: 190px;
+    background-color: rgba(8, 62, 74, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    margin: 24px 0 0 24px;
+}
+.community .link ul li:hover {
+    background-color: rgba(5,242,199,0.3);
+}
+.community .link ul li a {
+    display: block;
+    height: 175px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    padding: 38px;
+    background-position: right 38px bottom 38px;
+    background-repeat: no-repeat;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/commu_ico1.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/commu_ico2.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/commu_ico3.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/commu_ico4.svg);
 }
 
-
-
-
-
-
-
 footer {
-    margin: 500px 0 0 0;
+    padding: 43px 0 70px 0;
+    background-color: #EDEDED;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;    
+}
+footer .f_nav ul li {
+    padding: 0 46px 0 0;
+}
+footer .f_nav ul .privacy {
+    font-weight: 700;
+}
+footer .f_info {
+    margin: 29px 0;
+    display: flex;
+    justify-content: space-between;
+}
+footer .copylight {
+    color: #666;
+}
+footer .family button {
+    width: 190px;
+    height: 41px;
+    border: 1px solid #9F9F9F;
+    border-radius: 10px;
+    padding: 0 17px;
+    text-align: left;
+    background: url(../images/family.svg) no-repeat right 15px center;
 }
