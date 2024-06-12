@@ -34,3 +34,156 @@
             margin: 0; /* pc버전에서 준 여백을 삭제하려면 0을 줌 */
         }
 } /*media*/
+
+.health {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 135px 0 144px 0;
+}
+.health h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    padding: 0 0 13px 0;
+}
+
+@media screen and (max-width:640px){
+        .health {
+            padding: 88px 0 87px 0;
+        }
+        .health h2 {
+            font-size: 30px;
+            padding: 0 0 11px 0;
+        }
+        .health p br { /* 줄바꿈을 주던 태그를 삭제 */
+            display: none;
+        }
+} /*media*/
+
+.solution {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 135px 0 144px 0;
+}
+.solution h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    padding: 0 0 13px 0;
+}
+.solution p span {
+    display: block;
+}
+@media screen and (max-width:640px){
+    .solution {
+        padding: 88px 0 87px 0;
+    }
+    .solution h2 {
+        font-size: 30px;
+        padding: 0 0 11px 0;
+    }
+    .solution p span {
+        display: inline;
+    }
+
+} /*media*/
+.story {
+    margin: 167px 0 0 0;
+}
+.story .rowgroup1, 
+.story .rowgroup2 {
+    display: flex;
+    align-items: center; /* txxt 와  photo를 위아래 가운데 (세로) 정렬 */
+}
+.story .rowgroup2 {    
+    flex-direction: row-reverse;
+}
+.story .txt {
+    width: 630px;
+    padding: 0 0 0 107px;
+}
+.story .txt strong {
+    font-weight: 700;
+}
+.story .txt h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1;
+    padding: 11px 0 25px 0;
+}
+.story .txt .more{
+    margin: 30px 0 0 0;
+}
+.story .txt .more a {
+    padding: 8px 95px 9px 20px;
+    background-color: #417F3E;
+    color: #fff;
+    display: inline-block; /* padding 적용 */
+    position: relative;
+}
+.story .txt .more a::after {
+    position: absolute; right: 15px; top: 6px;
+    /* 아이콘 같이 전체가 보여야하는 경우는 contain - 이미지 안 짤림
+        배경에 이미지를 넣은 경우는 cover - 이미지 짤림
+        둘 다 영역에 크기에 맞춰서 배경이미지가 리사이즈됨 */
+    background: url(../images/story_more.svg) no-repeat center center / contain;
+    content: ""; 
+    width: 24px;
+    height: 24px;
+    /* after, bofore 가상선택자는 반드시 content 속성을 줘야 나타남 
+    넓이와 높이가 존재하지않는 특성이 있음. 이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야함
+    위치가 태그의 시작위치, 종료위치 마음대로 바뀜 내가 원하는 위치에 배치하려면 absolute로 배치해야함
+    그냥 before, after가상선택자는 반드시 absolute를 준다고 생각하면 됨*/
+}
+.story .photo { /* 이미지 태그 하단에 행간이 적용됨. 이걸 없애려면 이미지를 감싸는 태그에 폰트사이즈, 행간 0을 줌 */
+    font-size: 0;
+    line-height: 0;
+}
+
+@media screen and (max-width:640px){
+        .story {
+            margin: 0;
+        }
+        .story .rowgroup1, 
+        .story .rowgroup2 {
+            display: block; /* flex 해제 */
+        }
+        .story .txt {
+            width: auto;
+            padding: 0;
+            margin: 60px 0 26px 0;
+        }
+        .story .txt strong {
+            margin: 0 31% 0 0;
+            display: block;
+        }
+        .story .txt strong br { 
+            display: none;
+        }
+        .story .txt h2 {
+            font-size: 35px;
+            padding: 11px 0 17px 0;
+        }
+        .story .txt p br {
+            display: none;
+        }
+        .story .txt .more{
+            margin: 22px 0 0 0;
+        }
+        .story .txt .more a {
+            padding: 7px 61px 7px 16px;
+            display: inline-block; /* padding 적용 */
+            position: relative;
+        }
+        .story .txt .more a::after {
+            position: absolute; right: 7px; top: 3px;
+        }
+        .story .photo img {
+            width: 100%; /* photo 넓이의 100% */
+        }
+}/*media*/
