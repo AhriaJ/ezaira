@@ -187,3 +187,89 @@
             width: 100%; /* photo 넓이의 100% */
         }
 }/*media*/
+
+.news h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1;
+    margin: 200px 0 33px 0;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 297px;
+    border: 1px solid #ccc;
+}
+.news ul li a {
+    padding: 44px 26px 45px 25px;
+    display: block;
+}
+.news ul li a strong {
+    color: #417F3E;
+    font-weight: 700;
+}
+.news ul li a h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 14px 0;
+
+    /* 1줄로 제한하기  - 주의사항 padding 절대 금지 */
+    white-space: nowrap; /* 줄바꿈 금지 */
+    overflow: hidden; /* 영역에서 넘치는 글자 자르기 - *조건* 요소가 블럭요소여야 함 */
+    text-overflow: ellipsis; /* 글자 마지막에 말줄임표 추가 (글자 형태 잘리는 현상 막기) - 주의사항 ...수정 불가능 */
+}
+.news ul li a p {
+    /* 3줄로 제한하기 - 주의사항 padding 절대 금지 */
+    line-height: 1.2;
+    height: 3.6em; /* 행간 x 줄수 = 단위는 em */
+    overflow: hidden;
+}
+.news ul li a span {
+    color: #666;
+    margin: 35px 0 0 0;
+    display: block;
+}
+
+@media screen and (max-width:640px){
+        .news h2 {
+            font-size: 30px;
+            margin: 65px 0 20px 0;
+        }
+        .news ul {
+           /* display: flex;
+            justify-content: space-between;  2개씩 나오게 할꺼라 유지*/
+            flex-wrap: wrap;
+        }
+        .news ul li {
+            width: calc(50% - 8px);
+            margin-bottom: 16px;
+        }
+        .news ul li a {
+            padding: 26px 26px 38px 26px;
+        }
+        .news ul li a h3 {
+            font-size: 18px;
+            margin: 11px 0 15px 0;
+        }
+        .news ul li a span {
+            color: #666;
+            margin: 21px 0 0 0;
+        }
+} /*media*/
+
+@media screen and (max-width:450px){
+        .news ul {
+            display: block;
+        }
+        .news ul li {
+            width: auto;
+        }
+} /*media*/
+
+
+.container {
+    margin-bottom: 150px;
+}
