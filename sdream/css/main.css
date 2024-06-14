@@ -1,0 +1,155 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/* 폰트 2개 - 제목에는 gmarket, 본문에는 pretendard
+    body에는 본문 서체 적용. 
+    
+    제목 서체를 사용하는 적용하는 방법
+    1. css에서 해당 요소를 모두 선택하고 각각 불러내 서체 적용 시키기(귀찮음)
+    2. css를 하나 만들어 둠. 예를 들어 .tit로 만들고 html에서 gmarket 서체를 써야하는 html요소에
+    <section class="biz">
+        <h2 class="tit"></h2>    ---- 필요한곳에 class명 부여.
+    </section>
+*/
+
+.tit {
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 500;
+}
+.tit_b {
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 700;
+}
+
+header {
+    position: absolute; /*body를 기준삼아*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    font-size: 22px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 100;    
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 17px 0 0 0;
+}
+header .gnb .gnb_open {
+    display: none;
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul li a {
+    padding: 38px 32px 35px 32px;
+    display: block;
+    position: relative;
+}
+header .gnb .gnb_wrap ul li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    right: 0;
+    top: 48px;
+}
+header .gnb .gnb_wrap ul li:last-child a::after {
+    display: none;
+}
+
+@media screen and (max-width:640px){
+    header {
+        height: 50px;
+    }
+    header .logo {
+        margin: 11px 0 0 0;
+    }
+    header .logo img { /* 이미지태그로 코딩한 요소는 사이즈가 변경되면 반드시 css에서  img태그를 불러서 스타일을 줘야함. */
+        width: 82px; /* 넓이만 주면 높이는 알아서 조정 */
+    }
+    header .gnb .gnb_open {
+        /* 이미 header에 포지션값이 적용되어있어 header를 기준으로 알아서 정렬이 됨 */
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 50px;  /* button 사이즈 키우기 */
+        font-size: 0;   /*글자숨기기*/
+        line-height: 0;
+        background: url(../images/gnb_open.svg) no-repeat center center;   
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+
+}/*media*/
+
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 900px;
+    color: #fff;
+}
+.visual strong {
+    display: block;
+    color: rgba(255,255,255,0.8);
+    padding: 229px 0 9px 0;
+}
+.visual h2 {
+    font-size: 45px;
+}
+
+@media screen and (max-width:640px){
+    .visual {
+        height: auto;
+        padding:  86px 0 176px 0;
+    }
+    .visual strong {
+        display: none
+    }
+    .visual h2 {
+        font-size: 25px;
+    }
+}/*media*/
+
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.biz .subject {
+    position: sticky;
+    top: 240px;
+}
+.biz .subject strong {
+    font-weight: 700;
+    color: #044AD9;
+}
+.biz .subject h2 {
+    font-size: 45px;
+    color: #1d1d1d;
+    margin: 9px 0 21px 0;
+}
+.biz .list {
+    width: 500px;
+    height: 1500px;
+    background-color: #07D99A;
+}
+
+
+
+
+
+
+footer {
+    margin: 200px 0 0 0;
+}
