@@ -121,14 +121,21 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     }
 }/*media*/
 
+.biz {
+    margin: 124px 0 0 0;
+}
 .biz .wrapper {
     display: flex;
     justify-content: space-between;
+    /* flex로 정렬하면 좌우요소 길이가 같아짐. 하지만 스티키 구현을 위해선 좌우길이가 달라야함. */
     align-items: flex-start;
-}
+} /* align-items을 주면 flex로 정렬되어 길이가 같아진 요소들이 다시 본인 길이를 찾게됨 */
 .biz .subject {
     position: sticky;
-    top: 240px;
+    top: 121px;
+    margin: 121px 0 0 0;
+    /* 나를 감싸는 요소내에서 스크롤되는 동안 상단에 고정으로 존재. 감싸는 요소가 스크롤이 끝나면 그제서야 따라서 스크롤됨 대부분 left를 잘 안주고 top만 줌 
+    단점 :  감싸는 요소에 절대 overflow:hidden;을 주면 안됨. */
 }
 .biz .subject strong {
     font-weight: 700;
@@ -140,16 +147,163 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     margin: 9px 0 21px 0;
 }
 .biz .list {
-    width: 500px;
-    height: 1500px;
-    background-color: #07D99A;
+    width: 832px;
 }
-
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 404px;
+    color: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    overflow: hidden; /* 넘치는 요소 삭제 */
+}
+.biz .list ul li:nth-child(odd) { /* 홀수 odd/ 짝수 even */
+    transform: translate(0, 121px); 
+    /* margin은 다른 요소와 중복되면 밀리는 형상이 있지만
+     transform: translate는 공간을 차지하지않음.
+     기본적인 여백은 margin, margin이 안될때는 transform 사용*/
+}
+.biz .list ul li a {
+    height: 360px;
+    display: block;
+    position: relative;
+}
+.biz .list ul li a .photo::before {
+    display: none;
+    position: absolute; /* a 기준 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4,74,217,0.7);
+    content: ""; /* before를 존재하게 하는 값 */
+}
+.biz .list ul li a:hover .photo::before {
+    display: block;
+}
+.biz .list ul li a h3 {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    font-size: 24px;
+}
+.biz .list ul li a:hover h3 {
+    bottom: 98px;
+    font-weight: 700;
+}
+.biz .list ul li a p {
+    display: none;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    width: 319px;
+}
+.biz .list ul li a:hover p {
+    display: block;
+}
+.biz .list ul li a .more {
+    display: none;
+    position: absolute;
+    right: 36px;
+    bottom: 103px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/biz_more.png) no-repeat center center;
+    font-size: 0;
+    line-height: 0;
+}
+.biz .list ul li a:hover .more {
+    display: block;
+}
+@media screen and (max-width:640px){
+        .biz {
+            margin: 80px 0 0 0;
+        }
+        .biz .wrapper {
+            display: block;
+        } 
+        .biz .subject {
+            position: relative; /* sticky를 취소하기 위해*/
+            top: auto;
+            margin: 0;
+        }
+        .biz .subject h2 {
+            font-size: 25px;
+            margin: 3px 0 24px 0;
+        }
+        .biz .subject h2 br {
+            display: none;
+        }
+        .biz .subject p {
+            display: none;
+        }
+        .biz .list {
+            width: auto;
+        }
+        .biz .list ul {
+            gap: 16px;
+        }
+        .biz .list ul li {
+            width: calc(50% - 8px);
+            color: #1d1d1d;
+            border-radius: 0;
+            overflow: visible; /* overflow 해체 */
+        }
+        .biz .list ul li:nth-child(odd) { 
+            transform: translate(0, 0); 
+        }
+        .biz .list ul li a {
+            height: auto;
+        }
+        .biz .list ul li a .photo {
+            height: 100px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .biz .list ul li a .photo img {
+            /* pc와 mobile에서 이미지 비율이 다르게 보일때 */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .biz .list ul li a:hover .photo::before {
+            display: none;
+        }
+        .biz .list ul li a h3 {
+            position: relative;
+            left: auto;
+            bottom: auto;
+            font-size: 15px;
+            color: #1d1d1d;
+            text-align: center;
+            margin: 7px 0 0 0;
+        
+        }
+        .biz .list ul li a:hover h3 {
+            bottom: auto;
+            font-weight: 400;
+        }
+        .biz .list ul li a p {
+            display: none;
+        }
+        .biz .list ul li a:hover p {
+            display: none;
+        }
+        .biz .list ul li a .more {
+            display: none;
+        }
+        .biz .list ul li a:hover .more {
+            display: none;
+        }
+} /*media*/
 
 
 
 
 
 footer {
-    margin: 200px 0 0 0;
+    margin: 500px 0 0 0;
 }
