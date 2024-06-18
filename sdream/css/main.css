@@ -607,7 +607,181 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         }
 }/*media*/
 
+.introduce {
+    margin: 102px 0 76px 0;
+}
+.introduce .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.introduce .list ul li {
+    width: 615px;
+    color: rgba(255,255,255,0.8);
+}
+.introduce .list ul li a {
+    display: block;
+    height: 165px;
+    border-radius: 20px;
+    position: relative;
+    padding: 39px 0 0 48px;
+}
+.introduce .list ul li.intro1 a {
+    background: url(../images/intro1.png) no-repeat center center / cover;
+}
+.introduce .list ul li.intro2 a {
+    background: url(../images/intro2.png) no-repeat center center / cover;
+}
+.introduce .list ul li a h3 {
+    font-size: 30px;
+    color: #fff;
+    
+}
+.introduce .list ul li a:hover h3 {
+    font-weight: 700;
+}
+.introduce .list ul li a .more {
+    display: inline-block;
+    position: relative;
+    margin: 3px 0 0 0;
+    padding-right: 25px;
+    font-size: 15px;
+}
+.introduce .list ul li a .more::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/biz_more.svg) no-repeat center center / contain;
+    content: "";
+}
+@media screen and (max-width:640px){
+        .introduce {
+            margin: 60px 0 52px 0;
+        }
+        .introduce .list ul li {
+            width: calc(50% - 8px);
+        }
+        .introduce .list ul li a {
+            height: auto;
+            border-radius: 10px;
+            padding: 28px 0 20px 0;
+            text-align: center;
+        }
+        .introduce .list ul li a h3 {
+            font-size: 17px;            
+        }
+        .introduce .list ul li a .more {
+            margin: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+        .introduce .list ul li a .more::after {
+            top: -10px;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/intro_mobile_ico.svg);
+        }
+} /*media*/
 
 footer {
-    margin: 500px 0 0 0;
+    background-color: #f4f4f4;
+    padding: 54px 0 89px 0;
 }
+footer .wrapper {
+    position: relative; /* top 정렬기준*/
+}
+footer .top {
+    position: absolute;
+    right: 0;
+    top: -6px;
+    color: #666;
+}
+footer .top button {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 6px 37px 5px 17px;
+}
+footer .top button::after {
+    position: absolute; /* 비포 애프터는 나를 감싸고있는 요소가 기준 (여기선 버튼) */
+    right: 10px;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/top_ico.svg) no-repeat center center / contain;
+    content: "";
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 38px
+}
+footer .f_nav ul li {
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -19px;
+    top: 5px;
+    height: 10px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 700;
+}
+footer .f_info {
+    margin: 32px 0 0 0;
+    display: flex;
+    gap: 38px
+}
+footer .copyright {
+    color: #666;
+    margin: 10px 0 0 0;
+}
+@media screen and (max-width:640px){
+        footer {
+            padding: 27px 0 59px 0;
+        }
+        footer .top {
+            position: relative;
+            right: auto;
+            top: auto;
+            text-align: right;
+        }
+        footer .top button {
+            padding: 4px 33px 5px 16px;
+        }
+        footer .top button::after {
+            top: 3px;
+        }
+        footer .f_nav ul {
+            gap: 0;
+            margin: 18px 0 0 0;
+            flex-wrap: wrap;
+        }
+        footer .f_nav ul li {
+            margin: 0 33px 4px 0;
+        }
+        footer .f_nav ul li::after {
+            right: -17px;
+            top: 3px;
+            height: 7px;
+            width: 1px;
+        }
+        footer .f_info {
+            margin: 18px 0 0 0;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        footer .f_info address, footer .f_info span {
+            margin: 0 33px 4px 0;
+        }
+        footer .copyright {
+            margin: 11px 0 0 0;
+        }
+}/*media*/
