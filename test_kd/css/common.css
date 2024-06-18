@@ -1,0 +1,21 @@
+/* 글자 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언해야 모든 글자에 적용 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d;
+    letter-spacing: -0.05em; /* 자간 */
+    line-height: 1.4; /* 배수 */
+    word-break: keep-all;
+    word-wrap: break-word; /* 만약 단어길이가 화면넓이를 벗어난다면 강제로 줄바꿈을 실행 */
+}
+/* id는 #으로 불러야함 */
+/* 홈페이지 전체를 감싸는 역할 -가로 스크롤바가 생겼을때 배경이 짤리는 현상을 방지 */
+#wrap { 
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px; 
+    margin: 0 auto; /* 가운데 정렬 */
+}
+

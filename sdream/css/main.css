@@ -446,6 +446,9 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 .webzine {
     margin: 135px 0 0 0;
 }
+.webzine .wrapper {
+    position: relative;
+}
 .webzine .subject strong {
     font-weight: 700;
     color: #044AD9;
@@ -453,7 +456,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 .webzine .subject h2 {
     font-size: 45px;
     color: #1d1d1d;
-    margin: 10px 0 43px 0; 
+    margin: 10px 0 30px 0; 
 }
 .webzine .list ul {
     display: flex;
@@ -469,6 +472,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     display: block;
     overflow: hidden;
 }
+
 /* 게시판에서 이미지를 가져오는 경우 이미지의 사이즈가 다양함. 이를 디자인한대로 동일한 사이즈로 리사이즈하는 방법
 1. 이미지를 감싸는 요소가 넓이와 높이를 가지고 있기
     overflow:hidden;도 있어야함
@@ -481,8 +485,127 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition:0.5s;
 }
-
+.webzine .list ul li a h3 {
+    font-size: 20px;
+    color: #1d1d1d;
+    margin: 26px 30px 10px 27px;
+}
+.webzine .list ul li a p {
+    color: #666;
+    margin: 0 0 0 27px;
+}
+.webzine .list ul li a:hover {
+    border-color: #044AD9;
+    background-color: #044AD9;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.webzine .list ul li a:hover h3 {
+    color: #fff;
+}
+.webzine .list ul li a:hover p {
+    color: rgba(255,255,255,0.8);
+}
+.webzine .more {
+    position: absolute;
+    right: 0;
+    top: 32px;
+}
+.webzine .more a {
+    display: block;
+    padding: 8px 48px 8px 20px;
+    border-radius: 35px;
+    border: 1px solid #ccc;
+    color: #666;
+    position: relative;
+}
+.webzine .more a::after {
+    position: absolute;
+    right: 16px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/arrow_forward.svg) no-repeat center center / contain;
+    content: "";
+}
+.webzine .more a:hover {
+    background-color: #044AD9;
+    border-color: #044AD9;
+    color: #fff;
+}
+.webzine .more a:hover::after {
+    background-image: url(../images/arrow_forward02.svg);
+}
+@media screen and (max-width:640px){
+        .webzine {
+            margin: 70px 0 0 0;
+        }
+        .webzine .subject h2 {
+            font-size: 25px;
+            margin: 5px 0 19px 0; 
+        }
+        .webzine .list ul {
+            display: block;
+        }
+        .webzine .list ul li {
+            width: 100%;
+        }
+        .webzine .list ul li:nth-child(2), .webzine .list ul li:nth-child(3) {
+            display: none;
+        }
+        .webzine .list ul li a {
+            height: auto;
+            border-radius: 10px;
+        }
+        .webzine .list ul li a .photo {
+            height: 175px; /* 블럭요소라 넓이는 안줘도 알아서 들어감 */
+        }
+        .webzine .list ul li a h3 {
+            font-size: 17px;
+            color: #3d3d3d;
+            margin: 19px 20px 10px 21px;
+        }
+        .webzine .list ul li a p {
+            margin: 0 0 24px 21px;
+        }
+        .webzine .list ul li a:hover {
+            border-color: #ccc;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        .webzine .list ul li a:hover .photo img {
+            transform: scale3d(1.2, 1.2, 1);
+        }
+        .webzine .list ul li a:hover h3 {
+            color: #3d3d3d;
+        }
+        .webzine .list ul li a:hover p {
+            color: #666;
+        }
+        .webzine .more {
+            position: relative;
+            right: auto;
+            top: auto;
+            margin: 23px 0 0 0;
+            text-align: center;
+        }
+        .webzine .more a {
+            display: inline-block;
+            padding: 7px 38px 7px 18px;
+            border-radius: 20px;
+            
+        }
+        .webzine .more a::after {
+            right: 14px;
+            top: 5px;
+            width: 19px;
+            height: 19px;
+        }
+}/*media*/
 
 
 footer {
