@@ -254,12 +254,89 @@
     }
 }/*media*/
 
-
-
-
+.interview {
+    background-color: #F6F3EE;
+    margin: 155px 0 0 0;
+    padding: 112px 0 219px 0;
+}
+.interview .wrapper {
+    position: relative;
+}
+.interview .tit {
+    text-align: center;
+}
+.interview .tit h2 {
+    font-family: 'Eulyoo1945';
+    font-size: 45px;
+    color: #1d1d1d;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    margin: 0 0 10px 0;
+}
+.interview .list {
+    margin: 66px 0 0 0;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+}
+.interview .list ul li:nth-child(2) {
+    margin-top: 58px;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 50px 0 50px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+.interview .more {
+    position: absolute;
+    top: 114px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.interview .more a {
+    padding: 7px 63px 7px 18px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.interview .more a::after {
+    position: absolute;
+    right: 13px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_13_36' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_13_36)'%3E%3Cpath d='M14.2316 10.4166H4.16602V9.58329H14.2316L9.40477 4.75642L9.99935 4.16663L15.8327 9.99996L9.99935 15.8333L9.40477 15.2435L14.2316 10.4166Z' fill='%235B5545'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.interview .more a:hover {
+    border-color: #875F45;
+    background-color: #875F45;
+    color: #fff;
+}
+.interview .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_13_36' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_13_36)'%3E%3Cpath d='M14.2316 10.4166H4.16602V9.58329H14.2316L9.40477 4.75642L9.99935 4.16663L15.8327 9.99996L9.99935 15.8333L9.40477 15.2435L14.2316 10.4166Z' fill='%23FFFFFF'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 
 
 
 footer {
-    margin-top: 200px;
+    margin: 200px 0 0 0;
 }
