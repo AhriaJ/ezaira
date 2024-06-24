@@ -13,8 +13,28 @@
 </head>
 <body>
     <div id="wrap">
+        <!-- 스크롤이 되면 jquery에서 fixed 클래스를 header에게 부여 -->
         <header>
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <!-- 로고 이미지가 검>흰으로 교체됨. 이럴땐 이미지태그로 코딩 X css에서 background로 하기 -->
+                <h1 class="logo"><a href="#n">을유문화사</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li><a href="#n">을유문화사</a></li>
+                            <li><a href="#n">콘텐츠</a></li>
+                            <li><a href="#n">을유소식</a></li>
+                            <li><a href="#n">독자참여</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- top navigation bar - 메뉴 외 상단에 있는 요소들 -->
+                <div class="tnb">
+                    <a href="#n" class="mypage">마이페이지</a>
+                    <a href="#n" class="search">검색</a>
+                </div>
+            </div>
         </header>
         <main class="container">
             <section class="visual">
@@ -124,7 +144,7 @@
                     <div class="list">
                         <ul>
                             <!-- 마우스를 오버하면 jquery에서 오버한 li에만 on 클래스를 추가 -->
-                            <li>
+                            <li class="on">
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview1.png" alt="책을 보고있는 모습"></div>
                                     <div class="txt">
@@ -134,7 +154,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="on">
+                            <li>
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview2.png" alt="창밖을 바라보는 모습"></div>
                                     <div class="txt">
@@ -145,7 +165,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="on">
+                            <li>
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview3.png" alt="소파에 앉아 인터뷰하는 모습"></div>
                                     <div class="txt">
