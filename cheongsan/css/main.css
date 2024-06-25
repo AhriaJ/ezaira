@@ -25,7 +25,7 @@ header {
      header는 원래 block요소이기 때문에 넓이가 브라우저 넓이만큼 들어감
      그러나 position:absolute값이 적용되면 넓이값은 내부 컨텐츠 요소의 넓이값만큼만 적용됨
      header에 position:absolute를 주면 넓이 100%를 준다고 생각*/
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -44,7 +44,11 @@ header {
     </section> 
     여기선 header가 맨 위가 됨. visual tit은  visual보다 위에 배치될 수 없음
     (감사는 요소가z-index 10이기 때문에 header보다 높은 숫자를 줘도 아래 배치) */
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+header.fixed {
+    backdrop-filter: blur(5px) brightness(0.8);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 header .wrapper {
     display: flex;
@@ -188,14 +192,22 @@ header .gnb ul a:hover {
 }
 .tour .list ul li {
     width: 190px;
+    overflow: hidden;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: rgba(255,255,255,0.8);
+    transition: 0.5s;
 }
 /* li중에서 active 클래스를 갖고있는 li (띄어쓰기 중요) */
 .tour .list ul li.active {
     width: 618px;
+}
+.tour .list ul li.active a {
+    width: 618px;
+    /* transition 영향으로 넓이가 0.5초 동안 190>618px로 점점 변함
+        하지만 a에는 transition이 없어 618px로 넓이가 고정되기 때문에 컨텐츠 넓이가 고정이 됨.
+        그래서 글씨가 190px넓이일때 영향을 받지않음*/
 }
 .tour .list ul li.tour1 {
     background-image: url(../images/tour1.png);
@@ -353,6 +365,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 footer .f_nav ul {
     display: flex;    
@@ -387,6 +400,9 @@ footer .f_info {
 footer .copylight {
     color: #666;
 }
+footer .family {
+    position: relative;
+}
 footer .family button {
     width: 190px;
     height: 41px;
@@ -394,5 +410,46 @@ footer .family button {
     border-radius: 10px;
     padding: 0 17px;
     text-align: left;
-    background: url(../images/family.svg) no-repeat right 15px center;
+    position: relative;
+}
+footer .family button::after {
+    position: absolute;
+    right: 17px;
+    top: 14px;
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .family button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.148' height='11.148' viewBox='0 0 11.148 11.148'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24' d='M224.931-733.783h-4.288a.622.622,0,0,1-.458-.185.623.623,0,0,1-.185-.458.621.621,0,0,1,.185-.458.622.622,0,0,1,.458-.185h4.288v-4.288a.622.622,0,0,1,.185-.458.622.622,0,0,1,.458-.185.621.621,0,0,1,.458.185.622.622,0,0,1,.185.458v4.288h4.288a.622.622,0,0,1,.458.185.622.622,0,0,1,.185.458.621.621,0,0,1-.185.458.622.622,0,0,1-.458.185h-4.288v4.288a.622.622,0,0,1-.185.458.623.623,0,0,1-.458.185.621.621,0,0,1-.458-.185.622.622,0,0,1-.185-.458Z' transform='translate(-220 740)' fill='%239f9f9f'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.335' height='1.308' viewBox='0 0 11.335 1.308'%3E%3Cpath id='remove_24dp_FILL0_wght300_GRAD0_opsz24_1_' data-name='remove_24dp_FILL0_wght300_GRAD0_opsz24 (1)' d='M220.654-508.692a.632.632,0,0,1-.466-.188.633.633,0,0,1-.188-.466.632.632,0,0,1,.188-.466.632.632,0,0,1,.466-.188h10.027a.632.632,0,0,1,.466.188.633.633,0,0,1,.188.466.632.632,0,0,1-.188.466.633.633,0,0,1-.466.188Z' transform='translate(-220 510)' fill='%239f9f9f'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn_close {
+    display: none;
+}
+footer .family .list {
+    display: none;
+    position: absolute; /* family 기준으로 정렬 */
+    left: 0;
+    bottom: 40px;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    border: 1px solid #9F9F9F;
+    width: 100%;
+    padding: 14px 16px;
+}
+footer .family .list ul li a{
+    display: block;
+    line-height: 2;
+}
+footer .family.open button.btn_open {
+    display: none;
+}
+footer .family.open button.btn_close {
+    display: block;
 }

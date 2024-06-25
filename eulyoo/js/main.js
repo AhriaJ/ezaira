@@ -30,7 +30,7 @@ $(document).ready(function(){
         
         $(window).scrollTop()가 0이면 fixed를 삭제 , 0보다 크면 */ 
   
-     $(window).scroll(function(){ //브라우저가 스크롤 될때마다 실행
+    $(window).scroll(function(){ //브라우저가 스크롤 될때마다 실행
         $(window).scrollTop()
         console.log($(window).scrollTop())
         if($(window).scrollTop() > 0){
