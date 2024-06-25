@@ -776,7 +776,6 @@ header.fixed .tnb .search::before {
 
 
 @media screen and (max-width:640px){
-    
     .story .tit h2 {
         font-size: 30px;
         margin: 70px 0 20px 0;
@@ -843,8 +842,121 @@ header.fixed .tnb .search::before {
     }
 }/*media*/
 
-
-
 footer {
-    margin: 200px 0 0 0;
+    background-color: #EDE7DD;
+    color: #5B5545;
+    margin: 180px 0 0 0;
+    padding: 92px 0 93px 0;
 }
+footer .wrapper {
+    position: relative; /* copyright 정렬의 기준 */
+    display: flex;
+    justify-content: space-between;
+    /*
+    <div class="wrapper">
+        <div class="slogan"></div>
+        <div class="f_info"></div>
+        <div class="copylight"></div>  --- absolute
+    </div>
+    -- absolute를 빼고 나머지 2개 요소만 flex 적용됨.
+    */
+}
+footer .slogan {
+    color: #875F45;
+    font-family: 'Eulyoo1945';
+    font-size: 30px;
+    letter-spacing: -0.05em;
+}
+footer .slogan em {
+    color: rgba(135,95,69,0.6);
+}
+footer .f_info {
+    width: 404px;
+    margin-right: 40px;
+}
+footer .f_info .item {
+    margin: 0 0 65px 0;
+}
+footer .f_info .item:last-child {
+    margin: 0;
+}
+footer .f_info .item h2 {
+    font-family: 'Eulyoo1945';
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    margin-bottom: 11px;
+}
+footer .f_info .item .tel li {
+    display: flex;
+}
+footer .f_info .item .tel li strong {
+    width: 4.5em;
+}
+footer .f_info .item .tel li span {
+    width: calc(100% - 4.5em);
+    /* 왼쪽 strong 넓이빼고 전부 다*/
+}
+footer .f_info .item .sns {
+    display: flex;
+}
+footer .f_info .item .sns li {
+    margin: 0 36px 0 0;
+}
+footer .f_info .item .sns li a:hover {
+    text-decoration: underline;
+}
+footer .copylight {
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+}
+footer .copylight .f_logo img {
+    width: 190px;
+}
+footer .copylight .copy {
+    color: #666;
+    margin: 19px 0 0 0;
+}
+
+@media screen and (max-width:640px){
+    footer {
+        margin: 81px 0 0 0;
+        padding: 58px 0 38px 0;
+    }
+    footer .wrapper {
+        display: block;
+    }
+    footer .slogan {
+        font-size: 18px;
+    }
+    footer .f_info {
+        width: auto;
+        margin: 50px 0 0 0;
+    }
+    footer .f_info .item {
+        margin: 0 0 27px 0;
+    }
+    footer .f_info .item h2 {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+    footer .f_info .item .sns {
+        flex-wrap: wrap;
+    }
+    footer .f_info .item .sns li {
+        margin: 0 25px 5px 0;
+    }
+    footer .copylight {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 50px 0 0 0;
+    }
+    footer .copylight .f_logo img {
+        width: 168px;
+    }
+    footer .copylight .copy {
+        margin: 10px 0 0 0;
+    }
+}/*media*/
