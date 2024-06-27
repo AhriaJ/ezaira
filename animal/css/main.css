@@ -1,0 +1,9 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+p {
+    font-family: 'TmoneyRW';
+    font-size: 60px;
+    font-weight: 800;
+}
