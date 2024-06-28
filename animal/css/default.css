@@ -25,11 +25,20 @@ em, address {
 button { /* 버튼태그는 글자의 스타일은 상속받지 않음 */
     background-color: transparent; /* 투명색 */
     border: 0; /* 테두리 삭제 */
+    cursor: pointer;
+}
+/* form태그는 문자스타일 상속을 안 받음 */
+input, select, textarea, button {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
-    cursor: pointer;
+}
+legend {
+    display: none;
+}
+fieldset {
+    border: 0;
 }
