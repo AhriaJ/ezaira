@@ -100,5 +100,51 @@ $(document).ready(function(){
             $('header').removeClass('mobile_open')
         }
     })
-
+     /* find swiper */
+    const find01_swiper = new Swiper('.find .tab .find01 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        breakpoints: {
+            640: {  /* 640px 이상이 되면 적용 */
+                slidesPerView: 2,
+                spaceBetween: 16, 
+            },
+            768: {  /* 1024px 이상이 되면 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1024: {  /* 1024px 이상이 되면 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find01 .btn_wrap .next',
+            prevEl: '.find .tab .find01 .btn_wrap .prev',
+        },
+    });
+    const find02_swiper = new Swiper('.find .tab .find02 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    slidesPerView: 1, /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+    spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+    breakpoints: {
+        640: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: 2,
+            spaceBetween: 16, 
+        },
+        768: {  /* 1024px 이상이 되면 적용 */
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
+        1024: {  /* 1024px 이상이 되면 적용 */
+            slidesPerView: 4,
+            spaceBetween: 24,
+        },
+    },
+    loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+    navigation: {
+        nextEl: '.find .tab .find02 .btn_wrap .next',
+        prevEl: '.find .tab .find02 .btn_wrap .prev',
+    },
+});
 })//document

@@ -463,6 +463,42 @@ header.fixed .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after, header.me
     }
 }/*media*/
 
+.find {
+    background-color: #0F3C3C;
+    color: #fff;
+    padding: 120px 0 70px 0;
+}
+.find h2 {
+    font-family: 'TmoneyRW';
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 23px 0;
+}
+.find .tab > ul > li .tab_menu {
+    font-family: 'TmoneyRW';
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 15px 36px;
+}
+.find .tab > ul > li.find01.on .tab_menu {
+    background-color: #EC734E;
+    border-radius: 35px;
+}
+.find .tab > ul > li.find02.on .tab_menu {
+    background-color: #FD9326;
+    border-radius: 35px;
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+}
+
+
+
+
+
 footer {
     margin-top: 500px;
 }
