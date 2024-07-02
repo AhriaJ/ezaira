@@ -494,9 +494,91 @@ header.fixed .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after, header.me
 .find .tab .tab_detail ul li a {
     display: block;
 }
-
-
-
+.find .tab .tab_detail ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 20px;
+}
+.find .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .tab .tab_detail ul li a .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'TmoneyRW';
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 25px 0 15px 0;
+}
+.find .tab .tab_detail ul li a .tit strong {
+    width: 3.5em; /* 넓이 / 글자크기 = 넓이em */
+    height: 1.65em;
+    line-height: 1.65em;
+    text-align: center;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+.find .tab .tab_detail ul li a .tit strong.cate01 {
+    background-color: #FFBBA6;
+    color: #0F3C3C;
+}
+.find .tab .tab_detail ul li a .tit strong.cate02 {
+    background-color: #666666;
+}
+.find .tab .tab_detail ul li a .tit strong.cate03 {
+    background-color: #FFCE1F;
+    color: #0F3C3C;
+}
+.find .tab .tab_detail ul li a .tit strong.cate04 {
+    background-color: #FFEAD9;
+    color: #0F3C3C;
+}
+.find .tab .tab_detail ul li a .tit h3 {
+    width: calc(100% - 4em);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab .tab_detail ul li a p {
+    color: rgba(255,255,255,0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (min-width:1024px){
+    .find .tab .tab_detail ul li {
+        width: 297px;
+    }
+}
+@media screen and (max-width:768px){
+    
+    .find {
+        padding: 61px 0 39px 0;
+    }
+    .find h2 {
+        font-size: 30px;
+        margin: 0 0 12px 0;
+    }
+    .find .tab > ul > li .tab_menu {
+        font-size: 15px;
+        padding: 8px 17px;
+    }
+    .find .tab .tab_detail {
+        width: calc(100% + 20px);
+    }
+    .find .tab .tab_detail ul li {
+        width: 208px;
+    }
+    .find .tab .tab_detail ul li a .tit {
+        font-size: 15px;
+        margin: 13px 0 12px 0;
+    }
+}/*media*/
 
 
 footer {

@@ -11,15 +11,16 @@
     font-display: swap;
     src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
 }
+
 @font-face {
     font-family: 'TmoneyRW';
     font-weight: 400;
     font-display: swap;
-    src: local('TmoneyRoundWindRegular'), url(../fonts/TmoneyRoundWindRegular.woff) format('woff');
+    src: local('TmoneyRoundWind-Regular'), url(../fonts/TmoneyRoundWind-Regular.woff2) format('woff2'), url(../fonts/TmoneyRoundWind-Regular.woff) format('woff');
 }
 @font-face {
     font-family: 'TmoneyRW';
     font-weight: 800;
     font-display: swap;
-    src: local('TmoneyRoundWindExtraBold'), url(../fonts/TmoneyRoundWindExtraBold.woff) format('woff');
+    src: local('TmoneyRoundWind-ExtraBold'), url(../fonts/TmoneyRoundWind-ExtraBold.woff2) format('woff2'), url(../fonts/TmoneyRoundWind-ExtraBold.woff) format('woff');
 }
