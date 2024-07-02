@@ -119,7 +119,7 @@ $(document).ready(function(){
             nextEl: '.find .tab .find01 .btn_wrap .next',
             prevEl: '.find .tab .find01 .btn_wrap .prev',
         },
-    });
+    });//find01_swiper
     const find02_swiper = new Swiper('.find .tab .find02 .swiper', { /* 팝업을 감싼는 요소의 class명 */
     slidesPerView: 'auto', /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
     spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
@@ -138,5 +138,14 @@ $(document).ready(function(){
         nextEl: '.find .tab .find02 .btn_wrap .next',
         prevEl: '.find .tab .find02 .btn_wrap .prev',
     },
-});
+});//find02_swiper
+
+/* find의 탭메뉴 .find .tab > ul > li 를 클릭하면 클릭한 li에만 on 클래스를 줌.
+    1. 원래 himl에서 기본적으로 하나의 li에 on클래스가 있어야함 juqery에서 클릭하면 on을 다른 li에는 주는 것 뿐 */
+
+    $('.find .tab > ul > li').on('click', function(){
+        $('.find .tab > ul > li').removeClass('on')
+        $(this).addClass('on')
+    })
+
 })//document
