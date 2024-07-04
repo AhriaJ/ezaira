@@ -748,7 +748,7 @@ header.fixed .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after, header.me
     top: 50%;
     transform: translate(0, -50%);
     width: 100%;
-    height: 94px;
+    height: 90px;
     content: "";
     background: url(../images/campaign01.svg) no-repeat center center / contain;
 }
