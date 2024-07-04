@@ -823,19 +823,13 @@ header.fixed .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after, header.me
         display: none;
     }
     .campaign p .camp1::before {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-image: url(../images/cat_head_3d_mini.svg);
     }
     .campaign p .camp2::before {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-image: url(../images/search_3d_mini.svg);
     }
     .campaign p .camp3::before {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-image: url(../images/house_3d_mini.svg);
     }
 }/*media*/
 @media screen and (max-width:329px) {
