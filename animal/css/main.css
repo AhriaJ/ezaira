@@ -823,11 +823,7 @@ header.fixed .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after, header.me
         display: none;
     }
 }/*media*/
-@media screen and (max-width:329px) {
-    .campaign p {
-        font-size: 30px;
-    }
-}
+
 
 .family {
     background-color: #FFEAD9;
