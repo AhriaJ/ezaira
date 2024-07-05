@@ -1,0 +1,143 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header .logo a {
+    display: block;
+    width: 50px;
+    height: 58px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+header .logo a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+}
+/* 메뉴 오쁜 >< */
+header.menu_over {
+    color: #5F5F5F;
+}
+header.menu_over::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*z-index: -1;*/ /* 정렬기준요소의 모든 내부요소보다 아래에 배치. position값이 없는 요소까지 포함 */
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    content: "";
+}
+header.menu_over::after {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: #EDEDED;
+    content: "";
+}
+header.menu_over .logo a::before {
+    background-image: url(../images/logo.svg);
+}
+
+
+/* 1025까지는 상단의 메뉴가 모두 보이고 1024~769까지는 header높이가 100px, 메뉴는 모바일메뉴로
+    768이하는 header의 높이 50px이고 메뉴만 모바일 메뉴로 나타남  */
+
+@media screen and (min-width:1025px){ /* 1025이상일때 */
+    header .gnb button {
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 160px;
+        text-align: center;   
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        line-height: 100px; /* header 높이와 동일하게 */
+        display: block; /* li와 넓이를 동일하게 */
+        font-family: 'Quicksand';
+        font-size: 22px;
+        font-weight: 700;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a {
+        color: #00C6C6;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span {
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span::after {
+        position: absolute;
+        left: 0;
+        bottom: -38px;
+        z-index: 10;
+        width: 100%;
+        height: 2px;
+        background-color: #00C6C6;
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        display: none;
+        /* 2차 메뉴는 1차 메뉴하단, header 밖에 배치되기 때문에 무조건 absolute */
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        padding-top: 15px;
+        /* 1차메뉴 a와 2차메뉴 사이의 여백이 필요하면 반드시 2차메뉴 ul에 padding으로 줌 */
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a {
+        display: block;
+        line-height: 2;
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a:hover {
+        color: #00C6C6;
+        font-weight: 700;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 {
+        display: block;
+    }
+}/*media*/
+
+/* @media screen and (min-width:1025px) and (max-width:1300px){} 
+    1025~1300px */
+
+.visual {
+    background: url(../images/visual_bg3.png) no-repeat center center / cover;
+    height: 100vh;
+    margin-bottom: 10vh;
+}
+.visual h2 {
+    font-size: 60px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(255,255,255,0.8);
+    padding: 400px 0 0 0;
+    text-align: center;
+    
+}

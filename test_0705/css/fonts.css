@@ -1,0 +1,60 @@
+/* 폰트스타일 선언 */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../fonts/Quicksand-Light.woff2) format('woff2'),
+         url(../fonts/Quicksand-Light.woff) format('woff'),;
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/Quicksand-Regular.woff2) format('woff2'),
+         url(../fonts/Quicksand-Regular.woff) format('woff'),;
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-style: normal;
+    src: url(../fonts/Quicksand-Medium.woff2) format('woff2'),
+         url(../fonts/Quicksand-Medium.woff) format('woff'),;
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-style: normal;
+    src: url(../fonts/Quicksand-SemiBold.woff2) format('woff2'),
+         url(../fonts/Quicksand-SemiBold.woff) format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-style: normal;
+    src: url(../fonts/Quicksand-Bold.woff2) format('woff2'),
+         url(../fonts/Quicksand-Bold.woff) format('woff');
+    font-display: swap;
+} 
