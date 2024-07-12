@@ -1,0 +1,38 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.visual h2 {
+    display: none;
+}
+.visual ul li {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visal_bg1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visal_bg2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/visal_bg3.png);
+}
+.visual ul li.bg4 {
+    background-image: url(../images/visal_bg4.png);
+}
+.visual ul li strong {
+    display: block;
+    font-size: 20px;
+    color: rgba(255,255,255, 0.8);
+    margin: 35vh 0 0 0;
+}
+.visual ul li h3 {
+    margin: 13px 0 0 0;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.1;
+}
