@@ -1,6 +1,7 @@
 @import url(default.css);
 @import url(fonts.css);
 @import url(common.css);
+@import url(layout.css);
 
 .visual h2 {
     display: none;
@@ -31,8 +32,130 @@
     margin: 35vh 0 0 0;
 }
 .visual ul li h3 {
-    margin: 13px 0 0 0;
-    font-size: 50px;
+    margin: 10px 0 0 0;
+    font-size: 60px;
     font-weight: 300;
     line-height: 1.1;
+}
+.visual .btn_wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    z-index: 10;
+}
+.visual .btn_wrap .paging {
+    width: auto;
+    display: flex;
+    margin-bottom: 10px;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    /*현재 선택되지않은 불릿*/
+    width: 107px;
+    height: 4px;
+    border-radius: 0;
+    background-color: rgba(255,255,255, 0.2);
+    opacity: 1;
+    position: relative;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet-active::before {
+    /*현재 선택된 불릿*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 5s;
+    animation-iteration-count: 1; /* 1번만 실행 */
+    animation-fill-mode: forwards; /* 애니메이션 종료 후 마지막 유지 */
+    animation-timing-function: linear;
+}
+@keyframes visual_count {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+.visual .btn_wrap button {
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 20px;
+    position: relative;
+}
+.visual .btn_wrap button:last-child {
+    margin-right: 0;
+}
+.visual .btn_wrap button::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.visual .btn_wrap .btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M11.0533 11.9999L15.6533 7.39994L14.5996 6.34619L8.94582 11.9999L14.5996 17.6537L15.6533 16.5999L11.0533 11.9999Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap .btn_stop::before {    
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M13.25 18.5V5.5H18.5V18.5H13.25ZM5.5 18.5V5.5H10.75V18.5H5.5ZM14.75 17H17V7H14.75V17ZM7 17H9.25V7H7V17Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap .btn_play {
+    display: none;
+}
+.visual .btn_wrap .btn_play::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M8.5 18.0961V5.90405L18.0768 12.0001L8.5 18.0961ZM10 15.3501L15.2693 12.0001L10 8.65005V15.3501Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap .btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M12.9467 11.9999L8.34668 7.39994L9.40043 6.34619L15.0542 11.9999L9.40043 17.6537L8.34668 16.5999L12.9467 11.9999Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1300px){
+
+}
+@media screen and (max-width:1024px){
+
+}
+@media screen and (max-width:768px){/* 모바일 디자인적용 */
+    .visual ul li {
+        height: 550px;
+        min-height: auto;
+    }
+    .visual ul li strong {
+        display: none;
+    }
+    .visual ul li h3 {
+        margin: 150px 0 0 0;
+        font-size: 35px;
+    }
+    .visual ul li h3 br {
+        display: none;
+    }
+    .visual .btn_wrap {
+        display: flex;
+        align-items: center;
+    }
+    .visual .btn_wrap .paging {
+        margin-bottom: 0;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        /*현재 선택되지않은 불릿*/
+        width: 50px;
+    }
+    .visual .btn_wrap button {
+        width: 15px;
+        height: 15px;
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+    .visual .btn_wrap .btn_prev, .visual .btn_wrap .btn_next {
+        display: none;
+    }
+}
+@media screen and (max-width:480px){
+
 }

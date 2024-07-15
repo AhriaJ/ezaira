@@ -2,7 +2,7 @@ $(document).ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
         autoplay: {  /* 팝업 자동 실행 */
-            delay: 8000,
+            delay: 5000,
             disableOnInteraction: true,
         },
 
@@ -13,13 +13,31 @@ $(document).ready(function(){
             clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
         },
         
-
         navigation: {  /* 이전, 다음 버튼 */
             nextEl: '.visual .btn_next',  /* 다음 버튼의 클래스명 */
-            prevEl: '.visual .btn_prevv',  
+            prevEl: '.visual .btn_prev',  
         },
 
     });
     visual_swiper.autoplay.stop();  /* 일시정지 기능 */
     visual_swiper.autoplay.start();  /* 재생 기능 */
+    /*
+        일시정지 버튼을 클릭하면 .visual .btn_wrap .btn_stop
+        1. 팝업 일시정지
+        2. 일시정지 버튼을 숨김, 재생버튼 나타남
+
+        재생버튼을 클릭하면 .visual .btn_wrap .btn_play
+        1. 팝업 다시재생
+        2. 재생버튼 숨김, 일시정지 버튼 나타남
+     */
+    $('.visual .btn_wrap .btn_stop').on('click', function(){
+        visual_swiper.autoplay.stop();
+        $(this).hide() // 숨김
+        $('.visual .btn_wrap .btn_play').show() //보임
+    })
+    $('.visual .btn_wrap .btn_play').on('click', function(){
+        visual_swiper.autoplay.start();
+        $(this).hide() // 숨김
+        $('.visual .btn_wrap .btn_stop').show() //보임
+    })
 })
