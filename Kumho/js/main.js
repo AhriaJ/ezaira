@@ -40,4 +40,15 @@ $(document).ready(function(){
         $(this).hide() // 숨김
         $('.visual .btn_wrap .btn_stop').show() //보임
     })
+    /* pc - .biz .list ul li 에 마우스를 올리면 마우스를 올린 li는 on 클래스 추가, 마우스를 올리지않은 li는 off클래스 추가 */
+    $('.biz .list ul li').on('mouseenter', function(){
+        $('.biz .list ul li').removeClass('on')
+        $('.biz .list ul li').addClass('off')
+        $(this).removeClass('off')
+        $(this).addClass('on')
+    })
+    $('.biz .list').on('mouseleave', function(){
+        $('.biz .list ul li').removeClass('on')
+        $('.biz .list ul li').removeClass('off')
+    })
 })
