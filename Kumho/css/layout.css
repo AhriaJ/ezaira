@@ -457,5 +457,5 @@ header.fixed .logo a::before {
     }
 }/*media*/
 footer {
-    height: 100vh;
+    height: 100px;
 }
