@@ -457,5 +457,166 @@ header.fixed .logo a::before {
     }
 }/*media*/
 footer {
-    height: 100px;
+    padding: 65px 0 86px 0;
+    color: rgba(255,255,255,0.8);
+    background-color: #003049;
+}
+footer .wrapper {
+    position: relative; /* family_site , youtube 정렬 기준*/
+}
+footer .youtube {
+    position: absolute;
+    right: 220px;
+    top: 0;
+}
+footer .youtube a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #CCD6DB;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+footer .youtube a::before {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, -0);
+    width: 22px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='15' viewBox='0 0 22 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_33_335)'%3E%3Cpath d='M22 4.70008C22 2.10142 19.8365 0 17.1746 0H4.82541C2.16354 0 0 2.10734 0 4.70008V10.294C0 12.8927 2.16354 14.9941 4.82541 14.9941H17.1685C19.8365 14.9941 21.9939 12.8867 21.9939 10.294V4.70008H22ZM14.7376 7.92028L9.20111 10.59C8.98232 10.7024 8.24696 10.5485 8.24696 10.3118V4.83623C8.24696 4.59353 8.9884 4.43962 9.20718 4.55801L14.5066 7.36385C14.7315 7.48816 14.9624 7.80189 14.7376 7.92028Z' fill='%23003049'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_33_335'%3E%3Crect width='22' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .family_site {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 183px;
+}
+footer .family_site button {
+    width: 100%;
+    height: 36px;
+    background-color: #003049;
+    border: 1px solid rgba(255,255,255,0.8);
+    text-align: left;
+    padding-left: 18px;
+    position: relative;
+}
+footer .family_site button::after {
+    position: absolute;
+    right: 19px;
+    top: 14px;
+    width: 10px;
+    height: 5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.595703 4.74994L4.99945 0.346191L9.4032 4.74994H0.595703Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .family_site button.family_close::after {
+    transform: rotate(180deg);
+}
+footer .family_site ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    width: 100%;
+    background-color: #003049;
+    padding: 18px 27px;
+}
+footer .family_site ul li a {
+    display: block;
+    line-height: 2;
+}
+footer .family_site .family_close {
+    display: none;
+}
+footer .family_site.open .family_open {
+    display: none;
+}
+footer .family_site.open .family_close {
+    display: block;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 37px;
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -19px;
+    top: 6px;
+    width: 1px;
+    height: 8px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 700;
+}
+footer .copyright {
+    margin-top: 28px;
+    color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:1024px){
+    footer .youtube {
+        right: 200px;
+    }
+}
+@media screen and (max-width:768px) {
+    footer {
+        padding: 0 0 70px 0;
+    }
+    footer .youtube {
+        position: relative;
+        right: auto;
+        top: -17px;
+        text-align: center;
+    }
+    footer .youtube a {
+        display: inline-block;
+        width: 192px;
+        border-radius: 18px;
+        background-color: #EDEDED;
+        font-size: 13px;
+        line-height: 36px;
+        color: #003049;
+        padding-left: 28px;
+    }
+    footer .youtube a::before {
+        left: 21px;
+        transform: translate(0, 0);
+    }
+    footer .family_site {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+    footer .f_nav {
+        margin: 22px 0 0 0;
+    }
+    footer .f_nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer .f_nav ul li {
+        margin: 10px 30px 0 0;
+        position: relative;
+    }
+    footer .copyright {
+        margin-top: 20px;
+    }
 }
