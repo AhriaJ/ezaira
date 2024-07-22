@@ -13,10 +13,14 @@
     <title>금호건설</title>
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
         <header>
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_menu">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1"> <!-- pc : 1차메뉴에 마우스를 오버하면 li에 on클래스 추가 / mobile : 1차메뉴를 클릭하면 li에 open 클래스 추가-->
@@ -83,7 +87,7 @@
                 <a href="#n" class="artera">ARTERA</a>
             </div>
         </header>
-        <main class="container">
+        <main class="container" id="skip_contents">
             <section class="visual">
                 <h2>홍보팝업</h2> <!-- 해당 section 전체를 설명하는 제목 -->
                 <div class="swiper"> 
