@@ -643,3 +643,132 @@ footer .copyright {
         margin-top: 20px;
     }
 }
+
+/* 서브페이지 레이아웃 코딩 */
+.sub_visual {
+    height: 400px;
+    background: url(../images/common/sub_visual01.png) no-repeat center center / cover;
+    color: #fff;
+}
+.sub_visual.bg1 {
+    background-image: url(../images/common/sub_visual01.png);
+}
+.sub_visual.bg2 {
+    background-image: url(../images/common/sub_visual02.png);
+}
+.sub_visual.bg3 {
+    background-image: url(../images/common/sub_visual03.png);
+}
+.sub_visual.bg4 {
+    background-image: url(../images/common/sub_visual04.png);
+}
+.sub_visual.bg5 {
+    background-image: url(../images/common/sub_visual05.png);
+}
+.sub_visual strong {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 189px 0 4px 0;
+}
+.sub_visual p {
+    font-size: 20px;
+    color: rgba(255,255,255,0.8);
+}
+.sub_menu {
+    background-color: #C1121F;
+    color: rgba(255,255,255,0.8);
+    height: 50px;
+}
+.sub_menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.sub_menu .lnb ul {
+    display: flex;
+}
+.sub_menu .lnb ul li a {
+    display: block;
+    line-height: 50px;
+    padding: 0 17px;
+}
+.sub_menu .lnb ul li:first-child a {
+    padding-left: 0;
+}
+.sub_menu .lnb ul li.active a, .sub_menu .lnb ul li a:hover {
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+}
+.sub_menu .lnb ul li.active a::after, .sub_menu .lnb ul li a:hover::after {
+    position: absolute;
+    right: 9px;
+    top: 12px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+}
+.sub_menu .breadcrumb ol {
+    display: flex;
+}
+.sub_menu .breadcrumb ol li {
+    margin-right: 25px;
+    position: relative;
+}
+.sub_menu .breadcrumb ol li::after {
+    position: absolute;
+    right: -19px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_169_66' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='10' height='10'%3E%3Crect width='10' height='10' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_169_66)'%3E%3Cpath d='M3.3394 9.02233L2.74805 8.43098L6.17909 4.99994L2.74805 1.56889L3.3394 0.977539L7.3618 4.99994L3.3394 9.02233Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li:last-child {
+    margin-right: 0;
+}
+.sub_menu .breadcrumb ol li:last-child::after {
+    display: none;
+}
+.sub_menu .breadcrumb ol li a {
+    display: block;
+    line-height: 50px;
+}
+.sub_menu .breadcrumb ol li.now a {
+    text-decoration: underline;
+    text-underline-offset: 5px
+}
+.sub_menu .breadcrumb ol li.home a {
+    font-size: 0;
+    line-height: 0;
+    width: 11px;
+    height: 50px;
+    position: relative;
+}
+.sub_menu .breadcrumb ol li.home a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.375 12.6707V4.23319L6 0L11.625 4.23319V12.6707H7.42781V7.6515H4.57219V12.6707H0.375Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_contents .sub_title h2 {
+    font-weight: 700;
+    color: #C1121F;
+    margin: 145px 0 2px 0;
+}
+.sub_contents .sub_title p {
+    font-weight: 300;
+    font-size: 45px;
+}
