@@ -811,6 +811,9 @@ footer .copyright {
     .sub_menu .lnb ul li a {
         padding: 0 12px;
     }
+    .sub_menu .breadcrumb {
+        display: none;
+    }
 }
 @media screen and (max-width:768px){
     .sub_visual {
@@ -874,9 +877,6 @@ footer .copyright {
         top: 10px;
         width: 3px;
         height: 3px;
-    }
-    .sub_menu .breadcrumb {
-        display: none;
     }
     .sub_contents .sub_title h2 {
         font-size: 15px;
