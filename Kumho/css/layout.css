@@ -126,6 +126,9 @@ header.fixed .logo a::before {
         font-weight: 700;
         color: #C1121F;
     }
+    header .gnb .gnb_wrap ul.depth1 > li > a > span {
+        position: relative;
+    }
     header .gnb .gnb_wrap ul.depth1 > li.on > a > span {
         position: relative;
     }
@@ -137,6 +140,15 @@ header.fixed .logo a::before {
         height: 5px;
         border-radius: 50%;
         background-color: #C1121F;
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active > a > span::before {
+        position: absolute;
+        left: 0;
+        bottom: -37px;
+        width: 100%;
+        height: 2px;
+        background-color: #ED1C24;
         content: "";
     }
     header .tnb {
@@ -345,6 +357,10 @@ header.fixed .logo a::before {
         font-size: 15px;
         color: #3d3d3d;
     }
+    header .gnb .gnb_wrap ul.depth2 > li.active > a {
+        color: #C1121F;
+        font-weight: 700;
+    }
     header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] > span {
         padding-right: 16px; 
         display: inline-block;
@@ -416,7 +432,6 @@ header.fixed .logo a::before {
         width: 90px;
         height: 21px;
         line-height: 20px;
-        font-weight: 700;
         border: 1px solid #1D1D1D;
         border-radius: 13px;
         padding-left: 12px;
@@ -763,7 +778,12 @@ footer .copyright {
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.375 12.6707V4.23319L6 0L11.625 4.23319V12.6707H7.42781V7.6515H4.57219V12.6707H0.375Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
     content: "";
 }
+.sub_contents {
+    min-height: 400px;
+    /* 콘텐츠 최소 높이 - 아직 콘텐츠를 코딩하지 않았을때 페이지만 생성되어있어서 페이지의 여백이 없으면 디자인이 이상하게 보임. 이런걸 최소화하기 위해 최소높이를 줌. */
+}
 .sub_contents .sub_title h2 {
+    font-size: 20px;
     font-weight: 700;
     color: #C1121F;
     margin: 145px 0 2px 0;
@@ -771,4 +791,86 @@ footer .copyright {
 .sub_contents .sub_title p {
     font-weight: 300;
     font-size: 45px;
+    line-height: 1.1;
+}
+@media screen and (max-width:1300px){
+    .sub_visual p {
+        font-size: 17px;
+    }
+    .sub_contents .sub_title h2 {
+        font-size: 17px;
+    }
+    .sub_contents .sub_title p {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:1024px){
+    .sub_visual strong {
+        font-size: 40px;
+    }
+    .sub_menu .lnb ul li a {
+        padding: 0 12px;
+    }
+}
+@media screen and (max-width:768px){
+    .sub_visual {
+        height: 250px;
+    }
+    .sub_visual strong {
+        font-size: 35px;
+        font-weight: 600;
+        padding: 103px 0 4px 0;
+    }
+    .sub_visual p {
+        font-size: 13px;
+    }
+    .sub_menu {
+        height: 44px;
+        position: relative;
+    }
+    .sub_menu .wrapper { /* 만약 모바일에서 메뉴수가 많아 한번에 모두 표현되지 않는다면 가로스크롤바 on */
+        overflow-x: auto; /* 내부콘텐츠가 감싸는 요소보다 클 때 가로스크롤바 생성  */
+    }
+    .sub_menu::after {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        width: 33px;
+        height: 100%;
+        background-image: linear-gradient(90deg, rgba(193, 18, 31, 0), rgba(193, 18, 31, 1));
+        content: ""
+    }
+    .sub_menu .wrapper::-webkit-scrollbar {
+        height: 0;
+        background-color: transparent;
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .sub_menu .lnb {
+        margin-right: 33px; /* 오른쪽 그라데이션 준 만큼 여백을 줘야 마지막 요소가 그라데이션에 덮이지않고 깔끔하게 보임 */
+    }
+    .sub_menu .lnb ul li a {
+        line-height: 44px;
+        padding: 0 7px;
+    }
+    .sub_menu .lnb ul li.active a::after, .sub_menu .lnb ul li a:hover::after {
+        right: 3px;
+        top: 10px;
+        width: 3px;
+        height: 3px;
+    }
+    .sub_menu .breadcrumb {
+        display: none;
+    }
+    .sub_contents .sub_title h2 {
+        font-size: 15px;
+        margin: 63px 0 4px 0;
+    }
+    .sub_contents .sub_title p {
+        font-size: 30px;
+    }
 }
