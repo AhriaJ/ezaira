@@ -143,3 +143,248 @@
         width: 86px;
     }
 }
+
+/* 회사소개 - 연혁 */
+.cts_history {
+    margin: 70px 0 159px 0;
+    font-family: 'Pretendard';
+}
+.cts_history .tab_area .tab_btn ul {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.cts_history .tab_area .tab_btn ul li button {
+    padding: 20px 87px;
+    font-size: 24px;
+    color: #666;
+}
+.cts_history .tab_area .tab_btn ul li.active button, .cts_history .tab_area .tab_btn ul li button:hover {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #C1121F;
+    position: relative;
+}
+.cts_history .tab_area .tab_btn ul li.active button::after, .cts_history .tab_area .tab_btn ul li button:hover::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px;
+    background-color: #C1121F;
+    content: "";
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
+    height: 250px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/contents/history_tit_bg01.png);
+    color: #fff;
+    text-align: center;
+    margin: 34px 0 0 0;
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg1 {
+    background-image: url(../images/contents/history_tit_bg01.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg2 {
+    background-image: url(../images/contents/history_tit_bg02.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg3 {
+    background-image: url(../images/contents/history_tit_bg03.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg4 {
+    background-image: url(../images/contents/history_tit_bg04.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit strong {
+    display: block;
+    padding: 81px 0 3px 0;
+    font-size: 20px;
+    color: rgba(255,255,255,0.8);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.cts_history .history_list {
+    margin: 70px 0 0 0;
+    position: relative;
+}
+.cts_history .history_list::before {
+    position: absolute;
+    left: 50%;
+    top: 22px;
+    width: 1px;
+    height: calc(100% - 22px);
+    background-color: rgba(193,18,31,0.6);
+    content: "";
+}
+.cts_history .history_list .year_wrap {
+    margin-bottom: 54px;
+}
+.cts_history .history_list .year_wrap:last-child {
+    margin-bottom: 0;
+    position: relative;
+}
+.cts_history .history_list .year_wrap:last-child::before {
+    position: absolute;
+    left: 50%;
+    top: 23px;
+    width: 5px;
+    height: calc(100% - 23px);
+    background-color: #fff;
+    content: "";
+}
+.cts_history .history_list .year_wrap.right {
+    padding-left: calc(50% + 40px);
+}
+.cts_history .history_list .year_wrap.left {
+    padding-right: calc(50% + 40px);
+    text-align: right;
+}
+.cts_history .history_list .year_wrap.left ul li {
+    flex-direction: row-reverse;
+}
+.cts_history .history_list .year_wrap h4 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #C1121F;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+.cts_history .history_list .year_wrap h4::before {
+    position: absolute;
+    left: -46px;
+    top: 22px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #C1121F;
+    content: "";
+}
+.cts_history .history_list .year_wrap.left h4::before {
+    left: auto;
+    right: -47px;
+}
+.cts_history .history_list .year_wrap ul li {
+    display: flex;
+    margin: 0 0 10px 0;
+}
+.cts_history .history_list .year_wrap ul li strong {
+    font-weight: 700;
+    width: 5.5em;
+}
+.cts_history .history_list .year_wrap ul li span {
+    width: calc(100% - 9em);
+}
+@media screen and (max-width:1300px){
+    .cts_history .tab_area .tab_btn ul li button {
+        padding: 20px 60px;
+        font-size: 20px;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit strong {
+        font-size: 17px;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+        font-size: 40px;
+    }
+    .cts_history .history_list {
+        margin: 50px 0 0 0;
+    }
+    .cts_history .history_list .year_wrap h4 {
+        font-size: 35px;
+        margin: 0 0 17px 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .cts_history .tab_area .tab_btn {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .cts_history .tab_area .tab_btn::-webkit-scrollbar {
+        height: 7px;
+        background-color: transparent;
+    }
+    .cts_history .tab_area .tab_btn::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .cts_history .tab_area .tab_btn ul li button {
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width:768px){
+    .cts_history {
+        margin: 25px 0 65px 0;
+    }
+    .cts_history .tab_area .tab_btn ul li button {
+        padding: 9px 20px;
+        font-size: 17px;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
+        height: 150px;
+        margin: 22px 0 0 0;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit strong {
+        padding: 47px 0 0 0;
+        font-size: 13px;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+        font-size: 30px;
+    }
+    .cts_history .history_list {
+        margin: 35px 0 0 0;
+    }
+    .cts_history .history_list::before {
+        position: absolute;
+        left: 0;
+        top: 22px;
+        width: 1px;
+        height: calc(100% - 22px);
+        background-color: rgba(193,18,31,0.6);
+        content: "";
+    }
+    .cts_history .history_list .year_wrap {
+        margin-bottom: 34px;
+    }
+    .cts_history .history_list .year_wrap:last-child::before {
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 5px;
+        height: calc(100% - 13px);
+        background-color: #fff;
+        content: "";
+    }
+    .cts_history .history_list .year_wrap.right {
+        padding-left: 20px;
+    }
+    .cts_history .history_list .year_wrap.left {
+        padding-right: 0;
+        padding-left: 20px;
+        text-align: left;
+    }
+    .cts_history .history_list .year_wrap.left ul li {
+        flex-direction: row;
+    }
+    .cts_history .history_list .year_wrap h4 {
+        font-size: 25px;
+        margin: 0 0 9px 0;
+    }
+    .cts_history .history_list .year_wrap h4::before {
+        left: -24px;
+        top: 13px;
+        width: 9px;
+        height: 9px;
+    }
+    .cts_history .history_list .year_wrap.left h4::before {
+        left: -24px;
+        right: auto;
+    }
+    .cts_history .history_list .year_wrap ul li {
+        margin: 0 0 8px 0;
+    }
+}
