@@ -184,6 +184,12 @@
     text-align: center;
     margin: 34px 0 0 0;
 }
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] {
+    display: none; 
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"].active {
+    display: block; 
+}
 .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg1 {
     background-image: url(../images/contents/history_tit_bg01.png);
 }
@@ -603,6 +609,12 @@
         margin-right: 30px;
         width: 60px;
         height: 60px;
+    }
+    .cts_map .traffic .list ul li {
+        padding-left: 20px;
+    }
+    .cts_map .traffic .list ul li::before {
+        top: 2px;
     }
     .cts_map .traffic .list {
         font-size: 15px;
