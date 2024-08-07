@@ -1,0 +1,11 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+h1 {
+    font-size: var(--tit-size);
+}
+p {
+    font-size: 1.46rem;
+}
