@@ -3,9 +3,37 @@
 @import url(common.css);
 @import url(layout.css);
 
-h1 {
-    font-size: var(--tit-size);
+.visual_popup .popup .popup_item img {
+    width: 100%;
 }
-p {
-    font-size: 1.46rem;
+.visual_popup .popup .popup_item img.mo {
+    display: none;
+}
+.visual_popup .popup .slick-dots {
+    position: absolute; /*popup을 기준으로 정렬*/
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    gap: 6px;
+}
+.visual_popup .popup .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    width: 25px;
+    height: 9px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.5);
+}
+.visual_popup .popup .slick-dots li.slick-active button {
+    width: 50px;
+    background-color: #fff;
+}
+@media screen and (max-width:768px){
+    .visual_popup .popup .popup_item img.pc{
+        display: none;
+    }
+    .visual_popup .popup .popup_item img.mo {
+        display: block;
+    }
 }
