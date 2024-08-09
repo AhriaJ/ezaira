@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    position: relative;
 }
 header h1 {
     padding-top: 25px;
