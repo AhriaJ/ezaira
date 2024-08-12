@@ -37,3 +37,96 @@
         display: block;
     }
 }
+
+.menu .tit {
+    text-align: center;
+    margin: 170px 0 80px 0;
+}
+.menu .tit h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    color: var(--color-main-bk);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+.menu .tit p br {
+    display: none;
+}
+.menu .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 87px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 93px);
+    border: 3px solid #202020;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 50px;
+}
+.menu .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+.menu .list .popup .popup_item h3 {
+    font-size: 1.333rem;
+    font-weight: 700;
+    color: var(--color-main-bk);
+    padding: 16px 0 0 0;
+    margin: 20px 0 5px 0;
+    position: relative;
+}
+.menu .list .popup .popup_item h3::before {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-main-bk);
+    content: "";
+}
+.menu .list .popup .popup_item strong {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:1300px){
+    .menu .list .popup .popup_item {
+        width: 250px;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:1024px){
+    .menu .list .popup .popup_item {
+        width: 230px;
+        margin: 0 10px;
+        padding-bottom: 35px;
+    }
+}
+@media screen and (max-width:768px){
+    .menu .list .popup .popup_item {
+        width: 210px;
+        margin: 0 8px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width:480px){
+    .menu .list .popup .popup_item {
+        width: 207px;
+        margin: 0 8px;
+        padding-bottom: 25px;
+    }
+}

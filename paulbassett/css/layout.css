@@ -14,7 +14,7 @@
     width: 100%;
     height: 50px;
     line-height: 50px;
-    background-color: #003049;
+    background-color: #b30406;
     text-align: center;
     color: #fff;
 }
@@ -253,6 +253,67 @@ header .header_sub .logo a::before {
     }
     header .header_sub .gnb .gnb_wrap {
         display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 {
+        margin-top: 50px;
+        height: calc(100% -  50px);
+        overflow-y: auto;
+    }
+    header .header_sub .gnb .gnb_wrap ul.depth1 > li {
+        border-bottom: 1px solid #EDEDED;
+    }
+    header .header_sub .gnb .gnb_wrap ul.depth1 > li:first-child {
+        border-top: 1px solid #EDEDED;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a {
+        display: block;
+        padding: 22px 20px;
+        white-space: nowrap;
+        font-size: 1.538rem;
+        font-weight: 700;
+        color: var(--color-main-bk);
+        position: relative;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a::before {
+        position: absolute;
+        right: 17px;
+        top: 23px;
+        width: 24px;
+        height: 24px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23202020'%3E%3Cpath d='M560-253.85 333.85-480 560-706.15 602.15-664l-184 184 184 184L560-253.85Z'/%3E%3C/svg%3E");
+        transform: rotate(-90deg);
+        content: "";
+    }
+    
+    header .header_sub .gnb .gnb_wrap .depth2 {
+        padding: 15px 40px;
+        font-size: 1.154rem;
+        background-color: var(--color-main-bei);
+        display: none;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open > a {
+        color: var(--color-main-red2);
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open > a::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23b30406'%3E%3Cpath d='M560-253.85 333.85-480 560-706.15 602.15-664l-184 184 184 184L560-253.85Z'/%3E%3C/svg%3E");
+        transform: rotate(90deg);
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open .depth2 {
+        display: block;
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 > li > a {
+        display: block;
+        color: var(--color-main-bk);
+        line-height: 2;
     }
     header .header_sub .gnb .gnb_open, header .header_sub .gnb .gnb_close{
         position: absolute; /* header를 기준으로 정렬 */
@@ -279,9 +340,9 @@ header .header_sub .logo a::before {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='27.25px' height='21.25px'%3E%3Cpath fill-rule='evenodd' stroke='rgb(32, 32, 32)' stroke-width='1.5px' stroke-linecap='butt' stroke-linejoin='miter' fill='none' d='M2.250,10.250 L2.250,9.250 L24.250,9.250 L24.250,10.250 L2.250,10.250 ZM2.293,1.650 L18.207,1.650 L18.207,2.850 L2.293,2.850 L2.293,1.650 ZM18.207,18.850 L2.293,18.850 L2.293,17.650 L18.207,17.650 L18.207,18.850 Z'/%3E%3C/svg%3E");
     }
     header .header_sub .gnb .gnb_close::after {
-        width: 20px;
-        height: 19px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%235f6368'%3E%3Cpath d='M256-213.85 213.85-256l224-224-224-224L256-746.15l224 224 224-224L746.15-704l-224 224 224 224L704-213.85l-224-224-224 224Z'/%3E%3C/svg%3E");
+        width: 25px;
+        height: 25px;
+       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='50px' viewBox='0 -960 960 960' width='50px' fill='%23202020'%3E%3Cpath d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z'/%3E%3C/svg%3E");
     }
     header .header_sub .gnb .gnb_close {
         display: none;
@@ -297,6 +358,16 @@ header .header_sub .logo a::before {
     }
     header.fixed + .container {
         margin-top: 50px;
+    }
+    /*메뉴열림*/
+    header.menu_open .header_sub .gnb .gnb_wrap {
+        display: block;
+    }
+    header.menu_open .header_sub .gnb .gnb_open {
+        display: none;
+    }
+    header.menu_open .header_sub .gnb .gnb_close {
+        display: block;
     }
 } 
 

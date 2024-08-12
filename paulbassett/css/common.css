@@ -82,3 +82,23 @@ a:focus, button:focus {
     /* font size */
     --tit-size : 5.33rem;
 }
+@media screen and (max-width:1300px){
+    :root {
+        --tit-size : 5rem;
+    }
+}
+@media screen and (max-width:1024px){
+    :root {
+        --tit-size : 4.8rem;
+    }
+}
+@media screen and (max-width:768px){
+    :root {
+        --tit-size : 4rem;
+    }
+}
+@media screen and (max-width:480px){
+    :root {
+        --tit-size : 3.07rem;
+    }
+}
