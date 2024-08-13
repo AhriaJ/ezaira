@@ -40,7 +40,7 @@
 
 .menu .tit {
     text-align: center;
-    margin: 170px 0 80px 0;
+    margin: var(--tit-margin);
 }
 .menu .tit h2 {
     font-family: 'Wonder';
@@ -51,6 +51,10 @@
 }
 .menu .tit p br {
     display: none;
+}
+.menu .list {
+    margin-left: 20px;
+    width: calc(100% + 20px);
 }
 .menu .list .popup .popup_item {
     margin: 0 12px;
@@ -128,5 +132,186 @@
         width: 207px;
         margin: 0 8px;
         padding-bottom: 25px;
+    }
+}
+.brand {
+    margin: 150px  0 0 0;
+}
+.brand .inner {
+    height: 681px;
+    padding: 485px 70px 0 0;
+    background: url(../images/main/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: right;
+}
+.brand .inner h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    padding-bottom: 25px;
+    line-height: 1.1;
+}
+/*
+    loop 애니메이션
+    <div> - 감싸는 요소
+        <span></span> - 움직일 요소
+    </div>
+    움직일 요소는 white-space: nowrap; 으로 한줄
+    넓이가 온전하게 인식되어야함.
+    브라우저 크기를 초과하는 얿이가 온전히 인식되려면 
+    position:absolute;
+*/
+.brand .loop {
+    height: 6rem;
+    background-color: var(--color-main-red1);
+    color: var(--color-main-bei);
+    font-size: 3.333rem;
+    font-weight: 200;
+    line-height: 1;
+    position: relative;
+}
+.brand .loop span {
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    animation-name: brand_loop;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes brand_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50.12%, 0);}
+}
+@media screen and (max-width:1024px){
+    .brand {
+        margin: 130px  0 0 0;
+    }
+    .brand .inner {
+        height: auto;
+        padding: 300px 50px 50px 0;
+    }
+    .brand .inner h2 {
+        font-size: 3.5rem;
+        padding-bottom: 20px;
+    }
+    .brand .loop {
+        height: 5.333rem;
+        font-size: 3rem;
+    }
+    .brand .loop span {
+        top: 1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .brand {
+        margin: 90px 0 0 0;
+    }
+    .brand .inner {
+        height: auto;
+        padding: 200px 20px 20px 20px;
+    }
+    .brand .inner h2 {
+        font-size: 2.3rem;
+        padding-bottom: 10px;
+    }
+    .brand .inner p .mo_skip {
+        display: none;
+    }
+    .brand .loop {
+        height: 3.846rem;
+        font-size: 1.84rem;
+    }
+    .brand .loop span {
+        top: 0.9rem;
+    }
+}
+
+.md .tit {
+    text-align: center;
+    margin: var(--tit-margin);
+}
+.md .tit h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    color: var(--color-main-bk);
+    padding-bottom: 25px;
+    line-height: 1.1;
+}
+.md .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    text-align: center;
+}
+.md .list .popup .popup_item a .photo {
+    overflow: hidden;
+    margin: 0 20px;
+}
+.md .list .popup .popup_item a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+.md .list .popup .popup_item a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+.md .list .popup .popup_item a h3 {
+    color: var(--color-main-bk);
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+.md .list .popup .popup_item a:hover h3 {
+    color: var(--color-main-red2);
+    font-weight: 700;
+}
+@media screen and (max-width:768px){
+    .md .list {
+        margin-left: 0;
+        width: calc(100% + 20px);
+        /* 오른쪽 wrapper 밖까지 list가 나오게 하기 위해 list에게 100%에 오른쪽 여백 20px을 추가해줌 */
+    }
+    .md .list .popup .popup_item {
+        margin: 0 12px;
+        width: 224px;
+        text-align: center;
+    }
+}
+.event .tit {
+    text-align: center;
+    margin: var(--tit-margin);
+}
+.event .tit h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    color: var(--color-main-bk);
+    padding-bottom: 25px;
+    line-height: 1.1;
+}
+.event .list {
+    margin-left: 20px;
+    width: calc(100% + 20px);
+}
+.event .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+}
+.event .list .popup .popup_item a .photo {
+    overflow: hidden;
+    border-radius: 20px;
+}
+.event .list .popup .popup_item a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+.event .list .popup .popup_item a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+@media screen and (max-width:768px){
+    .event .list .popup .popup_item {
+        margin: 0 12px;
+        width: 208px;
     }
 }
