@@ -11,6 +11,8 @@
     <!--slick을 돌아가게 하는 값-->
     <script src="js/slick.min.js"></script>
     <link rel="stylesheet" href="css/slick.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Paul Bassett</title>
 </head>
 <body>
@@ -133,10 +135,10 @@
             </section>
             <section class="menu">
                 <div class="tit">
-                    <h2>Menu</h2>
-                    <p>폴 바셋 프리미엄 메뉴로 때로는 달콤함을, <br> 때로는 든든함을 느껴보세요.</p>
+                    <h2 data-aos="fade-up">Menu</h2>
+                    <p data-aos="fade-up">폴 바셋 프리미엄 메뉴로 때로는 달콤함을, <br> 때로는 든든함을 느껴보세요.</p>
                 </div><!--tit-->
-                <div class="list">
+                <div class="list" data-aos="fade-up">
                     <div class="popup">
                         <div class="popup_item">
                             <a href="#n">
@@ -225,7 +227,7 @@
                     </div>
                 </div><!--list-->
             </section>
-            <section class="brand">
+            <section class="brand" data-aos="fade-up">
                 <div class="inner">
                     <h2>Paul Bassett</h2>
                     <p>
@@ -350,8 +352,9 @@
             </section>
         </main>
         <aside class="quick">
-            <button title="퀵메뉴 열기">Quick</button>
+            <button title="퀵메뉴 열기" class="open">Quick</button>
             <div class="quick_cont">
+                <h2>Quick</h2>
                 <ul>
                     <li class="q01"><a href="#n"><span>Mobile<br>App</span></a></li>
                     <li class="q02"><a href="#n"><span>Special<br>Benefit</span></a></li>
@@ -359,7 +362,7 @@
                     <li class="q04"><button class="top"><span>Top</span></button></li>
                 </ul>
             </div>
-            <button title="퀵메뉴 닫기">닫기</button>
+            <button title="퀵메뉴 닫기" class="close">닫기</button>
         </aside>
         <footer>
             <div class="wrapper">
@@ -375,7 +378,7 @@
                         <li class="privacy"><a href="#n">개인정보처리방침 </a></li>
                         <li><a href="#n">신규입점안내</a></li>
                         <li><a href="#n">이용약관</a></li>
-                        <li><a href="#n">위치정보 서비스 이용약관</a></li>
+                        <li><a href="#n">위치정보서비스 이용약관</a></li>
                         <li><a href="#n">소사이어티카드 이용약관</a></li>
                         <li><a href="#n">기프트카드 이용약관</a></li>
                         <li><a href="#n">고객센터</a></li>
@@ -383,15 +386,22 @@
                     </ul>
                 </div>
                 <div class="f_info">
-                    <span>엠즈씨드(주) 대표이사 : 권익범</span>
-                    <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address><br>
+                    <span>엠즈씨드(주) 대표이사: 권익범</span>
+                    <address>주소: 서울특별시 강남구 도산대로 75길 22</address><br>
                     <span>사업자등록번호 211-88-95935</span>
                     <span>대표번호 1899-8829</span>
-                    <span>개인정보관리책임자 : 정보문</span>
+                    <span>개인정보관리책임자: 정보문</span>
                 </div>
                 <div class="copyright">© m’s seed Co., Ltd. All rights reserved.</div>
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+            offset: 150, 
+            duration: 500, 
+            easing: 'ease', 
+        });
+    </script>
 </body>
 </html>

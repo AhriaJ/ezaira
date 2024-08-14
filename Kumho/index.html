@@ -10,6 +10,8 @@
     <script src="js/main.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>금호건설</title>
 </head>
 <body>
@@ -133,11 +135,11 @@
             <section class="biz">
                 <div class="tit">
                     <div class="wrapper">
-                        <h2><span>BUSINESS</span></h2>
-                        <p>CONNECT <br> SPACE TO SPACE</p>
+                        <h2 data-aos="fade-up"><span>BUSINESS</span></h2>
+                        <p data-aos="fade-up">CONNECT <br> SPACE TO SPACE</p>
                     </div>
                 </div>
-                <div class="list">
+                <div class="list" data-aos="fade-up">
                     <ul> <!-- jquery에서 마우스를 오버한 li에는 on추가, 마우스를 오버하지않은 li에는 off추가 -->
                         <li class="arch">
                             <a href="#n">
@@ -181,10 +183,10 @@
             <section class="news">
                 <div class="wrapper">
                     <div class="tit">
-                        <h2><span>KUMHO NEWS</span></h2>
-                        <p>WE STAND BY<br><em>KUMHO'S </em>CUSTOMERS</p>
+                        <h2 data-aos="fade-up"><span>KUMHO NEWS</span></h2>
+                        <p data-aos="fade-up">WE STAND BY<br><em>KUMHO'S </em>CUSTOMERS</p>
                     </div>
-                    <div class="list">
+                    <div class="list" data-aos="fade-up">
                         <div class="swiper">
                             <ul class="swiper-wrapper"> 
                                 <li class="swiper-slide">
@@ -242,10 +244,10 @@
             <section class="service">
                 <div class="wrapper">
                     <div class="tit">
-                        <h2><span>KUMHO E&C</span></h2>
-                        <p>Leading with KUMHO</p>
+                        <h2 data-aos="fade-up"><span>KUMHO E&C</span></h2>
+                        <p data-aos="fade-up">Leading with KUMHO</p>
                     </div>
-                    <div class="list">
+                    <div class="list" data-aos="fade-up">
                         <ul>
                             <li class="egs">
                                 <a href="#n">
@@ -307,5 +309,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+            offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+            duration: 1000, // 애니메이션 효과가 작동되는 시간
+            easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
