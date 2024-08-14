@@ -2,7 +2,9 @@
 @import url(fonts.css);
 @import url(common.css);
 @import url(layout.css);
-
+.visual_popup .popup h2 {
+    display: none;
+}
 .visual_popup .popup .popup_item img {
     width: 100%;
 }
