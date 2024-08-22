@@ -1,11 +1,11 @@
 /* 글자 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언해야 모든 글자에 적용 */
 html, body {
-    font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-family: "Paperlogy", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
     font-weight: 400;
     font-size: 15px;
     color: #3d3d3d;
     letter-spacing: 0em; /* 자간 */
-    line-height: 1.3; /* 배수 */
+    line-height: 1.4; /* 배수 */
     word-break: keep-all;
     word-wrap: break-word; /* 만약 단어길이가 화면넓이를 벗어난다면 강제로 줄바꿈을 실행 */
 }
@@ -47,11 +47,11 @@ a:focus, button:focus {
     outline: 3px dashed #C1121F;
 } */
 
-/* 드래그 색상 변경 */
+/* 드래그 색상 변경
 ::selection {
     background-color: #721011;
     color: #fff;
-}
+} */
 
 /* 기본이 15px일 때 
 80px - 5.33rem
@@ -70,37 +70,28 @@ a:focus, button:focus {
 
 :root {
     /* color */
-    --color-main-red1 : #721011;
-    --color-main-red2 : #b30406;
-    --color-main-red3 : #ff0104;
-    --color-main-bk : #202020;
-    --color-main-bei : #f6f3e2;
-    --color-main-lg : #ededed;
+    --color-main-blue : #014D8B;
+    --color-main-mint : #32C7A1;
+    --color-main-bei : #F6F3BC;
+    --color-main-gr : #DCE2C8;
     --txt-color-w80 : rgba(255,255,255,0.8);
     --txt-color-w60 : rgba(255,255,255,0.6);
-    --tit-margin: 170px 0 80px 0;
     /* font size */
-    --tit-size : 5.33rem;
+    --tit-size : 55px;
 }
 @media screen and (max-width:1300px){
     :root {
-        --tit-size : 5rem;
     }
 }
 @media screen and (max-width:1024px){
     :root {
-        --tit-size : 4.8rem;
-        --tit-margin: 120px 0 45px 0;
     }
 }
 @media screen and (max-width:768px){
     :root {
-        --tit-size : 4rem;
-        --tit-margin: 90px 0 30px 0;
     }
 }
 @media screen and (max-width:480px){
     :root {
-        --tit-size : 3.07rem;
     }
 }
