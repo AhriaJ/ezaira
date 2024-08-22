@@ -1,0 +1,319 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+.visual_popup .popup h2 {
+    display: none;
+}
+.visual_popup .popup .popup_item img {
+    width: 100%;
+}
+.visual_popup .popup .popup_item img.mo {
+    display: none;
+}
+.visual_popup .popup .slick-dots {
+    position: absolute; /*popup을 기준으로 정렬*/
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    gap: 6px;
+}
+.visual_popup .popup .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    width: 25px;
+    height: 9px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.5);
+}
+.visual_popup .popup .slick-dots li.slick-active button {
+    width: 50px;
+    background-color: #fff;
+}
+@media screen and (max-width:768px){
+    .visual_popup .popup .popup_item img.pc{
+        display: none;
+    }
+    .visual_popup .popup .popup_item img.mo {
+        display: block;
+    }
+}
+
+.menu .tit {
+    text-align: center;
+    margin: var(--tit-margin);
+}
+.menu .tit h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    color: var(--color-main-bk);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+.menu .tit p br {
+    display: none;
+}
+.menu .list {
+    margin-left: 20px;
+    width: calc(100% + 20px);
+}
+.menu .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 87px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 93px);
+    border: 3px solid #202020;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 50px;
+}
+.menu .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+.menu .list .popup .popup_item h3 {
+    font-size: 1.333rem;
+    font-weight: 700;
+    color: var(--color-main-bk);
+    padding: 16px 0 0 0;
+    margin: 20px 0 5px 0;
+    position: relative;
+}
+.menu .list .popup .popup_item h3::before {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-main-bk);
+    content: "";
+}
+.menu .list .popup .popup_item strong {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:1300px){
+    .menu .list .popup .popup_item {
+        width: 250px;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:1024px){
+    .menu .list .popup .popup_item {
+        width: 230px;
+        margin: 0 10px;
+        padding-bottom: 35px;
+    }
+}
+@media screen and (max-width:768px){
+    .menu .list .popup .popup_item {
+        width: 210px;
+        margin: 0 8px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width:480px){
+    .menu .list .popup .popup_item {
+        width: 207px;
+        margin: 0 8px;
+        padding-bottom: 25px;
+    }
+}
+.brand {
+    margin: 150px  0 0 0;
+}
+.brand .inner {
+    height: 681px;
+    padding: 485px 70px 0 0;
+    background: url(../images/main/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: right;
+}
+.brand .inner h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    padding-bottom: 25px;
+    line-height: 1.1;
+}
+/*
+    loop 애니메이션
+    <div> - 감싸는 요소
+        <span></span> - 움직일 요소
+    </div>
+    움직일 요소는 white-space: nowrap; 으로 한줄
+    넓이가 온전하게 인식되어야함.
+    브라우저 크기를 초과하는 얿이가 온전히 인식되려면 
+    position:absolute;
+*/
+.brand .loop {
+    height: 6rem;
+    background-color: var(--color-main-red1);
+    color: var(--color-main-bei);
+    font-size: 3.333rem;
+    font-weight: 200;
+    line-height: 1;
+    position: relative;
+}
+.brand .loop span {
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    animation-name: brand_loop;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes brand_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50.12%, 0);}
+}
+@media screen and (max-width:1024px){
+    .brand {
+        margin: 130px  0 0 0;
+    }
+    .brand .inner {
+        height: auto;
+        padding: 300px 50px 50px 0;
+    }
+    .brand .inner h2 {
+        font-size: 3.5rem;
+        padding-bottom: 20px;
+    }
+    .brand .loop {
+        height: 5.333rem;
+        font-size: 3rem;
+    }
+    .brand .loop span {
+        top: 1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .brand {
+        margin: 90px 0 0 0;
+    }
+    .brand .inner {
+        height: auto;
+        padding: 200px 20px 20px 20px;
+    }
+    .brand .inner h2 {
+        font-size: 2.3rem;
+        padding-bottom: 10px;
+    }
+    .brand .inner p .mo_skip {
+        display: none;
+    }
+    .brand .loop {
+        height: 3.846rem;
+        font-size: 1.84rem;
+    }
+    .brand .loop span {
+        top: 0.9rem;
+    }
+}
+
+.md .tit {
+    text-align: center;
+    margin: var(--tit-margin);
+}
+.md .tit h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    color: var(--color-main-bk);
+    padding-bottom: 25px;
+    line-height: 1.1;
+}
+.md .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    text-align: center;
+}
+.md .list .popup .popup_item a .photo {
+    overflow: hidden;
+    margin: 0 20px;
+}
+.md .list .popup .popup_item a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+.md .list .popup .popup_item a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+.md .list .popup .popup_item a h3 {
+    color: var(--color-main-bk);
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+.md .list .popup .popup_item a:hover h3 {
+    color: var(--color-main-red2);
+    font-weight: 700;
+}
+@media screen and (max-width:768px){
+    .md .list {
+        margin-left: 0;
+        width: calc(100% + 20px);
+        /* 오른쪽 wrapper 밖까지 list가 나오게 하기 위해 list에게 100%에 오른쪽 여백 20px을 추가해줌 */
+    }
+    .md .list .popup .popup_item {
+        margin: 0 12px;
+        width: 224px;
+        text-align: center;
+    }
+}
+.event .tit {
+    text-align: center;
+    margin: var(--tit-margin);
+}
+.event .tit h2 {
+    font-family: 'Wonder';
+    font-size: var(--tit-size);
+    color: var(--color-main-bk);
+    padding-bottom: 25px;
+    line-height: 1.1;
+}
+.event .list {
+    margin-left: 20px;
+    width: calc(100% + 20px);
+}
+.event .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+}
+.event .list .popup .popup_item a .photo {
+    overflow: hidden;
+    border-radius: 20px;
+}
+.event .list .popup .popup_item a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+.event .list .popup .popup_item a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+@media screen and (max-width:768px){
+    .event .list .popup .popup_item {
+        margin: 0 12px;
+        width: 208px;
+    }
+}
