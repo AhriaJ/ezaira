@@ -9,41 +9,21 @@
         body strong -- 얘가 우선순위가 더 높음
     2. 속성값 뒤에 !important를 추가. (!important는 해제가 어렵기 때문에 사용시 주의)
 */
-body #fp-nav {
-    left: 2% !important;
+.fp_nav {
+    position: fixed;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
 }
-body #fp-nav ul li {
-    width: auto;
-    height: auto;
-    margin: 0;
+.fp_nav ul li a {
+    display: block;
+    color: #666;
+    line-height: 2;
+    white-space: nowrap;
 }
-body #fp-nav ul li .fp-tooltip {
-    display: none;
-}
-body #fp-nav ul li a {
-    width: auto;
-    height: auto;
-}
-body #fp-nav ul li a.active span, 
-body #fp-nav ul li:hover a.active span {
-    height: auto;
-    width: auto;
-    margin: 0;
-    border-radius: 0;
-}
-body #fp-nav ul li a span {
-    position: relative;
-    border: 0;
-    background: transparent;
-    left: auto;
-    top: auto;
-    margin: 0;
-}
-body #fp-nav .fp-sr-only {
-    padding: 0;
-    overflow: visible;
-    clip: auto;
-}
+
+
 .section {
     font-size: 70px;
     text-align: center;
