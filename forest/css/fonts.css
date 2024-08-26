@@ -13,6 +13,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Paperlogy';
+    font-weight: 800;
+    font-display: swap;
+    src: url(../fonts/Paperlogy-8ExtraBold.woff2) format('woff2');
+    font-style: normal;
+}
+@font-face {
     font-family: 'IBM';
     font-weight: 400;
     font-display: swap;

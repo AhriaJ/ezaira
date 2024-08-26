@@ -28,9 +28,14 @@ $(document).ready(function(){
 			console.log(destination.index)
 			$('.fp_nav ul li').removeClass('active')
 			$('.fp_nav ul li').eq(destination.index).addClass('active')
-		},
 
-		responsiveWidth: 1024 /* fullpage를 적용시키지 않을 모바일 사이즈 */
+			if(destination.index == 1){
+				$('.tree .count span').counterUp(); 
+			}
+		},
+		
+
+		responsiveWidth: 1025 /* fullpage를 적용시키지 않을 모바일 사이즈 */
 	});//fullpage
 
 	const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
@@ -51,6 +56,23 @@ $(document).ready(function(){
 		},
 		
 	});
-	swiper.autoplay.stop();  /* 일시정지 기능 */
-	swiper.autoplay.start();  /* 재생 기능 */
+
+	const swiper = new Swiper('.story .swiper', { /* 팝업을 감싼는 요소의 class명 */
+		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+		breakpoints: {
+			768: {  /* 640px 이상이 되면 적용 */
+				spaceBetween: 16, 
+			},
+			1024: {  /* 1024px 이상이 되면 적용 */
+				spaceBetween: 24,
+			},
+			1550: {
+				spaceBetween: 24,
+			}
+		},
+		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+		
+	});
+	
 })

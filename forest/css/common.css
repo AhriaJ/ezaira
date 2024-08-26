@@ -2,7 +2,7 @@
 html, body {
     font-family: "Paperlogy", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 17px;
     color: #3d3d3d;
     letter-spacing: 0em; /* 자간 */
     line-height: 1.4; /* 배수 */
@@ -20,18 +20,26 @@ html, body {
     margin: 0 auto; /* 가운데 정렬 */
 }
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
-@media screen and (max-width:1300px){
-    #wrap { 
-        min-width: 100%;
-    }
+@media screen and (max-width:1550px){
     .wrapper {
         width: auto;
-        margin: 0 20px; /* 좌우에 20px */
+        margin: 0 140px; /* 좌우 퀵메뉴 공간 */
+    }
+}
+@media screen and (max-width:1300px){
+    html, body {   
+        font-size: 16px;
+    }
+    #wrap { 
+        min-width: 100%;
     }
 }/* media */
 @media screen and (max-width:1024px){ 
     html, body {   
-        font-size: 14px;
+        font-size: 15px;
+    }
+    .wrapper {
+        margin: 0 20px; /* 좌우에 20px */
     }
 }
 
@@ -79,16 +87,24 @@ a:focus, button:focus {
     /* font size */
     --tit-size : 55px;
 }
+@media screen and (max-width:1550px){
+    :root {
+        --tit-size : 50px;
+    }
+}
 @media screen and (max-width:1300px){
     :root {
+        --tit-size : 42px;
     }
 }
 @media screen and (max-width:1024px){
     :root {
+        --tit-size : 35px;
     }
 }
 @media screen and (max-width:768px){
     :root {
+        --tit-size : 30px;
     }
 }
 @media screen and (max-width:480px){
