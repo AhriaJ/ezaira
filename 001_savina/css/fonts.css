@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-display: swap;
+    src: local('Pretendard Light'), url(../fonts/Pretendard-ExtraLight.woff2) format('woff2'), url(../fonts/Pretendard-ExtraLight.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src: local('Pretendard SemiBold'), url(../fonts/Pretendard-SemiBold.woff2) format('woff2'), url(../fonts/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'bolkit';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/bolkit_bold.woff2) format('woff2'), url(../fonts/bolkit_bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'litoland';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Litoland_Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'litoland ltalic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Litoland_Italic.woff) format('woff');
+}
