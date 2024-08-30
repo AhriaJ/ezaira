@@ -25,6 +25,7 @@ header {
     height: 5.33rem;
     z-index: 100;
     padding: 0 30px;
+    background-color: #fff;
     border-bottom: 2px solid #272727;
     display: flex;
     justify-content: space-between;
@@ -70,7 +71,6 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap .depth1 > li > a:hover {
         font-weight: 700;
-        letter-spacing: -0.035em;
     }
     header.menu_over .gnb .gnb_wrap .depth1 > li > a span {
         color: #666666;

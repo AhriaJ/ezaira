@@ -12,7 +12,7 @@ html, body {
 /* id는 #으로 불러야함 */
 /* 홈페이지 전체를 감싸는 역할 -가로 스크롤바가 생겼을때 배경이 짤리는 현상을 방지 */
 #wrap { 
-    min-width: 1860px;
+    min-width: 1474px;
     overflow: hidden;
 }
 .wrapper {
@@ -20,6 +20,12 @@ html, body {
     margin: 0 auto; /* 가운데 정렬 */
 }
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
+@media screen and (max-width:1550px){ 
+    .wrapper {
+        width: auto;
+        margin: 0 30px; /* 좌우에 20px */
+    }
+}
 @media screen and (max-width:1300px){
     html, body {   
         font-size: 14px;
@@ -52,8 +58,10 @@ a:focus, button:focus {
 60px - 4rem
 50px - 3.33rem
 45px - 3rem
+40px - 2.667rem
 22px - 1.46rem
 20px - 1.33rem
+17px - 1.133rem
 16 - 1.067rem
 
 기본이 13px일때
@@ -70,26 +78,27 @@ a:focus, button:focus {
     --main-gold : #B08E51;
     --txt-w80 : rgba(255,255,255,0.8);
     --txt-w60 : rgba(255,255,255,0.6);
+    --txt-w50 : rgba(255,255,255,0.5);
     /* font size */
     --tit-size : 3.333rem;
 }
 @media screen and (max-width:1300px){
     :root {
-        --tit-size : 5rem;
+        --tit-size : 2.667rem;
     }
 }
 @media screen and (max-width:1024px){
     :root {
-        --tit-size : 4.8rem;
+        --tit-size : 2.333rem;
     }
 }
 @media screen and (max-width:768px){
     :root {
-        --tit-size : 4rem;
+        --tit-size : 1.667rem;
     }
 }
 @media screen and (max-width:480px){
     :root {
-        --tit-size : 3.07rem;
+        --tit-size : 1.333rem;
     }
 }
