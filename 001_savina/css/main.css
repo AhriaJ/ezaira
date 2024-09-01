@@ -595,6 +595,7 @@ body .visual .paging {
     background-color: var(--main-black);
     opacity: 0.4;
     content: "";
+    transition: 0.5s;
 }
 .dm .list ul li a {
     display: block;
@@ -736,4 +737,146 @@ body .visual .paging {
     .dm .loop span {
         top: 1rem;
     }
+}
+.Program {
+    height: 854px;
+    position: relative;
+}
+.Program .pro_bg {
+    position: absolute;
+}
+.Program .inner {
+    position: relative;
+    padding: 128px 0 60px 0;
+}
+.Program .inner .tit {
+    color: #fff;
+}
+.Program .inner .tit strong {
+    font-size: 1.46rem;
+    font-weight: 700;
+    color: var(--main-gold);
+}
+.Program .inner .tit h2 {
+    font-size: 3.333rem;
+    font-weight: 700;
+    margin: 11px 0 58px 0;
+}
+
+.news {
+    height: 718px;
+    margin: 128px 0 146px 0;
+}
+.news .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.news .txt {
+    width: 30%;
+}
+.news .txt .tit strong {
+    font-size: 1.46rem;
+    font-weight: 700;
+    color: var(--main-gold);
+}
+.news .txt .tit h2 {
+    font-size: 3.333rem;
+    font-weight: 700;
+    margin: 11px 0 26px 0;
+}
+.news .txt .tab li button {
+    display: block;
+    line-height: 2;
+    font-size: 1.33rem;
+    color: #666;
+}
+.news .txt .tab li.on button {
+    font-weight: 700;
+    color: var(--main-black);
+    position: relative;
+}
+.news .txt .tab li.on button::after {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 69px;
+    height: 1px;
+    background-color: var(--main-black);
+    content: "";
+}
+.news .txt .tab li.on button:hover::after {
+    animation-name: under;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.news .list {
+    width: 70%;
+}
+.news .list ul li {
+    border-bottom: 1px solid var(--main-black);
+    position: relative;
+}
+.news .list ul li:first-child {
+    border-top: 3px solid var(--main-black);
+}
+.news .list ul li::after {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.2158 2H4.4349V2.77789H24.6669L2 25.4516L2.55677 26L25.2158 3.33409V23.3921H26V2.77789V2H25.2158Z' fill='%23CCCCCC' stroke='%23CCCCCC' stroke-width='2'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.news .list ul li a {
+    display: flex;
+    align-items: center;
+}
+.news .list ul li a .date {
+    width: 15%;
+    padding: 15px 36px;
+    text-align: center;
+    position: relative;
+}
+.news .list ul li a .date::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80%;
+    background-color: #ccc;
+    content: "";
+}
+.news .list ul li a .date .day {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.news .list ul li a .detail {
+    padding: 22px 35px;
+}
+.news .list ul li a .detail strong {
+    display: inline-block;
+    color: #666;
+    position: relative;
+    margin-bottom: 11px;
+}
+.news .list ul li a .detail strong::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    content: "";
+}
+.news .list ul li a .detail h4 {
+    font-size: 1.33rem;
+    font-weight: 700;
 }

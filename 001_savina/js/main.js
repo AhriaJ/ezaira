@@ -50,4 +50,15 @@ $(document).ready(function(){
     $(window).resize(function(){//브라우저가 리사이즈 될때마다
         scroll_chk()
     })
+    
+    $('.dm .list ul li').on('mouseenter', function(){
+        $('.dm .list ul li').removeClass('on')
+        $('.dm .list ul li').addClass('off')
+        $(this).removeClass('off')
+        $(this).addClass('on')
+    })
+    $('.dm .list').on('mouseleave', function(){
+        $('.dm .list ul li').removeClass('on')
+        $('.dm .list ul li').removeClass('off')
+    })
 })
