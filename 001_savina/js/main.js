@@ -61,4 +61,41 @@ $(document).ready(function(){
         $('.dm .list ul li').removeClass('on')
         $('.dm .list ul li').removeClass('off')
     })
+
+    const program_swiper = new Swiper('.program .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        spaceBetween: 0, /* li와 li사이 - 제일 작은 여백 */
+        centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 250000,
+            disableOnInteraction: true,
+        },
+        navigation: {
+            nextEl: '.program .list .next',
+            prevEl: '.program .list .prev',
+        },
+        pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+            el: '.program .list .paging', /* 해당 요소의 class명 */
+            clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+        },
+    });
+
+
+
+    /*
+        news 탭메뉴
+    */
+   $('.news .txt .tab li').on('mouseenter', function(){
+        $('.news .txt .tab li').removeClass('on')
+        $(this).addClass('on')
+   })
+   $('.news .txt .tab li.notice').on('click', function(){
+        $('.news .list ul').removeClass('on')
+        $('.news .list .notice_list ul').addClass('on')
+   })
+   $('.news .txt .tab li.media').on('click', function(){
+    $('.news .list ul').removeClass('on')
+    $('.news .list .media_list ul').addClass('on')
+})
 })

@@ -23,7 +23,7 @@ html, body {
 @media screen and (max-width:1550px){ 
     .wrapper {
         width: auto;
-        margin: 0 30px; /* 좌우에 20px */
+        margin: 0 30px; 
     }
 }
 @media screen and (max-width:1300px){
