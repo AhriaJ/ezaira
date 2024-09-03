@@ -193,6 +193,9 @@ body .visual .paging {
     border-top: 2px solid var(--main-black);
     border-bottom: 2px solid var(--main-black);
 }
+.bar h2 {
+    display: none;
+}
 .bar .wrapper {
     display: flex;
     justify-content: space-between;
