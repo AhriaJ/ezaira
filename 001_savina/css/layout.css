@@ -587,7 +587,7 @@ footer .f_inner .copy {
     }
     footer .f_sub .sns ul {
         display:flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
     footer .f_sub .sns ul li {

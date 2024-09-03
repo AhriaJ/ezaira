@@ -97,13 +97,13 @@ a:focus, button:focus {
 }
 @media screen and (max-width:768px){
     :root {
-        --tit-size : 1.667rem;
+        --tit-size : 1.923rem;
         --tit-sub-size : 1rem;
     }
 }
 @media screen and (max-width:480px){
     :root {
-        --tit-size : 1.333rem;
+        --tit-size : 1.692rem;
         --tit-sub-size : 1rem;
     }
 }

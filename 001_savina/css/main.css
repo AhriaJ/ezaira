@@ -575,6 +575,9 @@ body .visual .paging {
         font-size: 3.07rem;
     }
 }
+.dm h2 {
+    display: none;
+}
 .dm .list {
     margin: 0 20px;
 }
@@ -984,12 +987,14 @@ body .visual .paging {
     background-color: rgba(242,239,232, 1);
     opacity: 1;
 }
-.program .more a {
-    display: block;
-    color: #fff;
+.program .more {
     position: absolute;
     right: 30px;
     top: 180px;
+}
+.program .more a {
+    display: block;
+    color: #fff;
     padding: 10px 39px 10px 18px;
     border: 1px solid var(--txt-w80);
 }
@@ -1100,7 +1105,7 @@ body .visual .paging {
         width: 10rem;
         height: 2rem;
     }
-    .program .more a {
+    .program .more {
         top: 164px;
     }
 }
@@ -1188,7 +1193,7 @@ body .visual .paging {
         width: 7rem;
         height: 1rem;
     }
-    .program .more a {
+    .program .more {
         top: 134px;
     }
 }
@@ -1203,14 +1208,12 @@ body .visual .paging {
         width: 10rem;
         height: 1.5rem;
     }
-    .program .more a {
-        display: block;
-        color: #fff;
-        position: absolute;
+    .program .more {
         right: 30px;
         top: 134px;
+    }
+    .program .more a {
         padding: 7px 32px 6px 16px;
-        border: 1px solid var(--txt-w80);
     }
     .program .more a::after {
         width: 8px;
@@ -1306,11 +1309,13 @@ body .visual .paging {
         width: 56px;
         height: 2px;
     }
-    .program .more a {
-        display: inline-block;
+    .program .more {
         position: relative;
         right: auto;
         left: 50%;
+    }
+    .program .more a {
+        display: inline-block;
         transform: translateX(-50%);
         top: auto;
         bottom: -20px;
@@ -1399,7 +1404,7 @@ body .visual .paging {
     align-items: center;
 }
 .news .list ul li a .date {
-    width: 15%;
+    width: 131px;
     padding: 15px 36px;
     text-align: center;
     position: relative;
@@ -1420,7 +1425,7 @@ body .visual .paging {
     line-height: 1;
 }
 .news .list ul li a .detail {
-    width: calc(100% - 30%);
+    width: calc(100% - 150px);
     padding: 22px 35px;
 }
 .news .list ul li a .detail strong {
@@ -1451,14 +1456,17 @@ body .visual .paging {
 .news .list ul.on {
     display: block;
 }
-.news .more a{
-    display: block;
-    color: #666;
+.news .more {
     position: absolute;
     left: 0;
     bottom: 0;
+}
+.news .more a{
+    display: block;
+    color: #666;
     padding: 10px 39px 10px 18px;
     border: 1px solid #666;
+    position: relative;
 }
 .news .more a::after {
     position: absolute;
@@ -1530,23 +1538,25 @@ body .visual .paging {
         border-top-width: 2px
     }
     .news .list ul li a .date {
-        width: 10%;
+        width: 100px;
         padding: 12px 3px;
     }
     .news .list ul li a .date .day {
         font-size: 2.5rem;
     }
     .news .list ul li a .detail {
-        width: calc(100% - 20%);
+        width: calc(100% - 120px);
         padding: 10px 20px;
     }
     .news .list ul li a .detail strong {
         margin-bottom: 5px;
     }
-    .news .more a {
+    .news .more {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .news .more a {
         display: inline-block;
         margin-top: 34px;
     }
@@ -1561,13 +1571,16 @@ body .visual .paging {
     .news .list ul li a .date {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        width: 56px;
     }
     .news .list ul li a .date::after {
         right: -3px;
     }
     .news .list ul li a .date .day {
         font-size: 2.3rem;
+    }
+    .news .list ul li a .detail {
+        width: calc(100% - 56px);
     }
     .news .list ul li a .detail h4 {
         font-size: 1rem;
