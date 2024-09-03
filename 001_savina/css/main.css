@@ -997,6 +997,7 @@ body .visual .paging {
     color: #fff;
     padding: 10px 39px 10px 18px;
     border: 1px solid var(--txt-w80);
+    
 }
 .program .more a::after {
     position: absolute;
@@ -1209,8 +1210,13 @@ body .visual .paging {
         height: 1.5rem;
     }
     .program .more {
-        right: 30px;
-        top: 134px;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 0;
+        margin-top: 34px;
     }
     .program .more a {
         padding: 7px 32px 6px 16px;
@@ -1308,17 +1314,6 @@ body .visual .paging {
     .program .list .btn_wrap .paging .swiper-pagination-bullet-active {
         width: 56px;
         height: 2px;
-    }
-    .program .more {
-        position: relative;
-        right: auto;
-        left: 50%;
-    }
-    .program .more a {
-        display: inline-block;
-        transform: translateX(-50%);
-        top: auto;
-        bottom: -20px;
     }
 }
 
@@ -1456,6 +1451,9 @@ body .visual .paging {
 .news .list ul.on {
     display: block;
 }
+.news .list h3 {
+    display: none;
+}
 .news .more {
     position: absolute;
     left: 0;
@@ -1553,11 +1551,11 @@ body .visual .paging {
     }
     .news .more {
         position: relative;
+        display: inline-block;
         left: 50%;
         transform: translateX(-50%);
-    }
-    .news .more a {
-        display: inline-block;
+        top: auto;
+        bottom: 0;
         margin-top: 34px;
     }
 }
