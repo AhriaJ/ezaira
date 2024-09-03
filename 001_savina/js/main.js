@@ -95,7 +95,27 @@ $(document).ready(function(){
         $('.news .list .notice_list ul').addClass('on')
    })
    $('.news .txt .tab li.media').on('click', function(){
-    $('.news .list ul').removeClass('on')
-    $('.news .list .media_list ul').addClass('on')
-})
+        $('.news .list ul').removeClass('on')
+        $('.news .list .media_list ul').addClass('on')
+    })
+
+    const archive_swiper = new Swiper('.archive .mo_list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+	spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+	breakpoints: {
+		768: {  
+			spaceBetween: 16, 
+		},
+		1024: { 
+			spaceBetween: 24,
+		},
+	},
+
+	scrollbar: {
+        el: ".archive .mo_list .swiper-scrollbar",
+        hide: false,
+        draggable: true,
+    },
+});
+
 })

@@ -12,7 +12,7 @@ html, body {
 /* id는 #으로 불러야함 */
 /* 홈페이지 전체를 감싸는 역할 -가로 스크롤바가 생겼을때 배경이 짤리는 현상을 방지 */
 #wrap { 
-    min-width: 1474px;
+    min-width: 1260px;
     overflow: hidden;
 }
 .wrapper {
@@ -69,6 +69,7 @@ a:focus, button:focus {
 30px - 2.3rem
 24px - 1.84rem
 17px - 1.3rem
+15px - 1.154rem
 */
 
 :root {
@@ -81,6 +82,7 @@ a:focus, button:focus {
     --txt-w50 : rgba(255,255,255,0.5);
     /* font size */
     --tit-size : 3.333rem;
+    --tit-sub-size : 1.46rem;
 }
 @media screen and (max-width:1300px){
     :root {
@@ -90,15 +92,18 @@ a:focus, button:focus {
 @media screen and (max-width:1024px){
     :root {
         --tit-size : 2.333rem;
+        --tit-sub-size : 1.154rem;
     }
 }
 @media screen and (max-width:768px){
     :root {
         --tit-size : 1.667rem;
+        --tit-sub-size : 1rem;
     }
 }
 @media screen and (max-width:480px){
     :root {
         --tit-size : 1.333rem;
+        --tit-sub-size : 1rem;
     }
 }
