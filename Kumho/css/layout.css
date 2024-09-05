@@ -292,22 +292,18 @@ header.fixed .logo a::before {
         background-color: #fff;
         color: #1D1D1D;
     }
-    header .gnb .gnb_wrap ul.depth1 {
-        margin-top: 100px;
+    header .gnb .gnb_wrap .depth1 {
+        margin-top: 90px;
         height: calc(100vh - 100px);
         overflow-y: auto; /* 좌우스크롤 바는 금지, 세로스크롤바는 때에 따라 생김*/
     }
-    header .gnb .gnb_wrap ul.depth1 > li {
+    header .gnb .gnb_wrap .depth1 > li {
         border-bottom: 1px solid #EDEDED;
-    }
-    header .gnb .gnb_wrap ul.depth1 > li:first-child {
-        border-top: 1px solid #EDEDED;
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         display: block;
-        line-height: 3;
+        line-height: 60px;
         font-size: 20px;
-        font-weight: 600;
         padding: 0 20px;
         position: relative;
     }

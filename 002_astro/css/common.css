@@ -1,0 +1,99 @@
+/* 글자 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html, body에 선언해야 모든 글자에 적용 */
+html, body {
+    font-family: "Paperlogy", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.3; /* 배수 */
+    word-break: keep-all;
+    word-wrap: break-word; /* 만약 단어길이가 화면넓이를 벗어난다면 강제로 줄바꿈을 실행 */
+}
+/* id는 #으로 불러야함 */
+/* 홈페이지 전체를 감싸는 역할 -가로 스크롤바가 생겼을때 배경이 짤리는 현상을 방지 */
+#wrap { 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px; 
+    margin: 0 auto; /* 가운데 정렬 */
+}
+/* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
+@media screen and (max-width:1300px){
+    html, body {   
+        font-size: 15px;
+    }
+    #wrap { 
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px; /* 좌우에 20px */
+    }
+}/* media */
+@media screen and (max-width:1024px){ 
+    html, body {   
+        font-size: 14px;
+    }
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width:768px){ 
+    html, body {   
+        font-size: 13px;
+    }
+}/* media */
+
+/* 클릭하는 요소 a, button > focus가 되었을때 스타일 변경
+a:focus, button:focus {
+    outline: 3px dashed #C1121F;
+} */
+
+/* 기본이 16px일 때 
+80px - 5rem
+60px - 3.75rem
+50px - 3.125rem
+45px - 2.813rem
+40px - 2.5rem
+35px - 2.188rem
+30px - 1.875rem
+25px - 1.563rem
+22px - 1.375rem
+20px - 1.25rem
+17px - 1.176rem
+
+기본이 13px일때
+40px - 3.07rem
+30px - 2.3rem
+24px - 1.84rem
+17px - 1.3rem
+15px - 1.154rem
+*/
+
+:root {
+    /* color */
+    --main-blue : #08235A;
+    --main-sky : #6196DA;
+    --main-tit-color : #1d1d1d;
+    --txt-w80 : rgba(255,255,255,0.8);
+    --txt-w60 : rgba(255,255,255,0.6);
+    --txt-w50 : rgba(255,255,255,0.5);
+    /* font size */
+    --tit-size : 2.813rem;
+}
+@media screen and (max-width:1300px){
+    :root {
+        --tit-size : 2.8rem;
+    }
+}
+@media screen and (max-width:1024px){
+    :root {
+        --tit-size : 2.5rem;
+    }
+}
+@media screen and (max-width:768px){
+    :root {
+        --tit-size : 2.3rem;
+    }
+}
