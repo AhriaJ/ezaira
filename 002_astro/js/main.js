@@ -75,4 +75,37 @@ $(document).ready(function(){
         $('.schedule .calendar .swiper ul li').removeClass('on')
         $(this).addClass('on')
     })
+
+    const program_swiper = new Swiper('.program .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 1,
+                spaceBetween: 16,
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
+        navigation: {
+            nextEl: '.program .list .btn_next',
+            prevEl: '.program .list .btn_prev',
+        },
+        scrollbar: {
+            el: '.program .list .swiper-scrollbar',
+            draggable: true,
+            hide: false
+          }
+    });
+
+    $('footer .f_sitelink button.btn_open').on('click', function(){
+        $('footer .f_sitelink').addClass('open')
+        $('footer .f_sitelink .list').slideDown()
+    })
+    $('footer .f_sitelink button.btn_close').on('click', function(){
+        $('footer .f_sitelink').removeClass('open')
+        $('footer .f_sitelink .list').slideUp()
+    })
 })
