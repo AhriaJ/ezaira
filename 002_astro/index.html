@@ -10,6 +10,8 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>시립서울천문대</title>
 </head>
 <body>
@@ -105,7 +107,7 @@
                     <div class="element2">행성</div>
                 </div>
             </section>
-            <section class="infobar">
+            <section class="infobar" data-aos="fade-up">
                 <h2>운영소개</h2>
                 <div class="wrapper">
                     <div class="infomation">
@@ -138,16 +140,16 @@
                 <div class="wrapper">
                     <div class="news">
                         <div class="tit">
-                            <h3>천문대 <span>소식</span></h3>
+                            <h3 data-aos="fade-up">천문대 <span>소식</span></h3>
                             <div class="tab">
                                 <ul>
-                                    <li class="notice active"><button><span>공지사항</span></button></li>
-                                    <li class="media"><button><span>언론보도</span></button></li>
+                                    <li class="notice active" data-aos="fade-left" data-aos-delay="300"><button><span>공지사항</span></button></li>
+                                    <li class="media" data-aos="fade-left" data-aos-delay="500"><button><span>언론보도</span></button></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="more"><a href="#n">더보기</a></div>
-                        <div class="notice_list">
+                        <div class="more" data-aos="fade-up"><a href="#n">더보기</a></div>
+                        <div class="notice_list" data-aos="fade-up" data-aos-delay="500">
                             <ul class="active">
                                 <li>
                                     <a href="#n">
@@ -253,9 +255,9 @@
                         </div>
                     </div>
                     <div class="gallery">
-                        <h3>천문대 <span>포토</span></h3>
-                        <div class="more"><a href="#n">더보기</a></div>
-                        <div class="cont">
+                        <h3 data-aos="fade-up">천문대 <span>포토</span></h3>
+                        <div class="more" data-aos="fade-up"><a href="#n">더보기</a></div>
+                        <div class="cont" data-aos="fade-up" data-aos-delay="500">
                             <a href="#n">
                                 <div class="photo"><img src="images/main/gall01.png" alt="달사진"></div>
                                 <div class="txt_box">
@@ -270,7 +272,7 @@
                     </div>
                 </div>
             </section>
-            <section class="schedule">
+            <section class="schedule" data-aos="fade-up">
                 <h2>월별일정</h2>
                 <div class="wrapper">
                     <div class="tit">
@@ -307,10 +309,10 @@
                 <h2>프로그램소개</h2>
                 <div class="wrapper">
                     <div class="tit">
-                        <h3>교육 <span>프로그램</span></h3>
-                        <div class="more"><a href="#n">더보기</a></div>
+                        <h3 data-aos="fade-up">교육 <span>프로그램</span></h3>
+                        <div class="more" data-aos="fade-up"><a href="#n">더보기</a></div>
                     </div>
-                    <div class="list">
+                    <div class="list" data-aos="fade-up" data-aos-delay="500">
                         <div class="swiper">
                             <ul class="swiper-wrapper">
                                 <li class="swiper-slide pro_cont1">
@@ -405,6 +407,13 @@
                     </div>
                 </div>
             </section>
+            <script>
+                AOS.init({
+                    offset: 100, 
+                    duration: 500,
+                    easing: 'ease',
+                });
+            </script>
         </main>
         <footer>
             <div class="wrapper">
