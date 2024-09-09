@@ -883,7 +883,6 @@
     display: block;
  }
  .schedule .calendar .swiper {
-    width: 13;
     margin: 0;
  }
  .schedule .calendar .swiper ul {
@@ -1446,6 +1445,12 @@
         top: 4px;
         width: 10px;
         height: 10px;
+    }
+    .program .list .ctrl_wrap .scroll {
+        width: calc(100% - 40px);
+    }
+    .program .list .ctrl_wrap .btn_wrap button.btn_prev {
+        right: 50px;
     }
 } 
 
