@@ -55,12 +55,17 @@ $(document).ready(function(){
     $('.schedule .tit .month').text(month)
 
     const calendar_swiper = new Swiper('.schedule .calendar .swiper', { /* 팝업을 감싼는 요소의 class명 */
-        slidesPerView: 15, /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        slidesPerView: 5, 
         spaceBetween: 0, /* li와 li사이 - 제일 작은 여백 */
         breakpoints: {
-            768: {  /* 640px 이상이 되면 적용 */
+            640: {  /* 640px 이상이 되면 적용 */
+                slidesPerView: 10, 
                 spaceBetween: 0, 
-            }
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 15,
+                spaceBetween: 0,
+            },
         },
         navigation: {
             nextEl: '.schedule .calendar .btn_next',
@@ -80,8 +85,8 @@ $(document).ready(function(){
         slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            768: {    /* 768px 이상일때 적용 */
-                slidesPerView: 1,
+            640: {    /* 768px 이상일때 적용 */
+                slidesPerView: 2,
                 spaceBetween: 16,
             },
             1024: {   /* 1024px 이상일때 적용 */
