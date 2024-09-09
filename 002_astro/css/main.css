@@ -1462,6 +1462,7 @@ footer .wrapper {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
+    align-items: flex-start;
     color: var(--txt-w80);
 }
 footer .f_inner .f_nav ul {
@@ -1529,7 +1530,7 @@ footer .f_sitelink .list {
     display: none;
     position: absolute;
     left: 0;
-    bottom: 140px;
+    bottom: 17px;
     background-color: #08235A;
     border-radius: 10px 10px 0 0;
     border: 1px solid #fff;
@@ -1568,7 +1569,6 @@ footer .f_sitelink.open button.btn_close {
         width: 100%;
     }
     footer .f_sitelink .list {
-        bottom: 19px;
         text-align: left;
     }
     footer .f_inner {
