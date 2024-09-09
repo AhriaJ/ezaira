@@ -3,11 +3,11 @@
 @import url(common.css);
 @import url(layout.css);
 
-.container section h2 {
-    display: none;
-}
 .visual {
     width: 100%;
+}
+.visual h2{
+    display: none;
 }
 .visual .popup1 {
     background: url(../images/main/visual_bg.png) no-repeat center center / cover;
@@ -142,6 +142,9 @@
 }
 .infobar {
     height: 160px;
+}
+.infobar h2{
+    display: none;
 }
 .infobar .wrapper {
     height: 100%;
@@ -424,13 +427,13 @@
     justify-content: space-between;
     padding: 90px 0 105px 0;
 }
-.community h3 {
+.community h2 {
     font-size: var(--tit-size);
     font-weight: 700;
     color: #1d1d1d;
     line-height: 1;
 }
-.community h3 > span {
+.community h2 > span {
     color: var(--main-sky);
 }
 .community .news {
@@ -478,10 +481,15 @@
 .community .news .tit .tab ul li:last-child {
     margin-right: 75px;
 }
-.community .news .more {
+.community .news .notice_list .more {
     position: absolute;
     right: 28px;
-    top: 14px;
+    top: -47px;
+}
+.community .news .media_list .more {
+    position: absolute;
+    right: 28px;
+    top: 13px;
 }
 .community .news .more a {
     display: block;
@@ -555,14 +563,14 @@
 .community .news ul li a .list_tit strong.cate02 {
     background-color: #D9F27E;
 }
-.community .news ul li a .list_tit h4 {
+.community .news ul li a .list_tit h3 {
     width: 100%;
     padding: 0 24px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.community .news ul li a:hover .list_tit h4 {
+.community .news ul li a:hover .list_tit h3 {
     font-weight: 700;
 }
 .community .news ul li a span {
@@ -606,7 +614,7 @@
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.63462 8.36538H0.865385C0.620192 8.36538 0.414712 8.2824 0.248942 8.11644C0.0829809 7.95048 0 7.7449 0 7.49971C0 7.25433 0.0829809 7.04885 0.248942 6.88327C0.414712 6.7175 0.620192 6.63462 0.865385 6.63462H6.63462V0.865385C6.63462 0.620192 6.7176 0.414712 6.88356 0.248942C7.04952 0.0829809 7.2551 0 7.50029 0C7.74567 0 7.95115 0.0829809 8.11673 0.248942C8.2825 0.414712 8.36538 0.620192 8.36538 0.865385V6.63462H14.1346C14.3798 6.63462 14.5853 6.7176 14.7511 6.88356C14.917 7.04952 15 7.2551 15 7.50029C15 7.74567 14.917 7.95115 14.7511 8.11673C14.5853 8.2825 14.3798 8.36538 14.1346 8.36538H8.36538V14.1346C8.36538 14.3798 8.2824 14.5853 8.11644 14.7511C7.95048 14.917 7.7449 15 7.49971 15C7.25433 15 7.04885 14.917 6.88327 14.7511C6.7175 14.5853 6.63462 14.3798 6.63462 14.1346V8.36538Z' fill='white'/%3E%3C/svg%3E%0A");
     content: "";
 }
-.community .gallery h3 {
+.community .gallery h2 {
     margin-bottom: 15px;
     padding: 0 20px;
 }
@@ -667,7 +675,7 @@
     .community .news .notice_list ul, .community .news .media_list ul {
         width: 100%;
     }
-    .community .news ul li a .list_tit h4 {
+    .community .news ul li a .list_tit h3 {
         padding: 0 16px;
     }
     .community .news ul li a .list_tit strong {
@@ -716,14 +724,14 @@
         width: 100%;
         padding: 20px 28px;
     }
-    .community .news ul li a .list_tit h4 {
+    .community .news ul li a .list_tit h3 {
         font-size: 1.143rem;
     }
     .community .news .more {
         right: 0;
         top: 45px;
     }
-    .community .gallery h3 {
+    .community .gallery h2 {
         margin-top: 60px;
         padding: 0;
     }
@@ -845,7 +853,7 @@
     color: var(--main-blue);
     margin-bottom: 8px;
 }
-.schedule .tit h3 {
+.schedule .tit h2 {
     font-size: 1.5rem;
     color: var(--main-sky);
 }
@@ -1095,7 +1103,7 @@
         margin: 0 9px 0 0;
         font-size: 3.846rem;
     }
-    .schedule .tit h3 {
+    .schedule .tit h2 {
         display: inline-block;
         font-size: var(--tit-size);
     }
@@ -1164,43 +1172,17 @@
 } 
 .program .wrapper {
     padding: 98px 0 80px 0;
+    position: relative;
 }
-.program .tit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-}
-.program .tit h3 {
+.program h2 {
     font-size: var(--tit-size);
     font-weight: 700;
     color: #1d1d1d;
     line-height: 1;
+    margin-bottom: 18px;
 }
-.program .tit h3 > span {
+.program h2 > span {
     color: var(--main-sky);
-}
-.program .tit .more a {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: var(--main-sky);
-    border-radius: 50%;
-    font-size: 0;
-    line-height: 0;
-}
-.program .tit .more a::after {
-    position: absolute;
-    left: 7px;
-    top: 7px;
-    width: 15px;
-    height: 15px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.63462 8.36538H0.865385C0.620192 8.36538 0.414712 8.2824 0.248942 8.11644C0.0829809 7.95048 0 7.7449 0 7.49971C0 7.25433 0.0829809 7.04885 0.248942 6.88327C0.414712 6.7175 0.620192 6.63462 0.865385 6.63462H6.63462V0.865385C6.63462 0.620192 6.7176 0.414712 6.88356 0.248942C7.04952 0.0829809 7.2551 0 7.50029 0C7.74567 0 7.95115 0.0829809 8.11673 0.248942C8.2825 0.414712 8.36538 0.620192 8.36538 0.865385V6.63462H14.1346C14.3798 6.63462 14.5853 6.7176 14.7511 6.88356C14.917 7.04952 15 7.2551 15 7.50029C15 7.74567 14.917 7.95115 14.7511 8.11673C14.5853 8.2825 14.3798 8.36538 14.1346 8.36538H8.36538V14.1346C8.36538 14.3798 8.2824 14.5853 8.11644 14.7511C7.95048 14.917 7.7449 15 7.49971 15C7.25433 15 7.04885 14.917 6.88327 14.7511C6.7175 14.5853 6.63462 14.3798 6.63462 14.1346V8.36538Z' fill='white'/%3E%3C/svg%3E%0A");
-    content: "";
 }
 .program .list {
     position: relative;
@@ -1238,7 +1220,7 @@
     color: #fff;
     font-weight: 600;
 }
-.program .list .swiper ul li a h4 {
+.program .list .swiper ul li a h3 {
     font-size: 1.688rem;
     font-weight: 700;
     color: #1D1D1D;
@@ -1406,6 +1388,40 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.program .more {
+    position: absolute;
+    right: 0;
+    top: 113px;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+}
+.program .more a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-sky);
+    border-radius: 50%;
+}
+.program .more a::after {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.63462 8.36538H0.865385C0.620192 8.36538 0.414712 8.2824 0.248942 8.11644C0.0829809 7.95048 0 7.7449 0 7.49971C0 7.25433 0.0829809 7.04885 0.248942 6.88327C0.414712 6.7175 0.620192 6.63462 0.865385 6.63462H6.63462V0.865385C6.63462 0.620192 6.7176 0.414712 6.88356 0.248942C7.04952 0.0829809 7.2551 0 7.50029 0C7.74567 0 7.95115 0.0829809 8.11673 0.248942C8.2825 0.414712 8.36538 0.620192 8.36538 0.865385V6.63462H14.1346C14.3798 6.63462 14.5853 6.7176 14.7511 6.88356C14.917 7.04952 15 7.2551 15 7.50029C15 7.74567 14.917 7.95115 14.7511 8.11673C14.5853 8.2825 14.3798 8.36538 14.1346 8.36538H8.36538V14.1346C8.36538 14.3798 8.2824 14.5853 8.11644 14.7511C7.95048 14.917 7.7449 15 7.49971 15C7.25433 15 7.04885 14.917 6.88327 14.7511C6.7175 14.5853 6.63462 14.3798 6.63462 14.1346V8.36538Z' fill='white'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+@media screen and (max-width:1024px){
+    .program .more {
+        top: 100px;
+    }
+}
 @media screen and (max-width:768px){
     .program {
         height: auto;
@@ -1420,15 +1436,19 @@
     .program .list .swiper ul li a .photo {
         height: auto;
     }
-    .program .tit .more a {
+    .program .more {
+        top: 54px;
         width: 20px;
         height: 20px;
     }
-    .program .tit .more a::after {
+    .program .more a::after {
         left: 5px;
         top: 5px;
         width: 10px;
         height: 10px;
+    }
+    .program .list .swiper ul li a h3 {
+        margin: 10px 0;
     }
     .program .list .swiper ul li a .txt_sub span::before {
         top: -1px;
