@@ -12,7 +12,7 @@
 }
 .visual .photo {
     overflow: hidden;
-    width: 85.67%;
+    width: calc(100% - 275px);
     height: 795px;
     line-height: 0;
     font-size: 0;
@@ -89,4 +89,14 @@ body .visual .paging {
     border-radius: 4px;
     background-color: #ACFE05;
     opacity: 1;
+}
+@media screen and (max-width:1260px){
+    .visual .photo {
+        width: calc(100% - 250px);
+    }
+}
+@media screen and (max-width:1024px){
+    .visual .photo {
+        width: 100%;
+    }
 }
