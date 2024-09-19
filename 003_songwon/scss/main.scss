@@ -1,0 +1,401 @@
+@import "__default.scss";
+@import "__variable.scss";
+@import "__common.scss";
+@import "__fonts.scss";
+@import "__layout.scss";
+
+.visual {
+    height: 850px;
+    position: relative;
+    h2 {
+        display: none;
+    }
+    .photo {
+        overflow: hidden;
+        width: calc(100% - 275px);
+        height: 795px;
+        line-height: 0;
+        font-size: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .swiper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 704px;
+        ul {
+            li {
+                .wrapper {
+                    position: relative;
+                }
+                .tit {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 30;
+                    strong {
+                        display: block;
+                        color: $w80;
+                        font-size: 1.33rem;
+                        margin: 191px 0 19px 0;
+                    }
+                    h3 {
+                        color: #fff;
+                        font-family: 'GM';
+                        font-weight: 700;
+                        line-height: 1;
+                        font-size: $vs-tit;
+                    }
+                }
+                .popup {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 71.6%;
+                    height: 704px;
+                    border-top-left-radius: 150px;
+                    overflow: hidden;
+                    line-height: 0;
+                    font-size: 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .paging {
+            position: absolute;
+            top: 420px;
+            left: 15%;
+            width: auto;
+            height: 8px;
+            font-size: 0;
+            line-height: 0;
+            z-index: 50;
+            .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $w50;
+                opacity: 1;
+                transition: 0.5s;
+            }
+            .swiper-pagination-bullet-active {
+                width: 34px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: #ACFE05;
+                opacity: 1;                        
+            }
+        }
+    }
+}
+@media screen and (max-width:1260px){
+    .visual {
+        height: 800px;
+        .photo {
+            width: calc(100% - 250px);
+            height: 740px;
+        }
+        .swiper {
+            ul {
+                li {
+                    .tit {
+                        top: 50px;                        
+                        strong {
+                            margin: 150px 0 19px 0;
+                        }
+                        .popup {
+                            height: 650px
+                        }
+                    }
+                }
+            }
+            .paging {
+                left: 10%;
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .visual {
+        height: 720px;
+        .photo {
+            width: 100%;
+            height: 650px;
+        }
+        .swiper {
+            ul {
+                li {
+                    .tit{
+                        strong {
+                            margin: 190px 0 19px 0;
+                        }
+                        h3 {
+                            font-size: 4.5rem;;
+                        }
+                    }
+                    .popup {
+                        height: 600px
+                    }
+                }
+            }
+            .paging {
+                left: 8%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .visual {
+        height: 580px;
+        .photo {
+            height: 580px;
+        }
+        .swiper {
+            height: 580px;
+            ul {
+                li {
+                    .tit{
+                        top: 0;                        
+                        strong {
+                            font-size: 15px;
+                            margin: 98px 0 12px 0;
+                        }
+                        h3 {
+                            font-size: $vs-tit-mo1;
+                        }
+                    }
+                    .popup {
+                        width: 93%;
+                        height: 285px;
+                        border-top-left-radius: 100px;
+                    }
+                }
+            }
+            .paging {
+                top: 246px;
+                left: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .visual {
+        .swiper {
+            ul {
+                li {
+                    .tit{                    
+                        strong {
+                            font-size: 13px;
+                            margin: 98px 0 12px 0;
+                        }
+                        h3 {
+                            font-size: $vs-tit-mo2;
+                        }
+                    }
+                }
+            }
+            .paging {
+                top: 228px;
+            }
+        }
+    }
+}
+.go {
+    height: 200px;
+    h2 {
+        display: none;
+    }
+    .wrapper{
+        height: 100%;
+        padding: 30px 0;
+        position: relative;
+        .swiper {
+            width: 84%;
+            height: 100%;
+            ul {
+                display: flex;
+                li {
+                    width: 12.5%;
+                    text-align: center;
+                    a {
+                        display: block;
+                        padding-top: 123px;
+                        position: relative;
+                        &::before {
+                            @include poAb_x;
+                            top: 0;
+                            width: 105px;
+                            height: 105px;
+                            border-radius: 10px;
+                            border: 1px solid #ededed;
+                        }
+                        &::after {
+                            @include afterSp;
+                            left: 0;
+                            top: 23px;
+                            width: 100%;
+                            height: 60px;
+                        }
+                        &.g01 {
+                            &::after {
+                                background-image: url(../images/main/go_icon01.svg);
+                            }
+                        }
+                        &.g02 {
+                            &::after {
+                                background-image: url(../images/main/go_icon02.svg);
+                            }
+                        }
+                        &.g03 {
+                            &::after {
+                                background-image: url(../images/main/go_icon03.svg);
+                            }
+                        }
+                        &.g04 {
+                            &::after {
+                                background-image: url(../images/main/go_icon04.svg);
+                            }
+                        }
+                        &.g05 {
+                            &::after {
+                                background-image: url(../images/main/go_icon05.svg);
+                            }
+                        }
+                        &.g06 {
+                            &::after {
+                                background-image: url(../images/main/go_icon06.svg);
+                            }
+                        }
+                        &.g07 {
+                            &::after {
+                                background-image: url(../images/main/go_icon07.svg);
+                            }
+                        }
+                        &.g08 {
+                            &::after {
+                                background-image: url(../images/main/go_icon08.svg);
+                            }
+                        }
+                        &.g09 {
+                            &::after {
+                                background-image: url(../images/main/go_icon09.svg);
+                            }
+                        }
+                        &.g010 {
+                            &::after {
+                                background-image: url(../images/main/go_icon010.svg);
+                            }
+                        }
+                        &.g011 {
+                            &::after {
+                                background-image: url(../images/main/go_icon011.svg);
+                            }
+                        }
+                        &:hover {
+                            font-weight: 700;
+                            &::after {
+                                animation-name: turnImg;
+                                animation-duration: 0.5s;
+                                animation-iteration-count: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            .btn_prev {
+                font-size: 0;
+                line-height: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 83px;
+                height: 100%;
+                &::before {
+                    @include poAb;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_79_2196' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_79_2196)'%3E%3Cpath d='M19.9998 27.067L7.93262 14.9998L19.9998 2.93262L21.7739 4.70668L11.4804 14.9998L21.7739 25.2929L19.9998 27.067Z' fill='%23CCCCCC'/%3E%3C/g%3E%3C/svg%3E%0A");
+                }
+            }
+            .btn_next {
+                font-size: 0;
+                line-height: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 83px;
+                height: 100%;
+                &::before {
+                    @include poAb;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_79_2193' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' transform='matrix(-1 0 0 1 30 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_79_2193)'%3E%3Cpath d='M10.0002 27.067L22.0674 14.9998L10.0002 2.93262L8.22613 4.70668L18.5196 14.9998L8.22613 25.2929L10.0002 27.067Z' fill='%23CCCCCC'/%3E%3C/g%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+    }
+}
+@keyframes turnImg {
+    0% {transform: rotateY(0);}
+    100% {transform: rotateY(360deg);}    
+}
+@media screen and (max-width:768px){
+    .go {
+        height: 120px;
+        .wrapper {
+            padding: 19px 0;
+            .swiper {
+                width: 75.3%;
+                ul {
+                    li {
+                        a {
+                            padding-top: 68px;
+                            &::before {
+                                width: 60px;
+                                height: 60px;
+                            }
+                            &::after {
+                                left: 50%;
+                                transform: translateX(-50%);
+                                top: 15px;
+                                width: 30px;
+                                height: 35px;
+                            }
+                            &:hover {
+                                &::after {
+                                    animation-name: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_wrap {
+                .btn_prev, .btn_next {
+                    width: 30px;
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
