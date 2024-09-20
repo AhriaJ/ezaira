@@ -870,7 +870,8 @@ footer {
 .visual .photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .visual .swiper {
   position: absolute;
@@ -915,7 +916,8 @@ footer {
 .visual .swiper ul li .popup img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .visual .swiper .paging {
   position: absolute;
