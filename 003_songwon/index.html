@@ -388,14 +388,19 @@
             <section class="community">
                 <div class="wrapper">
                     <div class="news">
-                        <h2>송원인에게 알립니다.</h2>
+                        <h2>송원인에게 <span>알립니다.</span></h2>
                         <div class="tab">
-                            <ul>
-                                <li class="notice">
-                                    <div class="tab_menu">
-                                        <button>공지</button>
-                                    </div>
-                                    <div class="list">
+                            <div class="tab_btn">
+                                <ul role=”tablist”>
+                                    <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>학사</span></button></li>
+                                    <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>봉사</span></button></li>
+                                    <li id="tab_03" aria-selected="false" aria-controls="panel_03" role=”tab”><button><span>채용</span></button></li>
+                                    <li id="tab_04" aria-selected="false" aria-controls="panel_04" role=”tab”><button><span>일반</span></button></li>
+                                </ul>
+                            </div>
+                            <div class="tab_cont">
+                                <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                                    <div class="noti_list">
                                         <ul>
                                             <li>
                                                 <a href="#n">
@@ -440,13 +445,10 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
-                                </li>
-                                <li class="volunteer">
-                                    <div class="tab_menu">
-                                        <button>봉사</button>
-                                    </div>
-                                    <div class="list">
+                                    </div><!--noti_list-->
+                                </div>
+                                <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                                    <div class="noti_list">
                                         <ul>
                                             <li>
                                                 <a href="#n">
@@ -492,12 +494,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
-                                <li class="employ">
-                                    <div class="tab_menu">
-                                        <button>채용</button>
-                                    </div>
-                                    <div class="list">
+                                </div>
+                                <div id="panel_03" role="tabpanel" aria-labelledby="tab_03">
+                                    <div class="noti_list">
                                         <ul>
                                             <li>
                                                 <a href="#n">
@@ -543,12 +542,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
-                                <li class="general">
-                                    <div class="tab_menu">
-                                        <button>일반</button>
-                                    </div>
-                                    <div class="list">
+                                </div>
+                                <div id="panel_04" role="tabpanel" aria-labelledby="tab_04">
+                                    <div class="noti_list">
                                         <ul>
                                             <li>
                                                 <a href="#n">
@@ -594,17 +590,23 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div><!--tab-->
+                        <div class="more"><a href="#n">MORE</a></div>
                     </div><!--news-->
                     <div class="schedule">
-                        <h2>학사일정</h2>
+                        <h2>학사<span>일정</span></h2>
                         <div class="tab">
-                            <ul>
-                                <li class="sep">
-                                    <div class="tab_menu"><button>9월</button></div>
-                                    <div class="list">
+                            <div class="tab_btn">
+                                <ul role=”tablist”>
+                                    <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>9월</span></button></li>
+                                    <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>10월</span></button></li>
+                                </ul>
+                            </div>
+                            <div class="tab_cont">
+                                <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                                    <div class="sch_list">
                                         <ul>
                                             <li>
                                                 <div class="date">                                                    
@@ -638,10 +640,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
-                                <li class="oct">
-                                    <div class="tab_menu"><button>10월</button></div>
-                                    <div class="list">
+                                </div>
+                                <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                                    <div class="sch_list">
                                         <ul>
                                             <li>
                                                 <div class="date">                                                    
@@ -675,15 +676,124 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
+                        <div class="more"><a href="#n">MORE</a></div>
                     </div>
                 </div>
             </section>
-            <section class="number"></section>
-            <section class="news"></section>
-            <section class="media"></section>
+            <section class="number">
+                <div class="wrapper">
+                    <h2>숫자로 보는 <span>송원대학교</span></h2>
+                    <div class="num_cont">
+                        <ul>
+                            <li>
+                                <div class="inner">
+                                    <h3>취업률</h3>
+                                    <div class="count"><span class="counter" data-start="0" data-end="70">70</span><span>&#46;</span><span class="counter" data-start="0" data-end="3">3</span><strong>%</strong></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inner">
+                                    <h3>신입생 충원률</h3>
+                                    <div class="count"><span class="counter" data-start="0" data-end="99">99</span><span>&#46;</span><span class="counter" data-start="0" data-end="1">1</span><strong>%</strong></div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inner num3">
+                                    <h3><em>학생</em> 1인당 장학금</h3>
+                                    <div class="count"><span class="counter" data-start="1000" data-end="4156">4,156</span><strong>천원</strong></div>                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="media">
+                <div class="media_wrap">
+                    <div class="wrapper">
+                        <h2>송원 <span>NEWS</span></h2>
+                        <div class="media_cont">
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/media_01.png" alt="협약식 사진"></div>
+                                            <div class="txt">
+                                                <h3>송원대학교-광주청년일자리스테이션(상무) 청년 취업지원 업무협약</h3>
+                                                <p>송원대학교(총장 최수태) 진로지원처(처장 박장진)는 광주청년일자리스테이션 상무센터와 지난 11일 송원대학교 대학본부 2층 대회의실에서 청년들의 취업 지원 및 청년정책 활성화를 위한 업무협약을 체결했다고 밝혔다.</p>
+                                                <span>2024.09.13</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/media_02.png" alt="월드뷰티국제공모전입상을 한 학생들"></div>
+                                            <div class="txt">
+                                                <h3>미용예술학과 제21회 월드뷰티 아트&디자인 국제공모전 대거입상</h3>
+                                                <p>송원대학교(총장 최수태) 미용예술학과(학과장 박장순교수)는 2024 ‘제21회 월드뷰티 아트&디자인 국제공모전’에서 대거 입상하는 쾌거를 거두었다고 밝혔다. 이번 국제공모전은 사단법인 월드뷰티아트협회에서 주관하고 원드뷰티 아트&디자인 국제공모전 조직위원회에서 주최하여 지난 5월부터 6월에 걸쳐 국가기술종목과 일반작품 부분으로 진행하였다.</p>
+                                                <span>2024.09.13</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/media_03.png" alt="송원대 전경"></div>
+                                            <div class="txt">
+                                                <h3>송원대학교 수시특집 무등일보 - 호남 유일호남 유일 철도특성화 대학 우뚝</h3>
+                                                <p>송원대는 9월 9일부터 13까지 2025학년도 수시모집으로 643명을 모집한다. 이는 총 모집인원 675명의 95%이다. 전형은 학생부우수자, 인성우수자, 실기우수자 전형으로 선발한다. 송원대 수시모집의 큰 특징은 복잡한 전형을 간소화해 수능최저학력 및 자기소개서 작성 등이 없다는 점이다. 대부분 학생부 교과 성적이 크게 반영된다.</p>
+                                                <span>2024.09.05</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/media_04.png" alt="송원국토순례단 단체사진"></div>
+                                            <div class="txt">
+                                                <h3>송원대학교 혁신사업단 사회복지학과 송원국토순례단 역사 탐방 비교과 프로그램 성료</h3>
+                                                <p>송원대학교(총장 최수태) 대학혁신사업단(단장 김호연)의 지원을 통하여 송원대학교 송원국토순례단이 지난 8월 21일부터 8월 23일까지 4박 5일간의 일정으로 백두산을 방문하여 ‘2024학년도 국토탐방을 통한 자기 주도성 강화 및 역사 인식 함양 비교과 프로그램’을 성황리에 마쳤다.</p>
+                                                <span>2024.09.03</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/media_05.png" alt="송원대총장기주짓수대회 단체사진"></div>
+                                            <div class="txt">
+                                                <h3>송원대학교 대한주짓수회 업무협약 및 제2회 송원대학교총장기 주짓수대회 성료</h3>
+                                                <p>송원대학교(총장 최수태)는 대한주짓수회(회장 오준혁)와 30일 오후 3시에 송원대학교 대학본부 대회의실에서 지역 스포츠 발전을 위한 업무협약을 체결하고, 다음날 31일 오전 11시부터 ‘제1회 대한체육회장기 및 제2회 송원대학교총장기 생활주짓수대회’를 성황리에 개최하였다.</p>
+                                                <span>2024.09.02</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/main/media_06.png" alt="국가기술자격증 실기시험 현장"></div>
+                                            <div class="txt">
+                                                <h3>송원대학교 남구 유일 ‘미용사 일반(헤어) 국가시험장’ 선정</h3>
+                                                <p>송원대학교(총장 최수태) 미용예술학과(학과장 박장순)는 광주광역시 남구 유일의 미용사 일반(헤어) 국가기술자격증 실기시험장으로 지정되어 지난 16일(금) ‘제14회차 상시검정’을 송원대학교 Action동 5층 미용예술학과 실습실에서 진행하였다.</p>
+                                                <span>2024.08.19</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn_wrap">
+                                <button class="btn_prev"></button>
+                                <button class="btn_stop"></button>
+                                <button class="btn_play"></button>
+                                <button class="btn_next"></button>
+                            </div>
+                            <div class="more"><a href="#n">MORE</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_bg">
+                    <strong>SONGWON UNIVERSITY</strong>
+                </div>
+            </section>
+            <section class="onair"></section>
             <section class="campus"></section>
             <div class="banner"></div>
         </main>

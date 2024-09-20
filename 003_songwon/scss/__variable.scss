@@ -9,7 +9,15 @@ $vs-tit : 5.33rem;
 $vs-tit-mo1 : 4rem;
 $vs-tit-mo2 : 3.07rem;
 $tit-size : 3rem;
+$tit-size-mo : 2.154rem;
 
+
+
+@mixin titH2 {
+    font-family: 'GM';
+    color: #1d1d1d;
+    font-weight: 300;
+}
 @mixin poAb {
     position: absolute;
     left: 50%;
@@ -67,6 +75,47 @@ $tit-size : 3rem;
     content: "";
 }
 
+/* 텍스트 줄수 제한*/
+@mixin twoTxt {
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+}
+@mixin oneTxt {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@mixin otTxt {
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* more 오버애니메이션 */
+@keyframes mAct {
+    0% {
+        right: 8px;
+    }
+    50% {
+        right: 12px;
+    }
+    100% {
+        right: 8px;
+    }
+}
+
+@mixin moreAct {
+    animation: {
+        name: mAct;
+        duration : 1s;
+        iteration-count: infinite;
+        timing-function: linear;
+    }
+}
+
+
 $pc2000: 2000px;
 $pc1500: 1500px;
 $pc1300: 1300px;
@@ -74,9 +123,10 @@ $pc1260: 1260px;
 $pc1260: 1259px;
 $pc1025: 1025px;
 $pc1024: 1024px;
+$pcTomobile: 769px;
 $mobile768: 768px;
 $mobile480: 480px;
- 
+
 @mixin respond($pc1300) {
     @media screen and (max-width:$pc1300) {
         @content;
@@ -92,3 +142,9 @@ $mobile480: 480px;
         @content;
     }
 }
+@mixin respond($mobile480) {
+    @media screen and (max-width:$mobile480) {
+        @content;
+    }
+}
+

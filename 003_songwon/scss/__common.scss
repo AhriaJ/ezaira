@@ -20,16 +20,13 @@ html, body {
 #wrap { 
     min-width: 1260px;
     overflow: hidden;
+    @include respond($pc1300) {
+        min-width: 100%;
+    }
     .wrapper {
         width: 1260px; 
         margin: 0 auto; /* 가운데 정렬 */
-    }
-}
-//respond mixin
-@include respond($pc1300) {
-    #wrap {
-        min-width: 100%;
-        .wrapper{
+        @include respond($pc1300) {
             width: auto;
             margin: 0 20px; /* 좌우에 20px */
         }
