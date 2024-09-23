@@ -12,6 +12,16 @@ $tit-size : 3rem;
 $tit-size-mo : 2.154rem;
 
 
+@mixin underLine {
+    animation-name: under;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes under{
+    0% {width: 0;}
+    100% {width: 100%;}
+}
 
 @mixin titH2 {
     font-family: 'GM';
@@ -115,8 +125,6 @@ $tit-size-mo : 2.154rem;
     }
 }
 
-
-$pc2000: 2000px;
 $pc1500: 1500px;
 $pc1300: 1300px;
 $pc1260: 1260px;

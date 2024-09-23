@@ -106,7 +106,6 @@ $(document).ready(function(){
         requestAnimationFrame(animateCounter);
     }
 
-    
     // 윈도우의 스크롤 이벤트를 모니터링합니다.
     $(window).on('scroll', function() {
         // 각 "counter" 요소에 대해 반복합니다.
@@ -130,4 +129,88 @@ $(document).ready(function(){
             }
         });
     }).scroll();
+
+    const media_swiper = new Swiper('.media .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        breakpoints: {
+            769: { 
+                spaceBetween: 24, 
+            },
+        },
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 2500,
+            disableOnInteraction: true,
+        },
+        navigation: {
+            nextEl: '.media .btn_wrap .btn_next',
+            prevEl: '.media .btn_wrap .btn_prev',
+        },
+    });
+    media_swiper.autoplay.stop();  /* 일시정지 기능 */
+    media_swiper.autoplay.start();  /* 재생 기능 */
+    $('.media .btn_wrap .btn_stop').on('click', function(){
+        media_swiper.autoplay.stop();
+        $(this).hide() // 숨김
+        $('.media .btn_wrap .btn_play').show() //보임
+    })
+    $('.media .btn_wrap .btn_play').on('click', function(){
+        media_swiper.autoplay.start();
+        $(this).hide() // 숨김
+        $('.media .btn_wrap .btn_stop').show() //보임
+    })
+
+    const onair_swiper = new Swiper('.onair .swiper', { /* 팝업을 감싼는 요소의 class명 */
+
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 2500,
+            disableOnInteraction: true,
+        },
+    
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+    
+        pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+            el: '.onair .paging', /* 해당 요소의 class명 */
+            clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+            renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    });
+
+    const banner_swiper = new Swiper('.banner .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 3, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 5,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 2000,
+            disableOnInteraction: true,
+        },
+        navigation: {
+            nextEl: '.banner .btn_next',
+            prevEl: '.banner .btn_prev',
+        },
+    });
+    banner_swiper.autoplay.stop();  /* 일시정지 기능 */
+    banner_swiper.autoplay.start();  /* 재생 기능 */
+    $('.banner .btn_wrap .btn_stop').on('click', function(){
+        banner_swiper.autoplay.stop();
+        $(this).hide() // 숨김
+        $('.banner .btn_wrap .btn_play').show() //보임
+    })
+    $('.banner .btn_wrap .btn_play').on('click', function(){
+        banner_swiper.autoplay.start();
+        $(this).hide() // 숨김
+        $('.banner .btn_wrap .btn_stop').show() //보임
+    })
 })

@@ -789,7 +789,7 @@
         padding: 3px 11px;
         margin-top: 11px;
     }
-    .community .news ul li a .list_tit h4 {
+    .community .news ul li a .list_tit h3 {
         line-height: 21px;
     }
     .community .news ul li a span {
@@ -797,9 +797,6 @@
         width: auto;
         line-height: 1;
         padding: 10px;
-    }
-    .community .gallery h3 {
-        margin-top: 45px;
     }
     .community .gallery .cont a .txt_box {
         padding: 20px 25px;
