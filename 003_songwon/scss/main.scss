@@ -221,10 +221,18 @@ section {
                             font-size: $vs-tit-mo2;
                         }
                     }
+                    &.bg3 {
+                        .tit{
+                            h3 {
+                                letter-spacing: -0.05em;
+                            }
+                        }
+                        
+                    }
                 }
             }
             .paging {
-                top: 228px;
+                top: 265px;
             }
         }
     }
@@ -383,7 +391,7 @@ section {
         .wrapper {
             padding: 19px 0;
             .swiper {
-                width: 75.3%;
+                width: 78.3%;
                 ul {
                     li {
                         a {
@@ -1614,6 +1622,13 @@ section {
                         a {
                             .photo {
                                 border-radius: 10px;
+                            }
+                            strong {
+                                font-size: 13px;
+                            }
+                            &::after {
+                                width: 50px;
+                                height: 34px;
                             } 
                         }
                     }

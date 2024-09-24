@@ -285,6 +285,11 @@ header{
                                                     color: $main-vivid-b;
                                                 }
                                             }
+                                            &:last-child {
+                                                &::after {
+                                                    display: none;
+                                                }
+                                            }
                                         }
                                         .depth3 {
                                             padding-top: 3px;
@@ -805,11 +810,11 @@ header{
 }
 .quick {
     position: fixed;
-    right: 30px;
-    top: 309px;
+    right: 20px;
+    bottom: 50px;
     z-index: 90; 
     .open {
-        display: none;
+        display: block;
         color: #fff;
         background-color: #0061AF;
         width: 65px;
@@ -840,6 +845,7 @@ header{
         }
     }
     .quick_cont {
+        display: none;
         background-color: #F4F4F4;
         border-radius: 35px;
         text-align: center;
@@ -931,34 +937,18 @@ header{
                 }
             }
         }
-    }   
-}
-@include respond($pc1024) {
-    .quick {
-        right: 20px;
-        top: auto;
-        bottom: 50px;
+    }
+    &.active {
         .open {
-            display: block;
+            display: none;
         }
         .quick_cont {
-            display: none;
+            display: block;
         }
-        .close {
-            display: none;
+        .close{
+            display: block;
         }
-        &.active {
-            .open {
-                display: none;
-            }
-            .quick_cont {
-                display: block;
-            }
-            .close{
-                display: block;
-            }
-        }
-    }
+    }   
 }
 @include respond($mobile768) {
     .quick {
@@ -1057,6 +1047,7 @@ footer {
                             justify-content: space-between;
                             padding: 45px 0 50px 0;
                             li {
+                                white-space: nowrap;
                                 width: 214px;
                                 position: relative;
                                 >a {
@@ -1103,6 +1094,7 @@ footer {
                             justify-content: space-between;
                             padding: 45px 83px 50px 83px;
                             li {
+                                white-space: nowrap;
                                 width: 92px;
                                 &:hover {
                                     font-weight: 700;
@@ -1214,6 +1206,7 @@ footer {
                 }
             }
             .f_inner {
+                line-height: 1.7;
                 .f_nav {
                     ul{
                         display: flex;

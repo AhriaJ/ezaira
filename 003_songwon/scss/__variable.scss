@@ -90,7 +90,7 @@ $tit-size-mo : 2.154rem;
 /* 텍스트 줄수 제한*/
 @mixin twoTxt {
     line-height: 1.3;
-    height: 2.6em;
+    height: 2.5em;
     overflow: hidden;
 }
 @mixin oneTxt {
