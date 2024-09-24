@@ -1074,9 +1074,9 @@ footer {
                                             font-weight: 400;
                                             color: #3d3d3d;
                                             line-height: 2;
-                                        }
-                                        &:hover {
-                                            font-weight: 700;
+                                            &:hover {
+                                                font-weight: 700;
+                                            }
                                         }
                                     }
                                 }
@@ -1103,6 +1103,7 @@ footer {
                             justify-content: space-between;
                             padding: 45px 83px 50px 83px;
                             li {
+                                width: 92px;
                                 &:hover {
                                     font-weight: 700;
                                 }

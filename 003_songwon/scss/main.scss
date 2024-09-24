@@ -657,7 +657,7 @@ section {
         .wrapper {
             height: auto;
             display: block;
-            padding: 57px 0;
+            padding: 68px 0;
             .news {
                 width: auto;
                 .tab_cont {
@@ -686,6 +686,9 @@ section {
                                     display: flex;
                                     justify-content: space-between;
                                     align-items: center;
+                                    p {
+                                        font-size: 20px;
+                                    }
                                 }
                             }
                         }
@@ -750,11 +753,15 @@ section {
                     .sch_list {
                         height: auto;
                         ul {
+                            padding: 0 20px;
                             li {
                                 padding: 20px 0;
                                 .txt{
                                     width: calc(100% - 80px);
                                     display: block;
+                                    p {
+                                        font-size: 15px;
+                                    }
                                 }
                             }
                         }
@@ -788,10 +795,10 @@ section {
     }
 }
 .number {
-    margin: 167px 0 230px 0;
+    margin: 167px 0 200px 0;
     font-family: 'GM';
     @include respond($pc1024) {
-        margin: 120px 0 160px 0;
+        margin: 100px 0 120px 0;
     }
     @include respond($mobile768) {
         margin: 75px 0 99px 0;

@@ -1147,7 +1147,7 @@ footer .f_top .tab .tab_cont div .major_list .depth1 li .depth2 li a {
   color: #3d3d3d;
   line-height: 2;
 }
-footer .f_top .tab .tab_cont div .major_list .depth1 li .depth2 li:hover {
+footer .f_top .tab .tab_cont div .major_list .depth1 li .depth2 li a:hover {
   font-weight: 700;
 }
 footer .f_top .tab .tab_cont div .major_list .depth1 li::after {
@@ -1172,6 +1172,9 @@ footer .f_top .tab .tab_cont div .organ_list ul {
   display: flex;
   justify-content: space-between;
   padding: 45px 83px 50px 83px;
+}
+footer .f_top .tab .tab_cont div .organ_list ul li {
+  width: 92px;
 }
 footer .f_top .tab .tab_cont div .organ_list ul li:hover {
   font-weight: 700;
@@ -1932,7 +1935,7 @@ section.number h2, section.media h2, section.onair h2 {
   .community .wrapper {
     height: auto;
     display: block;
-    padding: 57px 0;
+    padding: 68px 0;
   }
   .community .wrapper .news {
     width: auto;
@@ -1955,6 +1958,9 @@ section.number h2, section.media h2, section.onair h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .community .wrapper .schedule .tab_cont .sch_list ul li .txt p {
+    font-size: 20px;
   }
   .community .wrapper .more {
     top: 77px;
@@ -2003,12 +2009,18 @@ section.number h2, section.media h2, section.onair h2 {
   .community .wrapper .schedule .tab_cont .sch_list {
     height: auto;
   }
+  .community .wrapper .schedule .tab_cont .sch_list ul {
+    padding: 0 20px;
+  }
   .community .wrapper .schedule .tab_cont .sch_list ul li {
     padding: 20px 0;
   }
   .community .wrapper .schedule .tab_cont .sch_list ul li .txt {
     width: calc(100% - 80px);
     display: block;
+  }
+  .community .wrapper .schedule .tab_cont .sch_list ul li .txt p {
+    font-size: 15px;
   }
   .community .wrapper .more {
     font-size: 0;
@@ -2036,12 +2048,12 @@ section.number h2, section.media h2, section.onair h2 {
 }
 
 .number {
-  margin: 167px 0 230px 0;
+  margin: 167px 0 200px 0;
   font-family: "GM";
 }
 @media screen and (max-width: 1024px) {
   .number {
-    margin: 120px 0 160px 0;
+    margin: 100px 0 120px 0;
   }
 }
 @media screen and (max-width: 768px) {
