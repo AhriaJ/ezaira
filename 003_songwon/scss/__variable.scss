@@ -4,6 +4,7 @@ $main-vivid-b : #0039C8;
 $w80 : rgba(255,255,255,0.8);
 $w60 : rgba(255,255,255,0.6);
 $w50 : rgba(255,255,255,0.5);
+$w20 : rgba(255,255,255,0.2);
 /* font size */
 $vs-tit : 5.33rem;
 $vs-tit-mo1 : 4rem;
@@ -57,6 +58,7 @@ $tit-size-mo : 2.154rem;
     background-size: contain;
     content: "";
 }
+
 @mixin beforeBg {
     position: absolute;
     left: 0;

@@ -78,4 +78,44 @@ $(document).ready(function(){
         //하단 스크롤 금지 해제
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
+
+    // 퀵메뉴
+    $('.quick .open').on('click', function(){
+        $('.quick').addClass('active')
+    })
+    $('.quick .close').on('click', function(){
+        $('.quick').removeClass('active')
+    })
+    $('.quick .top').on('click', function(){
+        $("html, body").animate({
+            scrollTop : 0
+          }, 300);
+    })
+
+    //footer
+    let f_tap_btn = $('footer .f_top .tab .tab_btn ul li')
+    let f_tap_name 
+    let f_tap_cnt = $('footer .f_top .tab .tab_cont div[role="tabpanel"]')
+    let f_tap_cnt_parent = $('footer .f_top .tab .tab_cont')
+
+    f_tap_btn.on('click', function(){
+        if( $(this).attr('aria-selected') == 'true'){
+            //열린거 다시누름
+            $(this).removeClass('active')
+            $(this).attr('aria-selected', 'false')
+            f_tap_cnt.slideUp()
+        }else{
+            f_tap_btn.removeClass('active')
+            $(this).addClass('active'),
+            f_tap_btn.attr('aria-selected', 'false')
+            $(this).attr('aria-selected', 'true')
+            f_tap_name = $(this).attr('aria-controls')
+            f_tap_name = '#'+f_tap_name //id 선택자를 추가로 삽입
+            console.log(f_tap_name)
+            // f_tap_cnt.removeClass('active')
+            // f_tap_cnt_parent.find(f_tap_name).addClass('active')
+            f_tap_cnt.slideUp()
+            f_tap_cnt_parent.find(f_tap_name).slideDown()
+        }
+    })
 })

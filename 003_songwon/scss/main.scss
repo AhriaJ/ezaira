@@ -93,7 +93,7 @@ section {
         .paging {
             position: absolute;
             top: 420px;
-            left: 15%;
+            left: 18%;
             width: auto;
             height: 8px;
             font-size: 0;
@@ -1512,12 +1512,6 @@ section {
             display: block;
             .ytb_wrap {
                 width: auto;
-                .inner_top {
-                    .thumb {
-                        a {
-                        }
-                    }
-                }
                 .inner_sub {
                     margin-top: 10px;
                     gap: 16px;
@@ -1980,10 +1974,6 @@ section {
                 width: 80%;
                 .swiper {
                     width: 100%;
-                    ul {
-                        li {
-                        }
-                    }
                 }
             }
         }
@@ -2009,10 +1999,6 @@ section {
                 width: 100%;
                 .swiper {
                     width: 100%;
-                    ul {
-                        li {
-                        }
-                    }
                 }
             }
         }
