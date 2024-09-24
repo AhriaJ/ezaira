@@ -713,7 +713,7 @@ header .header_sub .logo a::before {
   }
   header .header_sub .sub_left .gnb .gnb_wrap .depth1 > li .depth2 > li > a > span::after {
     position: absolute;
-    right: -22p;
+    right: -22px;
     top: 0;
     width: 20px;
     height: 20px;
