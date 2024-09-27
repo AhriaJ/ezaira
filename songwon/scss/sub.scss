@@ -1,0 +1,97 @@
+@import "__default.scss";
+@import "__variable.scss";
+@import "__common.scss";
+@import "__fonts.scss";
+@import "__layout.scss";
+.page_tit {
+    text-align: center;
+    font-family: 'GM';
+    font-weight: 300;
+    color: #1d1d1d;
+    font-size: $tit-size;
+    margin-bottom: 38px;
+    em {
+        font-weight: 700;
+    }
+    @include respond($pc1024) {
+        margin-bottom: 20px;
+    }
+}
+.cts_prosident001 {
+    padding: 86px 0 157px 0;
+    @include respond($pc1024) {
+        padding: 60px 0 100px 0;
+    }
+    .photo_wrap {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        .photo {
+            font-size: 0;
+            line-height: 0;
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+        .photo_txt {
+            position: absolute;
+            left: 12%;
+            top: 27%;
+            color: #fff;
+            h3 {
+                font-family: 'GM';
+                line-height: 1.2;
+                font-weight: 700;
+                font-size: 60px;
+                em {
+                    font-weight: 300;
+                    margin-left: 77px;
+                }
+            }
+        }
+    }
+    .txt_wrap {
+        .tit {
+            margin: 21px 0 27px 0;
+            p {
+                font-size: 30px;
+                font-weight: 700;
+                color: #1d1d1d;
+                em {
+                    color: $main-dark-b;
+                }
+            }
+        }
+        .txt {
+            display: flex;
+            justify-content: space-between;
+            .lft {
+                width: 49%;
+                em {
+                    font-weight: 700;
+                }
+            }
+            .rgt {
+                width: 49%;
+                em {
+                    font-weight: 700;
+                }
+            }
+            .sign {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                color: #1d1d1d;
+                strong {
+                    font-weight: 700;
+                    margin-right: 30px;
+                }
+                span {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

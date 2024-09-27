@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/sub.css">
+    <title>송원대학교 | 대학소개 | 총장메세지</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--
+            pc : 메뉴에 마우스 오버 menu_over
+                    스크롤시 상단에 메뉴 고정 fixed
+            mobile : 메뉴 클릭 menu_open
+        -->
+        <header>
+            <div class="header_top">
+                <div class="tnb">
+                    <ul>
+                        <li class="page"><a href="#n">국제교육원</a></li>
+                        <li class="page"><a href="#n">e -class</a></li>
+                    </ul>
+                </div>
+                <div class="tnb black sub">
+                    <ul>
+                        <li class="b01"><a href="#n">로그인</a></li>
+                        <li class="b02"><a href="#n">사이트맵</a></li>
+                        <li class="lang"><a href="#n">ENG</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_sub">
+                <div class="sub_left">
+                    <h1 class="logo"><a href="index.html">송원대학교</a></h1>
+                    <nav class="gnb" id="skip_menu">
+                        <button class="gnb_open sub">메뉴열기</button>
+                        <div class="gnb_wrap">
+                            <ul class="depth1">
+                                <li class="introduce open active">
+                                    <a href="#n"><span>대학소개</span></a>
+                                    <div class="gnb_bg">
+                                        <ul class="depth2">
+                                            <li>
+                                                <a href="#n"><span>e총장실</span></a>
+                                                <ul class="depth3">
+                                                    <li class="active"><a href="#n">총장메시지</a></li>
+                                                    <li><a href="#n">프로필</a></li>
+                                                    <li><a href="#n">동영상</a></li>
+                                                    <li><a href="#n">이사장 업무추진비 사용내역</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>이념과 역사</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">건학이념</a></li>
+                                                    <li><a href="#n">교육목표</a></li>
+                                                    <li><a href="#n">송원인의 5대 핵심역량</a></li>
+                                                    <li><a href="#n">연혁</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>송원상징</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">학교상징물</a></li>
+                                                    <li><a href="#n">교가</a></li>
+                                                    <li><a href="#n">UI</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>송원정보</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">대학조직도</a></li>
+                                                    <li><a href="#n">예산/결산공고</a></li>
+                                                    <li><a href="#n">대학정보공시</a></li>
+                                                    <li><a href="#n">대학자체평가</a></li>
+                                                    <li><a href="#n">국제교류정보</a></li>
+                                                    <li><a href="#n">등록금심의위원회</a></li>
+                                                    <li><a href="#n">평의원회</a></li>
+                                                    <li><a href="#n">개방이사ㆍ추천감사 공개모집</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>캠퍼스 안내</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">캠퍼스맵</a></li>
+                                                    <li><a href="#n">오시는길</a></li>
+                                                    <li><a href="#n">주차안내</a></li>
+                                                    <li><a href="#n">학과/부처 전화번호검색</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>학교법인</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">설립자메시지</a></li>
+                                                    <li><a href="#n">이사장메시지</a></li>
+                                                    <li><a href="#n">약력</a></li>
+                                                    <li><a href="#n">이사장 업무추진비 사용내역</a></li>
+                                                    <li><a href="#n">법인현황</a></li>
+                                                    <li><a href="#n">이사회 회의록</a></li>
+                                                    <li><a href="#n">송원문화재단</a></li>
+                                                    <li><a href="#n">법인임원 친족관계 교직원현황</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>대학발전기금</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">기금안내</a></li>
+                                                    <li><a href="#n">기부금모금 및 사용현황</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n">비전 및 핵심전략</a>
+                                            </li>
+                                        </ul><!--depth2-->
+                                    </div>
+                                </li>
+                                <li class="university">
+                                    <a href="#n"><span>대학/대학원</span></a>
+                                    <div class="gnb_bg">
+                                        <ul class="depth2">
+                                            <li>
+                                                <a href="#n"><span>철도대학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">철도운전시스템학과</a></li>
+                                                    <li><a href="#n">철도운전･관제시스템학과</a></li>
+                                                    <li><a href="#n">철도차량시스템학과</a></li>
+                                                    <li><a href="#n">철도운전경영학과</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>사회과학대학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">경찰행정학과</a></li>
+                                                    <li><a href="#n">유아교육과</a></li>
+                                                    <li><a href="#n">사회서비스융합학과</a></li>
+                                                    <li><a href="#n">한국어교육과</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>보건복지대학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">간호학과</a></li>
+                                                    <li><a href="#n">치위생학과</a></li>
+                                                    <li><a href="#n">보건안전관리학과</a></li>
+                                                    <li><a href="#n">사회복지학과</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>공과대학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">건축공학과(야간)</a></li>
+                                                    <li><a href="#n">토목환경공학과(야간)</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>예ㆍ체능대학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">공연예술학과</a></li>
+                                                    <li><a href="#n">미용예술학과</a></li>
+                                                    <li><a href="#n">스포츠지도학과(주ㆍ야)</a></li>
+                                                    <li><a href="#n">스포츠데이터분석학과</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>휴먼산업대학원</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">군사학과</a></li>
+                                                    <li><a href="#n">상담심리치료학과</a></li>
+                                                    <li><a href="#n">재활보건학과</a></li>
+                                                    <li><a href="#n">미용예술학과</a></li>
+                                                    <li><a href="#n">스포츠지도학과</a></li>
+                                                    <li><a href="#n">토목건축공학과</a></li>
+                                                    <li><a href="#n">사회복지학과</a></li>
+                                                    <li><a href="#n">실용예술학과</a></li>
+                                                    <li><a href="#n">한국어교육과</a></li>
+                                                    <li><a href="#n">아동학과</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul><!--depth2-->
+                                    </div>
+                                </li>
+                                <li class="edu">
+                                    <a href="#n"><span>교육/연구</span></a>
+                                    <div class="gnb_bg">
+                                        <ul class="depth2">
+                                            <li>
+                                                <a href="#n"><span>대학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">교양과정부</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>연구/산학</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n">지역사회협력지원센터</a></li>
+                                                    <li><a href="#n">광주남구다목적체육관</a></li>
+                                                    <li><a href="#n">여성새로일하기센터</a></li>
+                                                    <li><a href="#n">바우처사업단</a></li>
+                                                    <li><a href="#n">어린이급식관리지원센터</a></li>
+                                                    <li><a href="#n">일자리 창출사업단</a></li>
+                                                    <li><a href="#n">중소기업산학연센터</a></li>
+                                                    <li><a href="#n">테크숍운영지원센터</a></li>
+                                                    <li><a href="#n">송원모션즈(교수창업기업)</a></li>
+                                                    <li><a href="#n">산∙학∙관∙군 협동협약</a></li>
+                                                    <li><a href="#n">창업보육센터</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul><!--depth2-->                                    
+                                    </div>
+                                </li>
+                                <li class="school_info">
+                                    <a href="#n"><span class="into">입학안내</span></a>
+                                </li>
+                                <li class="campus_life">
+                                    <a href="#n"><span>대학생활</span></a>
+                                    <div class="gnb_bg">
+                                        <ul class="depth2">
+                                            <li>
+                                                <a href="#n"><span>학사행정</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>교원자격증정보</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>장학금 및 학자금 대출</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>IT지원서비스</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n"><span>대학생활</span></a>
+                                                <ul class="depth3">
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                    <li><a href="#n"></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#n">학생역량시스템</a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">차세대종합정보시스템</a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">수강신청</a>
+                                            </li>
+                                        </ul><!--depth2-->                                    
+                                    </div>
+                                </li>
+                                <li class="square">
+                                    <a href="#n"><span>송원광장</span></a>
+                                    <div class="gnb_bg">
+                                        <ul class="depth2">
+                                            <li><a href="#n">공지사항</a></li>
+                                            <li><a href="#n">자유게시판</a></li>
+                                            <li><a href="#n">송원신문고</a></li>
+                                            <li><a href="#n">사회봉사안내</a></li>
+                                            <li><a href="#n">취창업게시판</a></li>
+                                            <li><a href="#n">코로나바이러스-19 안내</a></li>
+                                        </ul><!--depth2-->                                    
+                                    </div>
+                                </li>
+                                <li class="sw_ad">
+                                    <a href="#n"><span>홍보관</span></a>
+                                    <div class="gnb_bg">
+                                        <ul class="depth2">
+                                            <li><a href="#n">교육서비스헌장</a></li>
+                                            <li><a href="#n">송원뉴스</a></li>
+                                            <li><a href="#n">홍보동영상</a></li>
+                                            <li><a href="#n">매체광고</a></li>
+                                            <li><a href="#n">송원갤러리</a></li>
+                                            <li><a href="#n">송원신문</a></li>
+                                        </ul><!--depth2-->                                    
+                                    </div>
+                                </li>
+                            </ul><!--depth1-->
+                        </div>
+                        <button class="gnb_close">메뉴 닫기</button>
+                    </nav>
+                </div>
+                <div class="sub_tnb">
+                    <a href="#n">검색페이지 이동</a> <!--모바일-->
+                    <button class="search sub">검색</button> <!--pc-->
+                </div>
+            </div>
+        </header>
+        <main class="container" id="skip_contents">
+            <div class="sub_visual bg1">
+                <div class="wrapper">
+                    <strong>SONGWON</strong>
+                    <h2>대학소개</h2>
+                </div>
+            </div>
+            <div class="sub_menu">
+                <div class="wrapper">
+                    <div class="breadcrumb">
+                        <ul class="sub_menu1">
+                            <li class="home">
+                                <a href="../index.html">홈</a>
+                            </li>
+                            <li class="menu1">
+                                <a href="#n"><span>대학소개</span></a>
+                                <ul class="sub_menu2">
+                                    <li class="active"><a href="#n">대학소개</a></li>
+                                    <li><a href="#n">대학/대학원</a></li>
+                                    <li><a href="#n">교육/연구</a></li>
+                                    <li><a href="#n">입학안내</a></li>
+                                    <li><a href="#n">대학생활</a></li>
+                                    <li><a href="#n">송원광장</a></li>
+                                    <li><a href="#n">홍보관</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu2">
+                                <a href="#n"><span>e총장실</span></a>
+                                <ul class="sub_menu2">
+                                    <li class="active"><a href="#n">e총장실</a></li>
+                                    <li><a href="#n">이념과 역사</a></li>
+                                    <li><a href="#n">송원상징</a></li>
+                                    <li><a href="#n">송원정보</a></li>
+                                    <li><a href="#n">캠퍼스안내</a></li>
+                                    <li><a href="#n">학교법인</a></li>
+                                    <li><a href="#n">대학발전기금</a></li>
+                                    <li><a href="#n">비전 및 핵심전략</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu3">
+                                <a href="#n"><span>총장메시지</span></a>
+                                <ul class="sub_menu2">
+                                    <li class="active"><a href="#n">총장메시지</a></li>
+                                    <li><a href="#n">프로필</a></li>
+                                    <li><a href="#n">동영상</a></li>
+                                    <li><a href="#n">이사장 업무추진비 사용내역</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sub_btn">
+                        <button class="share" title="공유">공유하기</button>
+                        <button class="print" title="프린트">프린트</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cts_prosident001">
+                <div class="wrapper">
+                    <h2 class="page_tit">총장 <em>메세지</em></h2>
+                    <div class="photo_wrap">
+                        <div class="photo"><img src="../images/contents/prosident01.png" alt="총장사진"></div>
+                        <div class="photo_txt"><h3><em>“열정교육</em><br>감동인재<br><em>책임취업”</em></h3></div>
+                    </div>
+                    <div class="txt_wrap">
+                        <div class="tit">
+                            <p><em>송원대학교 홈페이지</em>를 방문해주신 여러분 반갑습니다.</p>
+                        </div>
+                        <div class="txt">
+                            <div class="lft">
+                                <p> 송원대학교는 전 교직원이 "열정교육, 감동인재, 책임취업"을 목표로 새로운 도약을 시작하고 있습니다. 송원대학교에 들어오는 모든 학생들에게 강한 자조정신과 부모 공경에 기반한 높은 인격, 창의성, 글로벌 역량 그리고 고도의 전문성을 키워주기 위해 전 교직원이 노력하고 있습니다.<br><br>
+
+                                    2012년 전문대학교에서 4년제 일반 대학교로 교육부인가 받은 이후 짧은 기간 안에 기존의 전국 4년제 대학들과의 평가에서 송원대학교는 정부의 교원양성기관평가에서 최고 등급인 A등급 획득, 간호학과 평가에서 최고등급인 5년 인증 획득, 2017년 대학기관평가인증에서 ‘인증’등을 획득하였고, 모든 국가장학혜택 지원과 정부 재정지원사업 지원을 받을 수 있는 대학으로 자리매김한 특성화된 <em>작지만 강한 교육중심대학교입니다.</em><br><br>
+                                    
+                                    우리대학에서는 최근 외국 주요대학 박사 출신 등 새롭고 유능한 교수
+                                    70여명을 신규 채용하여 호남 최고의 교수진을 확보하였고, 최신의 강의동 준공과 다목적 체육관, 창업지원센터, 최신의 기숙사를 신설하고 호남과 제주에서 하나 뿐인 국토교통부 허가 ‘철도기관사 양성 연수기관’ 설립·운영하고 있습니다. 이와 같이 훌륭한 교수진과 교육시설을 갖추어 과학 기술변화와 사회변화에 대응하는 체계적이고 실용적인 새로운 교육과정을 개발하여 운용하고 있습니다.<br><br>
+                                    
+                                        또한 산업체와의 협력강화를 통해 현장 중심 교육과 지역사회발전에 송원대학교가 최대한 기여하도록 하며, 학생들의 취업을 책임지는 대학으로 노력을 해 나가고 있습니다. </p>
+                            </div>
+                            <div class="rgt">
+                                <div class="r_txt">
+                                    <p>이러한 전교직원들의 열성적인 교육의 결과 2017년 공식 발표한 전국 4년제 대학 취업률에서 송원대학교가 전국 최고 수준인 취업률 79%라는 획기적인 기록을 달성하였습니다.<br><br>
+
+                                        앞으로도 송원대학교는 대학운영에 있어 모든 교육 및 행정역량을 학생의 성장과 발달에 최우선적으로 집중할 것입니다. 그리하여 학생들의 잠재력을 최대한 계발시켜 학생들의 시간적, 경제적 투자 효과를 최대한 높여주는 대학, 학생들의 원대한 꿈이 달성될 수 있도록 최선을 다해 도와 드리는 대학으로 나아가는 것이 저의 목표입니다.<br><br>
+                                        
+                                        독일의 문호 괴테는 <em>"인생에서 도전과 정복의 대상이 사라진 순간 행복은 사라진다"</em>는 말을 했습니다. 저도 그렇게 생각합니다. 인생의 행복은 목표달성을 위한 열정에 불탈 때, 험난한 과정에서도 좌절하지 않고 숭고한 이상을 향해 달려갈 때, 그때가 행복한 순간이기 때문입니다.<br><br>
+                                        우리 송원대학교는 학생들의 꿈을 향한 열정에 불을 지피고 그들의 목표달성을 위해 전 교직원이 합심하여 도와주는 특성화된, 최고의 교육중심대학으로 확고히 올라 설 것입니다.<br><br>
+                                            
+                                        감사합니다.
+                                    </p>
+                                </div>
+                                <div class="sign">
+                                    <strong>총장 철학박사</strong>
+                                    <span>최 수 태</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="f_top">
+                <div class="tab">
+                    <div class="tab_btn">
+                        <div class="wrapper">
+                            <ul role="tablist">
+                                <li id="tab_07" aria-selected="false" aria-controls="panel_07" role="tab"><button><span>학과 사이트 <em>바로가기</em></span></button></li>
+                                <li id="tab_08" aria-selected="false" aria-controls="panel_08" role="tab"><button><span>기관 사이트 <em>바로가기</em></span></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="wrapper">
+                            <div id="panel_07" role="tabpanel" aria-labelledby="tab_07">
+                                <div class="major_list">
+                                    <ul class="depth1">
+                                        <li>
+                                            <a href="#n">철도대학</a>
+                                            <ul class="depth2">
+                                                <li><a href="#n">철도운전시스템학과</a></li>
+                                                <li><a href="#n">철도운전･관제시스템학과</a></li>
+                                                <li><a href="#n">철도차량시스템학과</a></li>
+                                                <li><a href="#n">철도운전경영학과</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#n">사회과학대학</a>
+                                            <ul class="depth2">
+                                                <li><a href="#n">경찰행정학과</a></li>
+                                                <li><a href="#n">유아교육과</a></li>
+                                                <li><a href="#n">사회서비스융합학과</a></li>
+                                                <li><a href="#n">한국어교육과</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#n">예술대학</a>
+                                            <ul class="depth2">
+                                                <li><a href="#n">공연예술학과</a></li>
+                                                <li><a href="#n">미용예술학과</a></li>
+                                                <li><a href="#n">스포츠지도학과(주ㆍ야)</a></li>
+                                                <li><a href="#n">스포츠데이터분석학과</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#n">보건복지대학</a>
+                                            <ul class="depth2">
+                                                <li><a href="#n">간호학과</a></li>
+                                                <li><a href="#n">치위생학과</a></li>
+                                                <li><a href="#n">보건안전관리학과</a></li>
+                                                <li><a href="#n">사회복지학과</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#n">공과대학</a>
+                                            <ul class="depth2">
+                                                <li><a href="#n">건축공학과(야간)</a></li>
+                                                <li><a href="#n">토목환경공학과(야간)</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#n">휴먼산업대학원</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="panel_08" role="tabpanel" aria-labelledby="tab_08">
+                                <div class="organ_list">
+                                    <ul>
+                                        <li><a href="#n">중앙도서관</a></li>
+                                        <li><a href="#n">취창업지원센터</a></li>
+                                        <li><a href="#n">학생상담센터</a></li>
+                                        <li><a href="#n">국제교육원</a></li>
+                                        <li><a href="#n">평생교육원</a></li>
+                                        <li><a href="#n">창업보육센터</a></li>
+                                        <li><a href="#n">송원생활관</a></li>
+                                        <li><a href="#n">신문방송국</a></li>
+                                        <li><a href="#n">송원유치원</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_sub">
+                <div class="wrapper">
+                    <div class="f_logo"><img src="images/common/logo_f.svg" alt="송원대학교 로고"></div>
+                    <div class="f_inner">
+                        <div class="f_nav">
+                            <ul>
+                                <li class="priv"><a href="#n">개인정보처리방침</a></li>
+                                <li><a href="#n">정보공개</a></li>
+                                <li><a href="#n">이메일무단수집거부</a></li>
+                                <li><a href="#n">찾아오시는길</a></li>
+                                <li><a href="#n">스쿨버스안내</a></li>
+                                <li><a href="#n">문의번호검색</a></li>
+                            </ul>
+                        </div>
+                        <div class="f_info">
+                            <address>61756 광주광역시 남구 송암로 73</address>
+                            <span>대표전화 : 062-360-5700</span>
+                            <span>FAX : 062-360-5756</span>
+                        </div>
+                        <div class="copy">Copyright 2011(c) by SONGWON UNIVERSITY. All right reserved. Image by Freepik</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
