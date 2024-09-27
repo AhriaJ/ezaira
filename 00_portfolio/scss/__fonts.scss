@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+    font-family: 'Wonder';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Wonderful Branding'), url(../fonts/WonderfulBrandingPersonalUse-Wyrgz.woff) format('woff');
+}
+@font-face {
+    font-family: 'tvn';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/EnjoystoriesBold.woff2) format('woff2'), url(../fonts/EnjoystoriesBold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Min';
+    font-weight: 400;
+    src: url(../fonts/MinSans-Regular.woff2) format("woff2");
+}
+@font-face {
+    font-family: 'Min';
+    font-weight: 700;
+    src: url(../fonts/MinSans-Bold.woff2) format("woff2");
+}
+@font-face {
+    font-family: 'GM';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../fonts/GmarketSansLight.woff2) format('woff2'),
+         url(../fonts/GmarketSansLight.woff) format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GM';
+    font-weight: 700;
+    font-style: normal;
+    src: url(../fonts/GmarketSansBold.woff2) format('woff2'),
+         url(../fonts/GmarketSansBold.woff) format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'bolkit';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/bolkit_bold.woff2) format('woff2'), url(../fonts/bolkit_bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'litoland';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Litoland_Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'litoland ltalic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Litoland_Italic.woff) format('woff');
+}
+@font-face {
+    font-family: 'Paper';
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/Paperlogy-3Light.woff2) format('woff2');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Paper';
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Paperlogy-7Bold.woff2) format('woff2');
+    font-style: normal;
+}
