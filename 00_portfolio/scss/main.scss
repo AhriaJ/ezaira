@@ -135,7 +135,7 @@ h1 {
                         font-size: 45px;
                         em {
                             font-family: 'tvn';
-                            font-family: 700;
+                            font-weight: 700;
                             font-size: 80px;
                             color: #00CD9C;
                         }
@@ -414,7 +414,7 @@ h1 {
                             position: relative;
                             &::after {
                                 position: absolute;
-                                right: 136px;
+                                right: 161px;
                                 top: 50%;
                                 transform: translateY(-50%);
                                 width: 300px;
