@@ -97,6 +97,10 @@ html, body {
   margin: 0 auto; /* 가운데 정렬 */
 }
 
+body {
+  min-width: 1300px;
+}
+
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
