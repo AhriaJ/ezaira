@@ -118,4 +118,17 @@ $(document).ready(function(){
             f_tap_cnt_parent.find(f_tap_name).slideDown()
         }
     })
+
+    // 서브페이지 서브메뉴
+    /* .sub_menu .breadcrumb .sub_menu1 > li 클릭하면 open 클래스 추가 */
+    $('.sub_menu .breadcrumb .sub_menu1 > li').on('click', function(){
+        if($(this).hasClass('open') == true){
+            //console.log('가지고 있음')
+            $(this).removeClass('open')
+        }else{
+            //console.log('아니')
+            $('.sub_menu .breadcrumb .sub_menu1 > li').removeClass('open')
+            $(this).addClass('open')
+        }
+    })
 })

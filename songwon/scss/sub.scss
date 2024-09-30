@@ -19,9 +19,6 @@
 }
 .cts_prosident001 {
     padding: 86px 0 157px 0;
-    @include respond($pc1024) {
-        padding: 60px 0 100px 0;
-    }
     .photo_wrap {
         width: 100%;
         height: 400px;
@@ -32,6 +29,16 @@
             img {
                 width: 100%;
                 height: 400px;
+                object-fit: cover;
+            }
+        }
+        .m_photo {
+            display: none;
+            font-size: 0;
+            line-height: 0;
+            img {
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
             }
         }
@@ -48,6 +55,22 @@
                 em {
                     font-weight: 300;
                     margin-left: 77px;
+                }
+            }  
+        }
+    }
+    @include respond($pc1024) {
+        padding: 60px 0 100px 0;
+        .photo_wrap {
+            height: 300px;
+            .photo {
+                img {
+                    height: 300px;
+                }
+            }
+            .photo_txt{
+                h3 {
+                    font-size: 40px;
                 }
             }
         }
@@ -75,6 +98,9 @@
             }
             .rgt {
                 width: 49%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 em {
                     font-weight: 700;
                 }
@@ -90,6 +116,39 @@
                 }
                 span {
                     font-size: 30px;
+                }
+            }
+        }
+    }
+    @include respond($mobile768) {
+        .photo_wrap {
+            width: 100%;
+            height: auto;
+            .photo {
+                display: none;
+            }
+            .m_photo {
+                display: block;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .photo_txt {
+                display: none;
+            }
+        }
+        .txt_wrap  {
+            .txt {
+                display: block;
+                .lft {
+                    width: auto;
+                }
+                .rgt {
+                    width: auto;
+                    .sign {
+                        margin-top: 20px;
+                    }
                 }
             }
         }
